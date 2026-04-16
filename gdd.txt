@@ -1,0 +1,14 @@
+=======================================================
+GAME DESIGN DOCUMENT - SERINGAL SÃO BERNARDO
+=======================================================
+Nome: Seringal São Bernardo
+Equipe: Caio Enzo Bessa de Oliveira, Eliaquim Timóteo da Cunha
+Game engine: Game Maker
+Plataformas: Windows
+
+O jogo consiste na fuga de um sistema opressor dentro de um seringal amazônico. O jogador deve fugir
+do seringal enquanto explora a floresta amazônica. Ao longo do jogo, o jogador obtém melhorias para
+o personagem, podendo melhorar suas habilidades e enfrentando outros desafios como os perigos da 
+floresta e criaturas místicas.
+=======================================================
+
