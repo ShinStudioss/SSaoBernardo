@@ -14,3 +14,4 @@ else{
 	layer_set_visible("lay_vinhetaNoite",0)
 	layer_set_visible("lay_noite",0)
 }
+

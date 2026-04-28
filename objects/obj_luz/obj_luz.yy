@@ -8,8 +8,8 @@
   "name":"obj_luz",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Controle",
+    "path":"folders/Objetos/Controle.yy",
   },
   "parentObjectId":null,
   "persistent":false,

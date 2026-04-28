@@ -9,8 +9,8 @@
   "name":"obj_passBy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Efeitos",
+    "path":"folders/Objetos/Efeitos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

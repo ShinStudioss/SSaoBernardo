@@ -29,3 +29,5 @@ global.cameraEstatica = false
 display_reset(0, true);
 
 global.daytime = "dia"
+global.pause = false
+draw_set_font(fnt_hud)

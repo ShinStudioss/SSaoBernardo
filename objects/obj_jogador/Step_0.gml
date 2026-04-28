@@ -1,3 +1,5 @@
+keybinds = scr_getBinds()
+
 #region Movimentação e colisão (clique para abrir)
 
 // Movimentação básica =================================================================================
@@ -5,7 +7,10 @@
 // Exemplo: Jogador pressiona DIREITA, que retorna 1 e é subtraído por ESQUERDA, que não está pressionado,
 // retornando 0, a subtração resulta em 1 e é multiplicado pela velocidade
 
+if global.pause = false{
 inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
+}
+
 
 if inputX != 0{
 	image_xscale = inputX
@@ -29,7 +34,7 @@ else{
     }
 
 // Movimento definitivo
-x += moveSpeed
+x += moveSpeed * speedMulti
 
 #endregion
 	
@@ -40,7 +45,7 @@ x += moveSpeed
 // Tem umas frescurinha tipo o coyote time e a multiplicação da velocidade de queda, junto com
 // aquela mecanica que o pulo é mais alto conforme você segura o botão
 
-if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0{
+if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false{
 	jumpSpeed = alturaMaxPulo
     coyoteTime = 0    
 }
@@ -121,3 +126,63 @@ if particleTimer <= 0{
 
 
 #endregion
+
+#region Correr
+var fomePerc = clamp(global.fome / global.fomeMax, 0, 1)
+
+fomePerc = power(fomePerc, 1.5)
+
+var walkMin = 0.4
+var walkMax = 1.0
+
+var runMin = 0.8
+var runMax = 1.67
+
+var walkSpeed = lerp(walkMin, walkMax, fomePerc)
+var runSpeed  = lerp(runMin, runMax, fomePerc)
+
+if keyboard_check(keybinds.run) and global.energia > 0{
+	speedMulti = runSpeed
+	image_speed = lerp(1, 1.67, fomePerc)
+	global.energia -= 0.15 * (1 - fomePerc * 0.5) 
+}
+else{
+	speedMulti = walkSpeed
+	image_speed = 1
+	
+	if global.fome > global.fomeMax * 0.4 and global.energia < global.energiaMax and !keyboard_check(keybinds.run){
+		global.energia += (global.fome/global.fomeMax) / 30
+	}
+}
+#endregion
+
+// Regeneração de vida
+if (lifeRegenTimer <= 0){
+    if (global.fome > global.fomeMax * 0.5){
+        if (global.saude < global.saudeMax){
+            global.saude += lifeRegen
+        }
+    }
+    lifeRegenTimer = lerp(600, 120, global.fome / global.fomeMax)
+}
+
+if global.fome <= 0{
+	global.saude -= 0.01
+}
+lifeRegenTimer--
+
+
+show_debug_message(lifeRegenTimer)
+// ========================================================================
+
+if keyboard_check(ord("N")){
+	global.fome -= 1
+}
+
+if keyboard_check(ord("M")){
+	global.fome += 1
+}
+
+if keyboard_check_pressed(ord("B")){
+	global.saude -= 2
+}

@@ -1,6 +1,7 @@
 // Definição de variáveis ===================================================================================
 // Variáveis que iniciam com a nomeclatura "stat" são atributos do jogador que serão acessados por diferentes
 // partes do jogo, e por isso são globais
+inputX = 0
 
 global.maxSpeed = 10
 global.currentSpeed = 0
@@ -11,6 +12,16 @@ coyoteTime = 0
 prevCoyoteTime = coyoteTime
 jumpSpeed = 0
 particleTimer = 0
+speedMulti = 1
+lifeRegenTimer = 120
+lifeRegen = 3
 
+global.saudeMax = 30
+global.saude = 30
 
-keybinds = scr_getBinds()
+global.energiaMax = 20
+global.energia = 20
+
+global.fomeMax = 20
+global.fome = 20
+
