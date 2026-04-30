@@ -1,3 +1,5 @@
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 draw_set_colour(c_black);
 draw_sprite(spr_cutsceneBars,0,0,0);
 draw_set_alpha(0.6);
