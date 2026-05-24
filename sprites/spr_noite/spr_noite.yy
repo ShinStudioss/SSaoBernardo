@@ -19,7 +19,7 @@
   "height":2000,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"18d7ffcc-ae3f-4dd1-9904-f1761ab0c8f4","blendMode":0,"displayName":"default (2) (2)","isLocked":false,"name":"18d7ffcc-ae3f-4dd1-9904-f1761ab0c8f4","opacity":89.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"18d7ffcc-ae3f-4dd1-9904-f1761ab0c8f4","blendMode":0,"displayName":"default (2) (2)","isLocked":false,"name":"18d7ffcc-ae3f-4dd1-9904-f1761ab0c8f4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"8b3d8961-28d4-4421-9e54-aab1de6e34dd","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"8b3d8961-28d4-4421-9e54-aab1de6e34dd","opacity":85.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_noite",

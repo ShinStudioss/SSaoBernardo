@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"__cle_shDirSpriteShadow",
+  "name":"__cle_shDirSpriteShadow",
+  "parent":{
+    "name":"SpriteBased",
+    "path":"folders/KazanGames/CrystalLightingEngine/Core/Shaders/Shadows/SpriteBased.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

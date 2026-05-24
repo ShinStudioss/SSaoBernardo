@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"__cle_shDebugSpriteShadow",
+  "name":"__cle_shDebugSpriteShadow",
+  "parent":{
+    "name":"Resources",
+    "path":"folders/KazanGames/CrystalLightingEngine/Core/Modules/Debug/Resources.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

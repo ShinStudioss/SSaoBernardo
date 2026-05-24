@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.31346938,
+  "duration":0.26122448,
   "exportDir":"",
   "name":"snd_menuHover",
   "parent":{

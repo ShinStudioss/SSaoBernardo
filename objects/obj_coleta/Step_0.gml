@@ -3,7 +3,7 @@ keybinds = scr_getBinds()
 depth = obj_jogador.depth + 1
 
 var distancia = distance_to_object(obj_jogador)
-var cima = keyboard_check_pressed(keybinds.up);
+var cima = keyboard_check_pressed(keybinds.interact);
 
 var dialogo;
 
@@ -13,6 +13,10 @@ switch state{
         dialogo = function(){ criar_dialogo(["É uma seringueira. Para extrair o látex, é necesário um balde.",""], true, [{text: "Colocar balde para coleta.", action: "colocarbalde"}, {text: "Cancelar", action: "cancel"}]) }
     break;
 
+	case "corte":
+		dialogo = function(){}
+	break
+
     case "vazio":
         image_alpha = 1
         image_index = 1
@@ -21,6 +25,7 @@ switch state{
 	
 	case "cheio":
 		image_index = 0
+		dialogo = function(){ scr_addItem(2,1) quantidade = 0 state = "sembalde"}
 	break
 }
 

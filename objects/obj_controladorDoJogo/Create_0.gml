@@ -14,7 +14,12 @@ var keybinds = {
 	down: ord("S"),
 	up: ord("W"),
 	jump: vk_space,
-	run: vk_shift
+	run: vk_shift,
+	interact: ord("E"),
+	item1: ord("1"),
+	item2: ord("2"),
+	item3: ord("3"),
+	item4: ord("4")
 };
 
 scr_setBinds(keybinds)
@@ -29,12 +34,12 @@ alturaCamAlvo = 648
 alvoCam = obj_jogador
 global.cameraEstatica = false
 display_reset(0, true);
+filtro_cor_set(c_white, 0);
 
 global.transitionX = 0
 global.transitionY = 0
-global.daytime = "dia"
 global.pause = false
 draw_set_font(fnt_hud)
 
-global.inventario = [[0,0],[0,0],[0,0],[0,0]]
+global.inventario = [[3,1],[1,3],[0,0],[0,0]]
 

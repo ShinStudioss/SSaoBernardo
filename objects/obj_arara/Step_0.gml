@@ -20,9 +20,5 @@ if global.pause = false{
 
 	if y < 0 {
 		instance_destroy()
-	}
-
-	if global.daytime = "noite"{
-		instance_destroy()
-	}
+	} 
 }
