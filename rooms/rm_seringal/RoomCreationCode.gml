@@ -6,4 +6,3 @@ else{
 	obj_jogador.y = global.transitionY
 }
 
-

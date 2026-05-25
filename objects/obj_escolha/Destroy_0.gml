@@ -15,8 +15,8 @@ switch selectedOption.action{
         
     case "colocarbalde":
 	if scr_buscarItem(1) != noone{
-		scr_removerItem(1, 1);
 		scr_buscarItem(1).animPlay = false
+		scr_removerItem(1, 1);
 	    caller.state = "vazio"
 		audio_play_sound(snd_equipe,3,0)
 		caller.image_xscale = random_range(1.5,2)

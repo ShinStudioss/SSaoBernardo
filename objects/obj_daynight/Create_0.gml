@@ -28,3 +28,4 @@ velocidade_transicao = 0.01
 lutAtual = lutdia;
 lutProxima = lutdia;
 
+castShadows = false
