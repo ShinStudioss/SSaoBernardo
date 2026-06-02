@@ -43,4 +43,7 @@ global.pause = false
 draw_set_font(fnt_hud)
 
 global.inventario = [[3,1],[1,3],[5,1],[0,0]]
+//
+global.tutorial = [[0]]
+//Ordem de global.tutorial: ColetaLatex, 
 
