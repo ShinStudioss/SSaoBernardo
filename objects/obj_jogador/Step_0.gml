@@ -171,7 +171,6 @@ if global.fome <= 0{
 }
 lifeRegenTimer--
 
-
 show_debug_message(lifeRegenTimer)
 // ========================================================================
 
