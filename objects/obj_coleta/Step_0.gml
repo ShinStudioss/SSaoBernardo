@@ -28,13 +28,15 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
 	    case "sembalde":
 	        image_alpha = 0
 			if scr_buscarItem(1) != noone{
-				scr_buscarItem(1).animPlay = false
-				scr_removerItem(1, 1);
-			    state = "vazio"
-				audio_play_sound(snd_equipe,3,0)
-				image_xscale = random_range(1.5,2)
-				image_yscale = random_range(1.5,2)
-				image_angle = random_range(-60,60)
+				if global.itemSelecionado == scr_buscarItem(1).arrayPos{
+					scr_buscarItem(1).animPlay = false
+					scr_removerItem(1, 1);
+				    state = "vazio"
+					audio_play_sound(snd_equipe,3,0)
+					image_xscale = random_range(1.5,2)
+					image_yscale = random_range(1.5,2)
+					image_angle = random_range(-60,60)
+				}
 			}
 			else{
 				criar_dialogo(["Você não tem baldes com você."],0,{})
@@ -45,12 +47,14 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
 	        image_alpha = 1
 	        image_index = 1
 			if scr_buscarItem(3) != noone{
-				scr_buscarItem(3).animPlay = false
-		        state = "corte"
-				alarm[0] = 2
-				image_xscale = random_range(1.5,2)
-				image_yscale = random_range(1.5,2)
-				image_angle = random_range(-60,60)
+				if global.itemSelecionado == scr_buscarItem(3).arrayPos{
+					scr_buscarItem(3).animPlay = false
+			        state = "corte"
+					alarm[0] = 2
+					image_xscale = random_range(1.5,2)
+					image_yscale = random_range(1.5,2)
+					image_angle = random_range(-60,60)
+				}
 			}
 			else{
 				criar_dialogo(["Você precisa de uma faca para cortar a casca."],0,{})

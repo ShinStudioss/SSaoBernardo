@@ -2,7 +2,28 @@ global.minuto += 1;
 
 if (global.minuto >= 60) {
     global.hora += 1;
+	if (scr_buscarItem(5) != noone){
+		if (global.hora >= 18 || global.hora <= 2) and global.combustivelPoronga > 0{
+			global.combustivelPoronga -= global.consumo
+		}
+	}
     global.minuto = 0;
+}
+
+if global.combustivelPoronga = 0{
+	scr_removerItem(5,1)
+	if scr_buscarItem(4) == noone{
+		scr_addItem(4,1)
+	}
+}
+
+if global.combustivelPoronga = 0 and scr_buscarItem(6) != noone{
+	if mouse_check_button_pressed(mb_left) and global.itemSelecionado == scr_buscarItem(6).arrayPos{
+		scr_removerItem(6,1)
+		global.combustivelPoronga += 300
+		scr_removerItem(4,1)
+		scr_addItem(5,1)
+	}
 }
 
 if (global.hora >= 24) {

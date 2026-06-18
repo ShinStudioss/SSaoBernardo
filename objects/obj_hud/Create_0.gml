@@ -9,5 +9,4 @@ repeat(4){
 	instance_create_depth(x,y,depth,obj_inventario,{arrayPos: pos})
 	pos += 1
 }
-global.itemSelecionado = 0
 

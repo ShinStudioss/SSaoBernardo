@@ -53,6 +53,15 @@ function scr_getItem(_id){
                 descricao: "Coloque na cabeça para iluminar. Se esgota com o tempo."
             };
 			break;
+			
+		case 6:
+            return {
+                nome: "Poronga acessa",
+                sprite: spr_item,
+                frame: 5,
+                descricao: "Use para abastecer a poronga. Consumido ápos o uso."
+            };
+			break
     }
 
     return undefined;
