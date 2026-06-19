@@ -257,6 +257,7 @@
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"spr_vazio","path":"sprites/spr_vazio/spr_vazio.yy",},},
     {"id":{"name":"spr_vegetacao","path":"sprites/spr_vegetacao/spr_vegetacao.yy",},},
+    {"id":{"name":"Sprite55","path":"sprites/Sprite55/Sprite55.yy",},},
     {"id":{"name":"tlt_madeira","path":"tilesets/tlt_madeira/tlt_madeira.yy",},},
     {"id":{"name":"tlt_terraPreta","path":"tilesets/tlt_terraPreta/tlt_terraPreta.yy",},},
   ],

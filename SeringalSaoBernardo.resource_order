@@ -183,6 +183,7 @@
     {"name":"spr_tileset","order":2,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"spr_vazio","order":2,"path":"sprites/spr_vazio/spr_vazio.yy",},
     {"name":"spr_vegetacao","order":1,"path":"sprites/spr_vegetacao/spr_vegetacao.yy",},
+    {"name":"Sprite55","order":3,"path":"sprites/Sprite55/Sprite55.yy",},
     {"name":"tlt_madeira","order":1,"path":"tilesets/tlt_madeira/tlt_madeira.yy",},
   ],
 }
