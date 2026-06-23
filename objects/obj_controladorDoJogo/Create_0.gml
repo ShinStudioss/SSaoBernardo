@@ -38,12 +38,14 @@ display_reset(0, true);
 filtro_cor_set(c_white, 0);
 
 global.transitionX = 0
+global.combustivelPoronga = 0
+global.itemSelecionado = 0
 global.transitionY = 0
 global.pause = false
 draw_set_font(fnt_hud)
 
-global.inventario = [[3,1],[1,3],[0,0],[0,0]]
-//
+global.inventario = [[3,1],[1,3],[0,0],[6,1]]
+
 global.tutorial = [[0]]
-//Ordem de global.tutorial: ColetaLatex, 
+
 

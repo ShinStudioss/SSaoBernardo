@@ -3,7 +3,7 @@
 // partes do jogo, e por isso são globais
 inputX = 0
 
-global.maxSpeed = 10
+global.maxSpeed = 7
 global.currentSpeed = 0
 
 alturaMaxPulo = -13

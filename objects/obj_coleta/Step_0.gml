@@ -8,7 +8,13 @@ var dialogo;
 
 switch state{
     case "sembalde":
-        image_alpha = 0
+	if global.itemSelecionado == scr_buscarItem(1).arrayPos and distancia < 70{
+		image_alpha = 0.3 + sin(current_time / 200) * 0.5;
+		image_index = 2
+	}
+	else{
+		image_alpha = 0
+	}
 		
 	break;
 
@@ -31,11 +37,13 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
 				if global.itemSelecionado == scr_buscarItem(1).arrayPos{
 					scr_buscarItem(1).animPlay = false
 					scr_removerItem(1, 1);
-				    state = "vazio"
+					scr_freeze(30)
+					scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaPontoPreto,10,0.03,0.1)
 					audio_play_sound(snd_equipe,3,0)
 					image_xscale = random_range(1.5,2)
 					image_yscale = random_range(1.5,2)
 					image_angle = random_range(-60,60)
+					state = "vazio"
 				}
 			}
 			else{

@@ -14,20 +14,22 @@
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"f81d6584-30f4-485e-8f55-2e1f723c9583","name":"f81d6584-30f4-485e-8f55-2e1f723c9583","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"feccd482-d6f4-439e-9003-2aa749516d4e","name":"feccd482-d6f4-439e-9003-2aa749516d4e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"42332728-1e80-4d44-b1bf-ed58cb73dd7a","name":"42332728-1e80-4d44-b1bf-ed58cb73dd7a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":80,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a371ed83-3980-484d-afd4-4ce3e301238b","blendMode":0,"displayName":"default","isLocked":false,"name":"a371ed83-3980-484d-afd4-4ce3e301238b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6831d32d-e78b-4414-ac8b-46d46e07469c","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"6831d32d-e78b-4414-ac8b-46d46e07469c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a371ed83-3980-484d-afd4-4ce3e301238b","blendMode":0,"displayName":"default","isLocked":false,"name":"a371ed83-3980-484d-afd4-4ce3e301238b","opacity":45.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_baldeDeFilho",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Vegetação",
-    "path":"folders/Sprites/Vegetação.yy",
+    "name":"Itens",
+    "path":"folders/Sprites/Itens.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -50,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -75,6 +77,9 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"feccd482-d6f4-439e-9003-2aa749516d4e","path":"sprites/spr_baldeDeFilho/spr_baldeDeFilho.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6de6cf25-ed63-4684-998a-eed8b41a61fd","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"42332728-1e80-4d44-b1bf-ed58cb73dd7a","path":"sprites/spr_baldeDeFilho/spr_baldeDeFilho.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ca99c9d9-7d96-4596-b4c1-242c05805047","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

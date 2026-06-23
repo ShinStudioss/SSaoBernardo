@@ -30,6 +30,7 @@ else{
         while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)){
             x += sign(moveSpeed)
         }
+		x = round(x);
 		moveSpeed = 0
     }
 
@@ -126,17 +127,18 @@ if particleTimer <= 0{
 
 
 #endregion
-
-#region Correr
+// Correndo =====================================================================
+// Calculo de speedmulti, fome, shift, etc...
+#region
 var fomePerc = clamp(global.fome / global.fomeMax, 0, 1)
 
 fomePerc = power(fomePerc, 1.5)
 
-var walkMin = 0.4
+var walkMin = 0.3
 var walkMax = 1.0
 
-var runMin = 0.6
-var runMax = 1.4
+var runMin = 0.4
+var runMax = 1.6
 
 var walkSpeed = lerp(walkMin, walkMax, fomePerc)
 var runSpeed  = lerp(runMin, runMax, fomePerc)

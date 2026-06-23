@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Personagens",
-    "path":"folders/Sprites/Personagens.yy",
+    "name":"Raimundo",
+    "path":"folders/Sprites/Personagens/Raimundo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

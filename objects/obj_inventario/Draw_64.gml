@@ -26,7 +26,7 @@ selecionadoAntes = selecionado;
 
 itemInfo = scr_getItem(item)
 draw_sprite_ext(itemInfo.sprite,itemInfo.frame,x,y,escala,escala,rotacao,c_white,1)
-if quantidade > 0{
+if quantidade > 1{
 	draw_text(x+16,y+16,"x" + string(quantidade))
 }
 draw_set_halign(fa_left);
@@ -39,3 +39,7 @@ draw_set_valign(fa_center)
 
 escala = lerp(escala,1,0.1)
 effectAlpha = lerp(effectAlpha,0,0.05)
+
+if item = 5{
+	draw_healthbar(x-24,y+32,x+24,y+34,(global.combustivelPoronga/300)*100,c_black,c_red,c_lime,0,1,1)
+}

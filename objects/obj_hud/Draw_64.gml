@@ -8,7 +8,8 @@ if global.pause = false{
 	draw_self()
 
 	draw_set_font(fnt_minor)
-
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top)
 	draw_text(80,room_height-120,"Inventário")
 	draw_set_font(fnt_hud)
 	

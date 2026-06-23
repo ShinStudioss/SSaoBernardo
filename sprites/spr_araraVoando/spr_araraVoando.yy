@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Personagens",
-    "path":"folders/Sprites/Personagens.yy",
+    "name":"Arara",
+    "path":"folders/Sprites/Personagens/Arara.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
