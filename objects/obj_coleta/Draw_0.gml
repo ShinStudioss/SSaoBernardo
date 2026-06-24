@@ -18,3 +18,11 @@ if state = "corte"{
 	}
 	draw_healthbar(x-30,y+20,x+30,y+23,valor,make_colour_rgb(20,20,20),c_white,c_white,0,true,true)
 }
+
+if state = "corte" or state = "cheio"{
+	draw_sprite(spr_leitePingando,dripFrame,x-3,y)
+}
+
+if state = "cheio"{
+	dripFrame = 0
+}

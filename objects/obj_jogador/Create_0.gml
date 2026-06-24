@@ -15,6 +15,7 @@ particleTimer = 0
 speedMulti = 1
 lifeRegenTimer = 120
 lifeRegen = 3
+attackItem = spr_vazio
 
 global.saudeMax = 30
 global.saude = 30
@@ -26,3 +27,5 @@ global.fomeMax = 20
 global.fome = 20
 
 instance_create_depth(56,72,depth,obj_hud)
+
+idleSprite = spr_jogadorParado

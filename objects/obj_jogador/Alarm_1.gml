@@ -1,0 +1,1 @@
+idleSprite = spr_jogadorParado

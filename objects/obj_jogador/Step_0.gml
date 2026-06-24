@@ -7,7 +7,7 @@ keybinds = scr_getBinds()
 // Exemplo: Jogador pressiona DIREITA, que retorna 1 e é subtraído por ESQUERDA, que não está pressionado,
 // retornando 0, a subtração resulta em 1 e é multiplicado pela velocidade
 
-if global.pause = false{
+if global.pause = false and !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
 inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
 }
 
@@ -26,16 +26,21 @@ else{
 // Verifica se há colisões e trava a velocidade nesses casos. A colisão vertical é um pouco mais 
 // elaborada que a condição horizontal devido a gravidade, mas nada demais
 
- if place_meeting(x + moveSpeed, y, obj_colisor){
-        while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)){
-            x += sign(moveSpeed)
-        }
-		x = round(x);
-		moveSpeed = 0
+// Checagem de colisão horizontal
+if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
+    while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)) {
+        x += sign(moveSpeed);
     }
 
-// Movimento definitivo
-x += moveSpeed * speedMulti
+    while (place_meeting(x, y, obj_colisor)) {
+        x -= sign(moveSpeed);
+    }
+
+    moveSpeed = 0;
+}
+
+// Movimento final
+x += moveSpeed * speedMulti;
 
 #endregion
 	
@@ -46,9 +51,11 @@ x += moveSpeed * speedMulti
 // Tem umas frescurinha tipo o coyote time e a multiplicação da velocidade de queda, junto com
 // aquela mecanica que o pulo é mais alto conforme você segura o botão
 
-if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false{
-	jumpSpeed = alturaMaxPulo
-    coyoteTime = 0    
+if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
+	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
+		jumpSpeed = alturaMaxPulo
+	    coyoteTime = 0
+	}
 }
 
 if place_meeting(x, y+1, obj_colisor){
@@ -70,7 +77,7 @@ if jumpSpeed = 0{
 		sprite_index = spr_jogadorAndando
 	}
 	else{
-		sprite_index = spr_jogadorParado
+		sprite_index = idleSprite
 	}
 }
 else{
@@ -172,18 +179,3 @@ if global.fome <= 0{
 	global.saude -= 0.01
 }
 lifeRegenTimer--
-
-show_debug_message(lifeRegenTimer)
-// ========================================================================
-
-if keyboard_check(ord("N")){
-	global.fome -= 1
-}
-
-if keyboard_check(ord("M")){
-	global.fome += 1
-}
-
-if keyboard_check_pressed(ord("B")){
-	global.saude -= 2
-}
