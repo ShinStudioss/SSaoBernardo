@@ -29,3 +29,5 @@ lutAtual = lutdia;
 lutProxima = lutdia;
 
 castShadows = false
+
+autoactivate = true

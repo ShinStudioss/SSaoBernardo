@@ -1,23 +1,40 @@
 global.minuto += 1;
 
-// Desligar poronga
+// Desligar poronga 
+
 if (scr_buscarItem(5) != noone) {
+									
     if (global.itemSelecionado == scr_buscarItem(5).arrayPos) {
         if (mouse_check_button_pressed(mb_left)) {
             scr_removerItem(5, 1);
             scr_addItem(4, 1);
         }
     }
+	
+	if (global.hora >= 6 && global.hora <= 17) and autoactivate == false{
+		scr_removerItem(5,1);
+		scr_addItem(4,1);
+		autoactivate = true
+	}
+	
 }
 
-// Ligar poronga (qualquer horário)
+// Ligar poronga 
 else if (scr_buscarItem(4) != noone) {
-    if (global.itemSelecionado == scr_buscarItem(4).arrayPos) {
+	
+    if (global.itemSelecionado == scr_buscarItem(4).arrayPos)  {
         if (mouse_check_button_pressed(mb_left) && global.combustivelPoronga > 0) {
             scr_removerItem(4, 1);
             scr_addItem(5, 1);
         }
     }
+	
+	if (global.hora >= 18 or global.hora <= 5) and (global.combustivelPoronga > 0) and autoactivate == true{
+		scr_removerItem(4,1);
+		scr_addItem(5,1);
+		autoactivate = false
+	}
+	
 }
 
 if (global.minuto >= 60) {
@@ -45,7 +62,7 @@ if (global.combustivelPoronga <= 0 && scr_buscarItem(6) != noone) {
         scr_removerItem(6, 1);
         global.combustivelPoronga = 300;
 
-        if (scr_buscarItem(4) != noone) {
+        if (scr_buscarItem(4) != noone) and (global.hora >= 18 or global.hora <= 5) {
             scr_removerItem(4, 1);
             scr_addItem(5, 1);
         }
