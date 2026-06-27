@@ -44,3 +44,15 @@ effectAlpha = lerp(effectAlpha,0,0.05)
 if item = 5{
 	draw_healthbar(x-24,y+32,x+24,y+34,(global.combustivelPoronga/300)*100,c_black,c_red,c_lime,0,1,1)
 }
+
+if point_in_rectangle(
+    device_mouse_x_to_gui(0),
+    device_mouse_y_to_gui(0),
+    x - sprite_width/2,
+    y + sprite_height/2,
+    x + sprite_width/2,
+    y - sprite_height/2
+)
+{
+    obj_cursor.display_text = scr_getItem(item).descricao;
+}

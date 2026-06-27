@@ -172,6 +172,7 @@ function scr_getItem(_id){
 		    break;
 
 		    return undefined;
+	}
 		}
 
 function scr_buscarItem(_idItem){

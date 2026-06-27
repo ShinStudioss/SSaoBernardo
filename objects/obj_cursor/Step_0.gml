@@ -9,8 +9,13 @@ x = mx_room
 y = my_room
 
 if display_text != ""{
-	alpha = lerp(alpha,1,0.2)
+	alpha = lerp(alpha,1,0.1)
 }
 else{
-	alpha = lerp(alpha,0,0.2)
+	alpha = lerp(alpha,0,0.1)
+}
+
+if mouse_check_button(mb_right){
+    var item_id = global.inventario[global.itemSelecionado][0];
+    display_text = scr_getItem(item_id).descricao;
 }
