@@ -1,4 +1,4 @@
-
+if instance_exists(obj_dialogBox) exit
 
 if global.pause = false{
 	draw_healthbar(60,45,480,75,(disp_saude/global.saudeMax) * 100,make_color_rgb(31, 7, 6),make_color_rgb(51, 22, 3),make_color_rgb(130, 35, 31),0,1,0)

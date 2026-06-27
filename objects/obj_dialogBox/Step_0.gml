@@ -18,7 +18,7 @@ if (newCharIndex > oldCharIndex)
 	audio_play_sound(voz, 1, false,,,random_range(0.9,1.4));
 }
 
-if keyboard_check_pressed(keybinds.jump) and !instance_exists(obj_escolha){
+if keyboard_check_pressed(keybinds.jump) or mouse_check_button_pressed(mb_left) and !instance_exists(obj_escolha){
 	if (charIndex < string_length(currentText)) {
 		charIndex = string_length(currentText);
 	}

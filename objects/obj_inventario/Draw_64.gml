@@ -1,3 +1,4 @@
+if instance_exists(obj_dialogBox) exit
 draw_sprite_ext(spr_inventario,2,x,y,1,1,0,c_white,effectAlpha)
 
 draw_self()

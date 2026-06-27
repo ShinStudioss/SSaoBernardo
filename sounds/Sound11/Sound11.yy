@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_damage",
+  "%Name":"Sound11",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":3.2391837,
   "exportDir":"",
-  "name":"snd_damage",
+  "name":"Sound11",
   "parent":{
     "name":"Sons",
     "path":"folders/Sons.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_damage.mp3",
+  "soundFile":"Sound11.mp3",
   "volume":1.0,
 }

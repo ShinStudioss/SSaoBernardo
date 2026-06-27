@@ -20,7 +20,7 @@ if state = "corte"{
 }
 
 if state = "corte" or state = "cheio"{
-	draw_sprite(spr_leitePingando,dripFrame,x-3,y)
+	draw_sprite(spr_corteArvore_1,dripFrame,x-3,y)
 }
 
 if state = "cheio"{
