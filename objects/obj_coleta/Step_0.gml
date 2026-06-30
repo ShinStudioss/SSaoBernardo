@@ -13,13 +13,18 @@ var dialogoSeringueira = [
 
 switch state{
     case "sembalde":
-        if global.itemSelecionado == scr_buscarItem(1).arrayPos and distancia < 70{
-            image_alpha = 0.3 + sin(current_time / 200) * 0.5;
-            image_index = 2
-        }
-        else{
-            image_alpha = 0
-        }
+		if scr_buscarItem(1) != noone{
+	        if global.itemSelecionado == scr_buscarItem(1).arrayPos and distancia < 70{
+	            image_alpha = 0.3 + sin(current_time / 200) * 0.5;
+	            image_index = 2
+	        }
+	        else{
+	            image_alpha = 0
+	        }
+		}
+		else{
+	            image_alpha = 0
+	    }
     break;
 
     case "vazio":
