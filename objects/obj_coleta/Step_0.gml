@@ -55,7 +55,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
 
                     audio_play_sound(snd_equipe,3,0,0.3,,random_range(1.1,1.4))
                     audio_play_sound(snd_equipe,3,0,0.3,,random_range(0.7,0.9))
-                    audio_play_sound(Sound11,3,0,1,,0.8)
+                    audio_play_sound(snd_porongaApagando,3,0,1,,0.8)
 
                     image_xscale = random_range(1.5,2)
                     image_yscale = random_range(1.5,2)

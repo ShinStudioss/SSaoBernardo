@@ -14,16 +14,16 @@ function scr_getItem(_id){
 		        nome: "Balde vazio",
 		        sprite: spr_item,
 		        frame: 0,
-		        descricao: "Balde de coleta utilizado para armazenar o látex extraído das seringueiras."
+		        descricao: "Balde de coleta utilizado para armazenar\no látex extraído das seringueiras."
 		    };
 		    break;
 
 		case 2:
 		    return {
-		        nome: "Balde de látex",
+		        nome: "Látex",
 		        sprite: spr_item,
 		        frame: 1,
-		        descricao: "Balde cheio de látex fresco, pronto para ser processado."
+		        descricao: "Látex fresco, pronto para ser processado."
 		    };
 		    break;
 
@@ -32,7 +32,7 @@ function scr_getItem(_id){
 		        nome: "Faca de sangria",
 		        sprite: spr_item,
 		        frame: 2,
-		        descricao: "Ferramenta afiada usada para realizar a sangria das seringueiras e extrair seu látex."
+		        descricao: "Ferramenta afiada usada para realizar\na sangria das seringueiras e extrair seu látex."
 		    };
 		    break;
 
@@ -41,7 +41,7 @@ function scr_getItem(_id){
 		        nome: "Poronga",
 		        sprite: spr_item,
 		        frame: 3,
-		        descricao: "Lamparina tradicional dos seringueiros. Precisa de combustível para funcionar."
+		        descricao: "Lamparina tradicional dos seringueiros.\nPrecisa de combustível para funcionar."
 		    };
 		    break;
 
@@ -50,7 +50,7 @@ function scr_getItem(_id){
 		        nome: "Poronga acesa",
 		        sprite: spr_item,
 		        frame: 4,
-		        descricao: "Poronga abastecida e acesa. Ilumina a mata durante a noite, mas o combustível se esgota com o tempo."
+		        descricao: "Poronga abastecida e acesa, Ilumina a mata\ndurante a noite, mas o combustível se esgota com o tempo."
 		    };
 		    break;
 
@@ -59,7 +59,7 @@ function scr_getItem(_id){
 		        nome: "Querosene",
 		        sprite: spr_item,
 		        frame: 5,
-		        descricao: "Recipiente com combustível para abastecer uma poronga. Consumido após o uso."
+		        descricao: "Recipiente com combustível para abastecer uma poronga.\nConsumido após o uso."
 		    };
 		    break;
 
@@ -68,7 +68,7 @@ function scr_getItem(_id){
 		        nome: "Bola de Borracha",
 		        sprite: spr_item,
 		        frame: 6,
-		        descricao: "Bola de borracha produzida a partir do látex. Possui valor de troca no barracão."
+		        descricao: "Bola de borracha produzida a partir do látex.\nPossui valor de troca no barracão."
 		    };
 		    break;
 
@@ -77,7 +77,7 @@ function scr_getItem(_id){
 		        nome: "Terçado",
 		        sprite: spr_item,
 		        frame: 7,
-		        descricao: "Terçado robusto usado tanto para abrir caminho na mata quanto para combate. Causa dano médio."
+		        descricao: "Terçado robusto usado tanto para abrir caminho na\nmata quanto para combate. Causa dano médio."
 		    };
 		    break;
 
@@ -86,7 +86,7 @@ function scr_getItem(_id){
 		        nome: "Facão",
 		        sprite: spr_item,
 		        frame: 8,
-		        descricao: "Facão afiado e resistente. Uma ferramenta versátil que também serve como arma. Causa dano médio."
+		        descricao: "Facão afiado e resistente. Uma ferramenta versátil\nque também serve como arma. Causa dano médio."
 		    };
 		    break;
 
@@ -95,7 +95,7 @@ function scr_getItem(_id){
 		        nome: "Machadinha",
 		        sprite: spr_item,
 		        frame: 9,
-		        descricao: "Machadinha leve utilizada para cortar madeira. Pode ser usada em combate. Causa dano médio."
+		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser usada em combate. Causa dano médio."
 		    };
 		    break;
 
@@ -104,7 +104,7 @@ function scr_getItem(_id){
 		        nome: "Galho",
 		        sprite: spr_item,
 		        frame: 10,
-		        descricao: "Galho improvisado encontrado na mata. Causa pouco dano e pode quebrar durante o uso."
+		        descricao: "Galho improvisado encontrado na mata.\nCausa pouco dano e pode quebrar durante o uso."
 		    };
 		    break;
 
@@ -113,16 +113,16 @@ function scr_getItem(_id){
 		        nome: "Terço",
 		        sprite: spr_item,
 		        frame: 11,
-		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder uma intervenção divina inesperada. Consumível."
+		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder\numa intervenção divina inesperada. Consumível."
 		    };
 		    break;
 
 		case 13:
 		    return {
-		        nome: "Feijoada",
+		        nome: "Feijão",
 		        sprite: spr_item,
 		        frame: 12,
-		        descricao: "Prato tradicional e bastante nutritivo. Reduz significativamente a fome. Consumível."
+		        descricao: "Prato tradicional e bastante nutritivo.\nReduz significativamente a fome. Consumível."
 		    };
 		    break;
 
@@ -131,7 +131,7 @@ function scr_getItem(_id){
 		        nome: "Carne seca",
 		        sprite: spr_item,
 		        frame: 13,
-		        descricao: "Carne salgada e seca, ideal para longas jornadas na floresta. Reduz a fome. Consumível."
+		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome. Consumível."
 		    };
 		    break;
 
@@ -140,7 +140,7 @@ function scr_getItem(_id){
 		        nome: "Farinha",
 		        sprite: spr_item,
 		        frame: 14,
-		        descricao: "Farinha de mandioca, alimento básico dos seringueiros. Reduz a fome. Consumível."
+		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz a fome. Consumível."
 		    };
 		    break;
 
@@ -149,7 +149,7 @@ function scr_getItem(_id){
 		        nome: "Mel",
 		        sprite: spr_item,
 		        frame: 15,
-		        descricao: "Mel silvestre coletado na floresta. Fonte rápida de energia e alimento. Consumível."
+		        descricao: "Mel silvestre coletado na floresta.\nReduz muito a fome e recupera um pouco da saúde. Consumível."
 		    };
 		    break;
 
@@ -158,7 +158,7 @@ function scr_getItem(_id){
 		        nome: "Espingarda",
 		        sprite: spr_item,
 		        frame: 16,
-		        descricao: "Espingarda de curto alcance, eficaz para caça e defesa pessoal."
+		        descricao: "Espingarda de curto alcance, eficaz para\ncaça e defesa pessoal. Requer munição."
 		    };
 		    break;
 
@@ -167,7 +167,7 @@ function scr_getItem(_id){
 		        nome: "Carabina",
 		        sprite: spr_item,
 		        frame: 17,
-		        descricao: "Carabina precisa e potente, capaz de atingir alvos a grandes distâncias."
+		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias."
 		    };
 		    break;
 

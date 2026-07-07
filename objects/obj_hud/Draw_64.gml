@@ -24,4 +24,8 @@ if global.pause = false{
 		"Fome: "   + string(round(clamp(global.fome,    0, global.fomeMax)))    + "/" + string(round(global.fomeMax))
 	);
 	}
+	
+	if keyboard_check(vk_control){
+		draw_text(50,300,fps)
+	}
 }

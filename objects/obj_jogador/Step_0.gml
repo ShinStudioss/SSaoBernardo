@@ -7,10 +7,15 @@ keybinds = scr_getBinds()
 // Exemplo: Jogador pressiona DIREITA, que retorna 1 e é subtraído por ESQUERDA, que não está pressionado,
 // retornando 0, a subtração resulta em 1 e é multiplicado pela velocidade
 
-if global.pause = false and !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
-inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
+if global.pause = false {
+	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem){
+		inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
+	}
+	else{
+		inputX = 0
+		global.currentSpeed = 0
+	}
 }
-
 
 if inputX != 0{
 	image_xscale = inputX
@@ -40,7 +45,9 @@ if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
 }
 
 // Movimento final
-x += moveSpeed * speedMulti;
+if sprite_index != spr_jogadorAtacando{
+	x += moveSpeed * speedMulti;
+}
 
 #endregion
 	
@@ -72,24 +79,29 @@ if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
 }
 
 // Sprite machine
-if jumpSpeed = 0{
-	if inputX != 0{
-		sprite_index = spr_jogadorAndando
-	}
-	else{
-		sprite_index = idleSprite
-	}
-}
-else{
-	sprite_index = spr_jogadorPulando
-	if sign(jumpSpeed) = 1{
-		image_index = clamp(image_index,3,4)
-	}
-	else{
-		image_index = clamp(image_index,0,2)
-	}
-}
+if sprite_index != spr_jogadorAtacando{
+	if jumpSpeed = 0{
+		if inputX != 0{
+			idleSprite = spr_jogadorParado
+			sprite_index = spr_jogadorAndando
+		}
+		else{
+			sprite_index = idleSprite
+		}
 
+	}
+	else{
+		sprite_index = spr_jogadorPulando
+		if sign(jumpSpeed) = 1{
+			image_index = clamp(image_index,3,4)
+		}
+		else{
+			image_index = clamp(image_index,0,2)
+		}
+	}
+}else{
+	image_speed = 1
+}
 
 // Colisão vertical (ajustada com partículas)
 if place_meeting(x, y + jumpSpeed, obj_colisor){
@@ -150,7 +162,7 @@ var runMax = 1.6
 var walkSpeed = lerp(walkMin, walkMax, fomePerc)
 var runSpeed  = lerp(runMin, runMax, fomePerc)
 
-if keyboard_check(keybinds.run) and global.energia > 0{
+if keyboard_check(keybinds.run) and global.energia > 0 and inputX != 0 and sprite_index != spr_jogadorAtacando{
 	speedMulti = runSpeed
 	image_speed = lerp(1, 1.67, fomePerc)
 	global.energia -= 0.15 * (1 - fomePerc * 0.5) 
