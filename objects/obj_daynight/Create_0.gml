@@ -13,7 +13,7 @@ intensidade = 1;
 
 intensidade_overlay = 0
 
-global.hora = 20
+global.hora = 7
 global.minuto = 0
 
 lutId = lutmadrugada;
