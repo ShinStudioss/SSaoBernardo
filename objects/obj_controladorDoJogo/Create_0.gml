@@ -38,13 +38,32 @@ display_reset(0, true);
 filtro_cor_set(c_white, 0);
 
 global.transitionX = 0
-global.combustivelPoronga = 300
+global.combustivelPoronga = 0
 global.itemSelecionado = 0
 global.transitionY = 0
 global.pause = false
 draw_set_font(fnt_hud)
 
-global.inventario = [[8,1],[9,1],[3,1],[5,1]]
+global.inventario = [[8,1],[3,1],[13,1],[0,0]]
+// ID dos itens do jogo
+// 1 - Balde
+// 2 - Látex
+// 3 - Faca de sangria
+// 4 - Poronga
+// 5 - Poronga acesa
+// 6 - Querosene
+// 7 - Bola de borracha
+// 8 - Terçado
+// 9 - Facão
+// 10 - Machadinha
+// 11 - Galho
+// 12 - Terço
+// 13 - Feijão
+// 14 - Carne seca
+// 15 - Farinha
+// 16 - Mel
+// 17 - Espingarda
+// 18 - Carabina
 
 global.tutorial = [[0]]
 
