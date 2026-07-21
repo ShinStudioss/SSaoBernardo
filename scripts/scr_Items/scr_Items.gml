@@ -122,7 +122,7 @@ function scr_getItem(_id){
 		        nome: "Feijão",
 		        sprite: spr_item,
 		        frame: 12,
-		        descricao: "Prato tradicional e bastante nutritivo.\nReduz significativamente a fome. Consumível."
+		        descricao: "Prato tradicional e bastante nutritivo.\nReduz a fome. Consumível."
 		    };
 		    break;
 
@@ -131,7 +131,7 @@ function scr_getItem(_id){
 		        nome: "Carne seca",
 		        sprite: spr_item,
 		        frame: 13,
-		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome. Consumível."
+		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome significativamente. Consumível."
 		    };
 		    break;
 
@@ -140,7 +140,7 @@ function scr_getItem(_id){
 		        nome: "Farinha",
 		        sprite: spr_item,
 		        frame: 14,
-		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz a fome. Consumível."
+		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz um pouco a fome. Consumível."
 		    };
 		    break;
 
@@ -149,7 +149,7 @@ function scr_getItem(_id){
 		        nome: "Mel",
 		        sprite: spr_item,
 		        frame: 15,
-		        descricao: "Mel silvestre coletado na floresta.\nReduz muito a fome e recupera um pouco da saúde. Consumível."
+		        descricao: "Mel silvestre coletado na floresta.\nRecupera totalmente sua energia. Consumível."
 		    };
 		    break;
 

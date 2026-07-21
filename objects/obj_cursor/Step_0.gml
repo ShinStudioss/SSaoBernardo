@@ -115,8 +115,59 @@ if mouse_check_button_pressed(mb_left){
 				if global.fome < global.fomeMax{
 					scr_removerItem(13,1)
 					global.fome += 5
-					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,6,spr_particulaLatex,10,0.05,0.2)
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaFeijao,5,0.05,0.1)
+					alarm[2] = 55
 				}
+				else{
+					scr_Emote(spr_jogadorNao)
+					criar_dialogo(["Você não está com fome agora."],0,{})
+				}
+			break;
+			
+			case "Carne seca":
+				if global.fome < global.fomeMax{
+					scr_removerItem(14,1)
+					global.fome += 8
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaCarne,5,0.05,0.1)
+					alarm[2] = 55
+				}
+				else{
+					scr_Emote(spr_jogadorNao)
+					criar_dialogo(["Você não está com fome agora."],0,{})
+				}
+			break;
+			
+			case "Farinha":
+				if global.fome < global.fomeMax{
+					scr_removerItem(15,1)
+					global.fome += 3
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaFarinha,5,0.05,0.1)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaNuvem,3,0.025,0.05)
+					alarm[2] = 55
+				}
+				else{
+					scr_Emote(spr_jogadorNao)
+					criar_dialogo(["Você não está com fome agora."],0,{})
+				}
+			break;
+			
+			case "Mel":
+					scr_removerItem(16,1)
+					global.energia = global.energiaMax
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaMel,5,0.05,0.1)
+					alarm[2] = 55
 			break;
 		}
 	}
