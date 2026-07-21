@@ -44,7 +44,7 @@ global.transitionY = 0
 global.pause = false
 draw_set_font(fnt_hud)
 
-global.inventario = [[13,10],[14,10],[15,10],[16,10]]
+global.inventario = [[13,5],[14,5],[15,5],[16,5]]
 // ID dos itens do jogo
 // 1 - Balde
 // 2 - Látex

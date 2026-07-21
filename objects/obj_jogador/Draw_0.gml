@@ -1,5 +1,11 @@
 if sprite_index != spr_jogadorAtacando{
-	draw_self()
+	var _cor = make_color_rgb(effectColor[0],effectColor[1],effectColor[2])
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,_cor,image_alpha)
+}
+if obj_cursor.alarm[2] < 19{
+	effectColor[0] = lerp(effectColor[0],255,0.05)
+	effectColor[1] = lerp(effectColor[1],255,0.05)
+	effectColor[2] = lerp(effectColor[2],255,0.05)
 }
 if (scr_buscarItem(5) != noone)
 {

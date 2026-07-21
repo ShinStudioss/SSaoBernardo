@@ -27,7 +27,7 @@ global.energiaMax = 20
 global.energia = 20
 
 global.fomeMax = 20
-global.fome = 16
+global.fome = 0
 
 global.forca = 5
 
@@ -37,3 +37,5 @@ idleSprite = spr_jogadorParado
 
 itemX = 0
 itemY = 0
+
+effectColor = [255,255,255]

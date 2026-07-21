@@ -19,6 +19,7 @@
   "height":512,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"a48a21c0-3810-43ce-9a74-4af812dd946e","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"a48a21c0-3810-43ce-9a74-4af812dd946e","opacity":35.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"08fea677-23c7-4bb0-bf02-2644089ab7c0","blendMode":0,"displayName":"default","isLocked":false,"name":"08fea677-23c7-4bb0-bf02-2644089ab7c0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"lut_madrugada",
