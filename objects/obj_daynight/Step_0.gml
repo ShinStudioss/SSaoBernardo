@@ -108,7 +108,7 @@ if (global.hora >= 6 && global.hora <= 15) {
         image_yscale = 1;
     }
 }
-else if (global.hora >= 16 && global.hora <= 17) {
+else if (global.hora >= 14 && global.hora <= 18) {
 
     lutId_alvo = lutentardecer;
     image_alpha = lerp(image_alpha, 0.3, 0.01);
@@ -127,7 +127,7 @@ else if (global.hora >= 16 && global.hora <= 17) {
     image_xscale = 1;
     image_yscale = 1;
 }
-else if (global.hora >= 18 || global.hora <= 5) {
+else if (global.hora >= 19 || global.hora <= 5) {
 
     lutId_alvo = lutnoite;
     image_alpha = lerp(image_alpha, 1, 0.01);

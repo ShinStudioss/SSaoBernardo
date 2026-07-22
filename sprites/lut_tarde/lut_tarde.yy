@@ -19,6 +19,7 @@
   "height":512,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"b64d5946-3d45-468d-8914-291fd6548bd7","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"b64d5946-3d45-468d-8914-291fd6548bd7","opacity":34.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"5e748248-a04c-4f98-8fe6-fe18deaede5b","blendMode":0,"displayName":"default","isLocked":false,"name":"5e748248-a04c-4f98-8fe6-fe18deaede5b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"lut_tarde",
