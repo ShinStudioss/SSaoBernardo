@@ -60,6 +60,7 @@ if sprite_index != spr_jogadorAtacando{
 
 if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
 	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
+		pulando = true
 		jumpSpeed = alturaMaxPulo
 	    coyoteTime = 0
 	}
@@ -81,6 +82,7 @@ if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
 // Sprite machine
 if sprite_index != spr_jogadorAtacando{
 	if jumpSpeed = 0{
+		pulando = false
 		if inputX != 0{
 			idleSprite = spr_jogadorParado
 			sprite_index = spr_jogadorAndando

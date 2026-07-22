@@ -19,6 +19,7 @@ damageMulti = 1
 lifeRegenTimer = 120
 lifeRegen = 3
 attackItem = spr_vazio
+effectColor = [255,255,255]
 
 global.saudeMax = 30
 global.saude = 30
@@ -39,3 +40,4 @@ itemX = 0
 itemY = 0
 
 _verificador = noone
+pulando = false

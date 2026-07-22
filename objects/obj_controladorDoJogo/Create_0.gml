@@ -45,7 +45,7 @@ global.pause = false
 draw_set_font(fnt_hud)
 
 
-global.inventario = [[1,3],[13,10],[14,1],[9,1]]
+global.inventario = [[1,3],[3,1],[9,1],[8,1]]
 
 
 // ID dos itens do jogo
@@ -69,6 +69,7 @@ global.inventario = [[1,3],[13,10],[14,1],[9,1]]
 // 18 - Carabina
 
 global.tutorial = [[0]]
+
 
 
 

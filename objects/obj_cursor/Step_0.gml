@@ -26,6 +26,10 @@ if mouse_check_button(mb_right){
 #region Uso dos itens
 var _item = scr_getItem(global.inventario[global.itemSelecionado][0])
 
+if obj_jogador.pulando == false{
+	ataque_ar = true
+}
+
 if mouse_check_button_pressed(mb_left){
 	if _item.nome != "" and !instance_exists(obj_dialogBox){
 		switch _item.nome{
@@ -41,12 +45,19 @@ if mouse_check_button_pressed(mb_left){
 				obj_jogador.attackItem = spr_facaDeSangria
 				obj_jogador.damageMulti = 0.8
 					
-				if obj_jogador.sprite_index != spr_jogadorAtacando{
+				if obj_jogador.sprite_index != spr_jogadorAtacando and obj_jogador.pulando != true{
 					obj_jogador.image_index = 0
 					scr_Emote(spr_jogadorAtacando)
 					audio_stop_sound(snd_espada1)
 					audio_play_sound(snd_espada1,3,0,,,random_range(0.9,1.2))
 					obj_jogador.x += 5 * obj_jogador.image_xscale
+				}
+				if obj_jogador.sprite_index != spr_jogadorAtacando and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada1)
+					audio_play_sound(snd_espada1,3,0,,,random_range(0.9,1.2))
+					ataque_ar = false
 				}
 			break;
 			
@@ -83,7 +94,7 @@ if mouse_check_button_pressed(mb_left){
 				obj_jogador.attackItem = spr_tercado
 				obj_jogador.damageMulti = 1.1
 					
-				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0{
+				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true{
 					obj_jogador.image_index = 0
 					scr_Emote(spr_jogadorAtacando)
 					audio_stop_sound(snd_espada3)
@@ -93,6 +104,17 @@ if mouse_check_button_pressed(mb_left){
 					obj_jogador.x += 10 * obj_jogador.image_xscale
 					alarm[1] = 5
 				}
+				
+				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada3)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,0.9)
+					audio_play_sound(snd_espada3,3,0,,,random_range(0.9,1.2))
+					alarm[1] = 5
+					ataque_ar = false
+				}
 			break;
 			
 			case "Facão":
@@ -100,7 +122,7 @@ if mouse_check_button_pressed(mb_left){
 					obj_jogador.attackItem = spr_facao
 					obj_jogador.damageMulti = 1.4
 
-					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 {
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true {
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorAtacando)
 						audio_stop_sound(snd_espada2)
@@ -110,6 +132,17 @@ if mouse_check_button_pressed(mb_left){
 						obj_jogador.x += 15 * obj_jogador.image_xscale
 						alarm[1] = 10
 					}
+					
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada2)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,0.8)
+					audio_play_sound(snd_espada2,3,0,,,random_range(0.8,1.1))
+					alarm[1] = 5
+					ataque_ar = false
+				}
 				}
 			break;
 			
