@@ -45,7 +45,7 @@ global.pause = false
 draw_set_font(fnt_hud)
 
 
-global.inventario = [[10,1],[0,0],[0,0],[0,0]]
+global.inventario = [[13,10],[11,1],[12,1],[0,0]]
 
 
 // ID dos itens do jogo

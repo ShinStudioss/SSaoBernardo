@@ -22,13 +22,13 @@ attackItem = spr_vazio
 effectColor = [255,255,255]
 
 global.saudeMax = 30
-global.saude = 30
+global.saude = 5
 
 global.energiaMax = 20
 global.energia = 20
 
 global.fomeMax = 20
-global.fome = 20
+global.fome = 16
 
 global.forca = 5
 

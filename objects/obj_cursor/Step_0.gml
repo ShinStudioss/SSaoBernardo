@@ -93,7 +93,7 @@ if mouse_check_button_pressed(mb_left){
 			case "Terçado":
 			if !instance_exists(obj_machadinha){
 				obj_jogador.attackItem = spr_tercado
-				obj_jogador.damageMulti = 1.2
+				obj_jogador.damageMulti = 1.4
 					
 				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true{
 					obj_jogador.image_index = 0
@@ -122,7 +122,7 @@ if mouse_check_button_pressed(mb_left){
 			case "Facão":
 				if !instance_exists(obj_machadinha){
 					obj_jogador.attackItem = spr_facao
-					obj_jogador.damageMulti = 1.4
+					obj_jogador.damageMulti = 1.6
 
 					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true {
 						obj_jogador.image_index = 0
@@ -151,7 +151,7 @@ if mouse_check_button_pressed(mb_left){
 			case "Machadinha":
 				if !instance_exists(obj_machadinha){
 					obj_jogador.attackItem = spr_jogadorAtacando
-					obj_jogador.damageMulti = 1.1
+					obj_jogador.damageMulti = 1.2
 					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorAtacando)
@@ -165,9 +165,36 @@ if mouse_check_button_pressed(mb_left){
 			break;
 			
 			case "Galho":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_galho
+					obj_jogador.damageMulti = 1.1
+
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true {
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorAtacando)				
+						audio_stop_sound(snd_porongaApagando)
+						audio_play_sound(snd_porongaApagando,5,0,,,2.5)
+						obj_jogador.x += 15 * obj_jogador.image_xscale
+						alarm[1] = 10
+					}
+					
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,2.5)
+					alarm[1] = 5
+					ataque_ar = false
+				}
+				}
 			break;
 			
 			case "Terço":
+				if global.saude < global.saudeMax {
+				scr_removerItem(12,1)
+				scr_Emote(spr_jogadorRezando)
+				global.saude = global.saudeMax
+				}
 			break;
 			
 			case "Feijão":

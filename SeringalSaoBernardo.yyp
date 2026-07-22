@@ -269,6 +269,7 @@
     {"id":{"name":"spr_jogadorNao","path":"sprites/spr_jogadorNao/spr_jogadorNao.yy",},},
     {"id":{"name":"spr_jogadorParado","path":"sprites/spr_jogadorParado/spr_jogadorParado.yy",},},
     {"id":{"name":"spr_jogadorPulando","path":"sprites/spr_jogadorPulando/spr_jogadorPulando.yy",},},
+    {"id":{"name":"spr_jogadorRezando","path":"sprites/spr_jogadorRezando/spr_jogadorRezando.yy",},},
     {"id":{"name":"spr_jogadorSim","path":"sprites/spr_jogadorSim/spr_jogadorSim.yy",},},
     {"id":{"name":"spr_jogadorTiro","path":"sprites/spr_jogadorTiro/spr_jogadorTiro.yy",},},
     {"id":{"name":"spr_noite","path":"sprites/spr_noite/spr_noite.yy",},},

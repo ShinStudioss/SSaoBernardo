@@ -197,6 +197,7 @@
     {"name":"spr_jogadorNao","order":3,"path":"sprites/spr_jogadorNao/spr_jogadorNao.yy",},
     {"name":"spr_jogadorParado","order":4,"path":"sprites/spr_jogadorParado/spr_jogadorParado.yy",},
     {"name":"spr_jogadorPulando","order":5,"path":"sprites/spr_jogadorPulando/spr_jogadorPulando.yy",},
+    {"name":"spr_jogadorRezando","order":8,"path":"sprites/spr_jogadorRezando/spr_jogadorRezando.yy",},
     {"name":"spr_jogadorSim","order":6,"path":"sprites/spr_jogadorSim/spr_jogadorSim.yy",},
     {"name":"spr_jogadorTiro","order":7,"path":"sprites/spr_jogadorTiro/spr_jogadorTiro.yy",},
     {"name":"spr_noite","order":1,"path":"sprites/spr_noite/spr_noite.yy",},
