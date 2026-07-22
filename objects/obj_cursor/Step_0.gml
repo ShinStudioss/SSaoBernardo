@@ -27,7 +27,7 @@ if mouse_check_button(mb_right){
 var _item = scr_getItem(global.inventario[global.itemSelecionado][0])
 
 if mouse_check_button_pressed(mb_left){
-	if _item.nome != ""{
+	if _item.nome != "" and !instance_exists(obj_dialogBox){
 		switch _item.nome{
 			case "Balde vazio":
 				scr_Emote(spr_jogadorItem)
@@ -62,11 +62,13 @@ if mouse_check_button_pressed(mb_left){
 			break;
 			
 			case "Poronga acesa":
+				scr_Emote(spr_jogadorItem)
 				audio_play_sound(snd_porongaApagando,4,0)
 			break;
 			
 			case "Querosene":
 				audio_play_sound(snd_porongaAcendendo,4,0)
+				scr_Emote(spr_jogadorItem)
 				obj_jogador.porongaScale = 2
 				scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaBrilho,13+random_range(-2,2),0.05,0.3)
 				scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaFogo,13+random_range(-2,2),0.05,0.3)
@@ -112,9 +114,9 @@ if mouse_check_button_pressed(mb_left){
 			break;
 			
 			case "Feijão":
-				if global.fome < global.fomeMax{
+				if global.fome < global.fomeMax {
 					scr_removerItem(13,1)
-					global.fome += 5
+					//global.fome += 5
 					audio_stop_sound(snd_comer)
 					audio_play_sound(snd_comer,10,0)
 					scr_Emote(spr_jogadorItem)
@@ -122,8 +124,10 @@ if mouse_check_button_pressed(mb_left){
 					alarm[2] = 55
 				}
 				else{
-					scr_Emote(spr_jogadorNao)
-					criar_dialogo(["Você não está com fome agora."],0,{})
+					if obj_jogador.sprite_index != spr_jogadorPulando{
+						scr_Emote(spr_jogadorNao)
+						criar_dialogo(["Você não está com fome agora."],0,{})
+					}
 				}
 			break;
 			

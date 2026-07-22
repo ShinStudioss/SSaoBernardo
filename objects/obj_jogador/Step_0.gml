@@ -117,12 +117,16 @@ if place_meeting(x, y + jumpSpeed, obj_colisor){
     jumpSpeed = 0
 }
 
+// Pausa no ar durante o ataque
+if (sprite_index == spr_jogadorAtacando && !place_meeting(x, y + 1, obj_colisor))
+{
+    jumpSpeed = lerp(jumpSpeed, 0, 0.35)
+}
 
 // Movimento definitivo
 y += jumpSpeed
 	
-// Limitando a velocidade de queda, usando o número fixo porque aqui é meio que o único
-// lugar que a gente manuseia a velocidade da queda :p
+// Limitando a velocidade de queda
 if jumpSpeed > 30{
 	jumpSpeed = 30
 }
