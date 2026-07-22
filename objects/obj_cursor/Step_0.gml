@@ -91,8 +91,9 @@ if mouse_check_button_pressed(mb_left){
 			break;
 			
 			case "Terçado":
+			if !instance_exists(obj_machadinha){
 				obj_jogador.attackItem = spr_tercado
-				obj_jogador.damageMulti = 1.1
+				obj_jogador.damageMulti = 1.2
 					
 				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true{
 					obj_jogador.image_index = 0
@@ -115,10 +116,11 @@ if mouse_check_button_pressed(mb_left){
 					alarm[1] = 5
 					ataque_ar = false
 				}
+				}
 			break;
 			
 			case "Facão":
-				if !instance_exists(Object33){
+				if !instance_exists(obj_machadinha){
 					obj_jogador.attackItem = spr_facao
 					obj_jogador.damageMulti = 1.4
 
@@ -144,6 +146,28 @@ if mouse_check_button_pressed(mb_left){
 					ataque_ar = false
 				}
 				}
+			break;
+			
+			case "Machadinha":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_jogadorAtacando
+					obj_jogador.damageMulti = 1.1
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorAtacando)
+						audio_stop_sound(snd_porongaApagando)
+						audio_play_sound(snd_porongaApagando,5,0,,,0.8)
+						instance_create_depth(obj_jogador.x,obj_jogador.y,depth-1,obj_machadinha)
+						alarm[1] = 5
+						ataque_ar = false
+				}
+				}
+			break;
+			
+			case "Galho":
+			break;
+			
+			case "Terço":
 			break;
 			
 			case "Feijão":

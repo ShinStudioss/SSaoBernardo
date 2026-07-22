@@ -86,7 +86,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
                     alarm[0] = 18
 
                     scr_Emote(spr_jogadorAtacando)
-                    obj_jogador.attackItem = spr_facaDeSangria
+                    obj_jogador.attackItem = spr_galho
 
                     image_xscale = random_range(1.5,2)
                     image_yscale = random_range(1.5,2)

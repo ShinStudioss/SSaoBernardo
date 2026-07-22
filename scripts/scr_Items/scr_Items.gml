@@ -95,7 +95,7 @@ function scr_getItem(_id){
 		        nome: "Machadinha",
 		        sprite: spr_item,
 		        frame: 10,
-		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser usada em combate. Causa dano médio."
+		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser arremessada em combate. Causa dano médio."
 		    };
 		    break;
 
