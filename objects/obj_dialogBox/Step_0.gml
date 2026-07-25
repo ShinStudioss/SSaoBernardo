@@ -4,34 +4,55 @@ var currentText = textArray[textArrayIndex];
 
 var oldCharIndex = floor(charIndex);
 
-if (charIndex < string_length(currentText)) {
-	charIndex += textSpeed;
-	audio_stop_sound(snd_menuHover)
-	audio_play_sound(snd_menuHover,2,0)
-	charIndex = clamp(charIndex, 0, string_length(currentText));
+// Escreve o texto
+if (charIndex < string_length(currentText))
+{
+    charIndex += textSpeed;
+    charIndex = clamp(charIndex, 0, string_length(currentText));
 }
 
 var newCharIndex = floor(charIndex);
 
+// Som da voz conforme a frequência definida
 if (newCharIndex > oldCharIndex)
 {
-	audio_play_sound(voz, 1, false,,,random_range(0.9,1.4));
+    for (var i = oldCharIndex + 1; i <= newCharIndex; i++)
+    {
+        if (i mod voiceFrequency == 0)
+        {
+            audio_play_sound(
+                voz,
+                1,
+                false,
+                ,
+                ,
+                random_range(0.9, 1.4)
+            );
+        }
+    }
 }
 
-if keyboard_check_pressed(keybinds.jump) or mouse_check_button_pressed(mb_left) and !instance_exists(obj_escolha){
-	if (charIndex < string_length(currentText)) {
-		charIndex = string_length(currentText);
-	}
-	else {
-		if textArrayIndex >= array_length(textArray) - 1 {
-			global.pause = false;
-			instance_destroy();
-		} else {
-			stretchLerp = 64;
-			textArrayIndex += 1;
-			charIndex = 0;
-		}
-	}
+// Avançar diálogo
+if ((keyboard_check_pressed(keybinds.jump) || mouse_check_button_pressed(mb_left)) && !instance_exists(obj_escolha))
+{
+    if (charIndex < string_length(currentText))
+    {
+        charIndex = string_length(currentText);
+    }
+    else
+    {
+        if (textArrayIndex >= array_length(textArray) - 1)
+        {
+            global.pause = false;
+            instance_destroy();
+        }
+        else
+        {
+            stretchLerp = 64;
+            textArrayIndex += 1;
+            charIndex = 0;
+        }
+    }
 }
 
-stretchLerp = lerp(stretchLerp,0,0.2);
+stretchLerp = lerp(stretchLerp, 0, 0.2);

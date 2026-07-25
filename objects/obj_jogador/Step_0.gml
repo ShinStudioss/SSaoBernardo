@@ -18,13 +18,13 @@ if global.pause = false {
 }
 
 if inputX != 0{
-	image_xscale = inputX
+	xScaleReal = inputX
 	global.currentSpeed = lerp(global.currentSpeed,global.maxSpeed,0.8)
 	var moveSpeed = inputX * global.currentSpeed
 }
 else{
 	global.currentSpeed = lerp(global.currentSpeed,0,0.2)
-	moveSpeed = global.currentSpeed * image_xscale
+	moveSpeed = global.currentSpeed * xScaleReal
 }
 
 // Colisão horizontal + vertical =========================================================================
@@ -45,7 +45,7 @@ if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
 }
 
 // Movimento final
-if sprite_index != spr_jogadorAtacando{
+if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
 	x += moveSpeed * speedMulti;
 }
 
@@ -61,6 +61,8 @@ if sprite_index != spr_jogadorAtacando{
 if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
 	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
 		pulando = true
+		xScaleReal = sign(xScaleReal) * 0.5
+		yScaleReal = 1.6
 		jumpSpeed = alturaMaxPulo
 	    coyoteTime = 0
 	}
@@ -75,12 +77,13 @@ else{
 }
 	
 if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
+	idleSprite = spr_jogadorParado
 	jumpSpeed *= 0.4
 	coyoteTime = 0
 }
 
 // Sprite machine
-if sprite_index != spr_jogadorAtacando{
+if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
 	if jumpSpeed = 0{
 		pulando = false
 		if inputX != 0{
@@ -94,6 +97,10 @@ if sprite_index != spr_jogadorAtacando{
 	}
 	else{
 		sprite_index = spr_jogadorPulando
+		if jumpSpeed < -2{
+			xScaleReal = lerp(xScaleReal, sign(xScaleReal) * 0.9, 0.2)
+			yScaleReal = lerp(yScaleReal, 1.15, 0.2)
+		}
 		if sign(jumpSpeed) = 1{
 			image_index = clamp(image_index,3,4)
 		}
@@ -113,6 +120,8 @@ if place_meeting(x, y + jumpSpeed, obj_colisor){
 
     // Partículas ao aterrissar, se estava caindo (jumpSpeed positivo)
     if jumpSpeed > 0{
+		xScaleReal = sign(xScaleReal) * 1.7
+		yScaleReal = 0.8
         scr_explosaoParticula(x,y+sprite_height/2,depth+1,180,jumpSpeed,spr_particulaGrama,10,0.03,0.1)
     }
 
@@ -120,9 +129,9 @@ if place_meeting(x, y + jumpSpeed, obj_colisor){
 }
 
 // Pausa no ar durante o ataque
-if (sprite_index == spr_jogadorAtacando && !place_meeting(x, y + 1, obj_colisor))
+if sprite_index == spr_jogadorAtacando or sprite_index == spr_jogadorTiro
 {
-    jumpSpeed = lerp(jumpSpeed, 0, 0.35)
+    jumpSpeed = 0;
 }
 
 // Movimento definitivo
@@ -197,3 +206,15 @@ if global.fome <= 0{
 	global.saude -= 0.01
 }
 lifeRegenTimer--
+if sprite_index = spr_jogadorRezando{
+	global.pause = true
+	if image_index = image_number-2{
+		image_speed = 0
+		if tercoDialogo = 0{
+			tercoDialogo = criar_dialogo(["Ave maria, cheia de graça, o senhor é convosco. Bendita sois vós entre as mulheres, bendito é o fruto do vosso ventre; Jesus.","Santa Maria mãe de Deus, rogai por nós pecadores, agora e na hora de nossa morte... Amém."],0,{},1.5,snd_raimundoVoz,0.3,5)
+		}
+	}
+}
+
+xScaleReal = lerp(xScaleReal, sign(xScaleReal), 0.1)
+yScaleReal = lerp(yScaleReal, 1, 0.1)

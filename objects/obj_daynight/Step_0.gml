@@ -183,3 +183,4 @@ var fx_struct = {
 };
 
 fx_set_parameters(layer_get_fx("lay_lut"), fx_struct);
+

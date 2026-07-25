@@ -20,9 +20,14 @@ lifeRegenTimer = 120
 lifeRegen = 3
 attackItem = spr_vazio
 effectColor = [255,255,255]
+tercoDialogo = 0
+
+xScaleReal = 1
+yScaleReal = 1
+angleReal = 0
 
 global.saudeMax = 30
-global.saude = 5
+global.saude = 1
 
 global.energiaMax = 20
 global.energia = 20

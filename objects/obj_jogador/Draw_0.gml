@@ -3,9 +3,9 @@ if _item != 0 and _item.frame != 0{
 	_verificador = _item
 }
 
-if sprite_index != spr_jogadorAtacando{
+if sprite_index != spr_jogadorAtacando or sprite_index = spr_jogadorTiro{
 	var _cor = make_color_rgb(effectColor[0],effectColor[1],effectColor[2])
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,_cor,image_alpha)
+	draw_sprite_ext(sprite_index,image_index,x,y,xScaleReal,yScaleReal,angleReal,_cor,image_alpha)
 }
 if obj_cursor.alarm[2] < 19{
 	effectColor[0] = lerp(effectColor[0],255,0.05)
@@ -19,7 +19,11 @@ if (scr_buscarItem(5) != noone)
 }
 
 if sprite_index = spr_jogadorAtacando{
-	draw_sprite_ext(attackItem,image_index,x,y,image_xscale,image_yscale,0,c_white,1)
+	draw_sprite_ext(attackItem,image_index,x,y,xScaleReal,yScaleReal,0,c_white,1)
+}
+
+if sprite_index = spr_jogadorTiro{
+	draw_sprite_ext(attackItem,image_index,x,y,xScaleReal,yScaleReal,0,c_white,1)
 }
 
 if sprite_index = spr_jogadorItem{
@@ -27,9 +31,9 @@ if sprite_index = spr_jogadorItem{
     var offY = 0
 	itemX = lerp(itemX,x+offX,0.1)
 	itemY = lerp(itemY,y+offY,0.1)
-	draw_sprite_ext(spr_item,_verificador.frame,itemX,itemY,0.7*image_xscale,0.7,0,c_white,1)
+	draw_sprite_ext(spr_item,_verificador.frame,itemX,itemY,0.7*xScaleReal,0.7,0,c_white,1)
 }
 else{
-	itemX = x-20*image_xscale
+	itemX = x-20*xScaleReal
 	itemY = y+20
 }

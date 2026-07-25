@@ -22,3 +22,12 @@ if global.pause = false{
 		instance_destroy()
 	} 
 }
+
+if audio_is_playing(snd_espingarda) or audio_is_playing(snd_carabina) and distance_to_object(obj_jogador) < 300{
+	if !audio_is_playing(snd_araraVoando){
+		repeat(3){
+			audio_play_sound(snd_araraVoando,9,,,random_range(0.9,1.3))
+		}
+	}
+	state = "voando"
+}

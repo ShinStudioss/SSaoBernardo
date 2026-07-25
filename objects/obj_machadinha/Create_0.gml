@@ -7,6 +7,6 @@ pickable = false
 audio_play_sound(snd_espada1,5,0,0.5,,random_range(0.9,1.3))
 audio_play_sound(snd_espada3,5,0,0.5,,random_range(0.9,1.3))
 
-image_xscale = sign(obj_jogador.image_xscale)
+image_xscale = sign(obj_jogador.xScaleReal)
 
 depth = obj_jogador.depth -1

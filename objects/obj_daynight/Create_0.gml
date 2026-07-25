@@ -13,8 +13,8 @@ intensidade = 1;
 
 intensidade_overlay = 0
 
-global.hora = 7
-global.minuto = 0
+global.hora = 18
+global.minuto = 55
 
 lutId = lutmadrugada;
 lutId_alvo = lutdia;

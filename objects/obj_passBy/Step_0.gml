@@ -3,7 +3,7 @@
 // a sensação que o jogador arrastou ele brevemente ao mover
 
 if place_meeting(x,y,obj_jogador) and obj_jogador.inputX != 0{
-	image_angle = lerp(image_angle,obj_jogador.image_xscale * 15,0.05)
+	image_angle = lerp(image_angle,obj_jogador.xScaleReal * 15,0.05)
 }
 else{
 	image_angle = lerp(image_angle,lerpAngle,0.05)

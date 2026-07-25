@@ -167,7 +167,7 @@ function scr_getItem(_id){
 		        nome: "Carabina",
 		        sprite: spr_item,
 		        frame: 18,
-		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias."
+		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias. Requer munição."
 		    };
 		    break;
 

@@ -1,1 +1,3 @@
-idleSprite = spr_jogadorParado
+if idleSprite != spr_jogadorRezando{
+	idleSprite = spr_jogadorParado
+}
