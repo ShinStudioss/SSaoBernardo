@@ -33,7 +33,7 @@ global.energiaMax = 20
 global.energia = 20
 
 global.fomeMax = 20
-global.fome = 16
+global.fome = 20
 
 global.forca = 5
 
