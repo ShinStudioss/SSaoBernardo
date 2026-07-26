@@ -19,3 +19,401 @@ if mouse_check_button(mb_right){
     var item_id = global.inventario[global.itemSelecionado][0];
     display_text = scr_getItem(item_id).descricao;
 }
+<<<<<<< Updated upstream
+=======
+#endregion
+
+#region Uso dos itens
+var _item = scr_getItem(global.inventario[global.itemSelecionado][0])
+
+if obj_jogador.pulando == false{
+	ataque_ar = true
+}
+if mouse_check_button_pressed(mb_left){
+	if _item.nome != "" and !instance_exists(obj_dialogBox){
+		switch _item.nome{
+			case "Balde vazio":
+				scr_Emote(spr_jogadorItem)
+			break;
+			
+			case "Látex":
+				scr_Emote(spr_jogadorItem)
+			break;
+			
+			case "Faca de sangria":
+				obj_jogador.attackItem = spr_facaDeSangria
+				obj_jogador.damageMulti = 0.8
+					
+				if obj_jogador.sprite_index != spr_jogadorAtacando and obj_jogador.pulando != true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada1)
+					audio_play_sound(snd_espada1,3,0,,,random_range(0.9,1.2))
+					obj_jogador.x += 5 * obj_jogador.xScaleReal
+				}
+				if obj_jogador.sprite_index != spr_jogadorAtacando and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada1)
+					audio_play_sound(snd_espada1,3,0,,,random_range(0.9,1.2))
+					ataque_ar = false
+				}
+			break;
+			
+			case "Poronga":
+				scr_Emote(spr_jogadorItem)
+				if global.combustivelPoronga > 0{
+					audio_play_sound(snd_porongaAcendendo,4,0)
+					obj_jogador.porongaScale = 2
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaBrilho,13+random_range(-2,2),0.05,0.3)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaFogo,13+random_range(-2,2),0.05,0.3)
+					scr_freeze(90)
+				}
+			break;
+			
+			case "Poronga acesa":
+				scr_Emote(spr_jogadorItem)
+				audio_play_sound(snd_porongaApagando,4,0)
+			break;
+			
+			case "Querosene":
+				audio_play_sound(snd_porongaAcendendo,4,0)
+				scr_Emote(spr_jogadorItem)
+				obj_jogador.porongaScale = 2
+				scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaBrilho,13+random_range(-2,2),0.05,0.3)
+				scr_explosaoParticula(obj_jogador.x,obj_jogador.y-80,depth+1,360,10,spr_particulaFogo,13+random_range(-2,2),0.05,0.3)
+				scr_freeze(90)
+			break;
+			
+			case "Bola de borracha":
+				scr_Emote(spr_jogadorItem)
+			break;
+			
+			case "Terçado":
+			if !instance_exists(obj_machadinha){
+				obj_jogador.attackItem = spr_tercado
+				obj_jogador.damageMulti = 1.4
+					
+				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada3)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,0.9)
+					audio_play_sound(snd_espada3,3,0,,,random_range(0.9,1.2))
+					obj_jogador.x += 10 * obj_jogador.xScaleReal
+					alarm[1] = 5
+				}
+				
+				if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada3)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,0.9)
+					audio_play_sound(snd_espada3,3,0,,,random_range(0.9,1.2))
+					alarm[1] = 5
+					ataque_ar = false
+				}
+				}
+			break;
+			
+			case "Facão":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_facao
+					obj_jogador.damageMulti = 1.6
+
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true {
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorAtacando)
+						audio_stop_sound(snd_espada2)
+						audio_stop_sound(snd_porongaApagando)
+						audio_play_sound(snd_porongaApagando,5,0,,,0.8)
+						audio_play_sound(snd_espada2,3,0,,,random_range(0.8,1.1))
+						obj_jogador.x += 15 * obj_jogador.xScaleReal
+						alarm[1] = 10
+					}
+					
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_espada2)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,0.8)
+					audio_play_sound(snd_espada2,3,0,,,random_range(0.8,1.1))
+					alarm[1] = 5
+					ataque_ar = false
+				}
+				}
+			break;
+			
+			case "Machadinha":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_jogadorAtacando
+					obj_jogador.damageMulti = 1.2
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorAtacando)
+						audio_stop_sound(snd_porongaApagando)
+						audio_play_sound(snd_porongaApagando,5,0,,,0.8)
+						instance_create_depth(obj_jogador.x,obj_jogador.y,depth-1,obj_machadinha)
+						alarm[1] = 5
+						ataque_ar = false
+				}
+				}
+			break;
+			
+			case "Galho":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_galho
+					obj_jogador.damageMulti = 1.1
+
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and obj_jogador.pulando != true {
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorAtacando)				
+						audio_stop_sound(snd_porongaApagando)
+						audio_play_sound(snd_porongaApagando,5,0,,,2.5)
+						obj_jogador.x += 7 * obj_jogador.xScaleReal
+						alarm[1] = 10
+					}
+					
+					if obj_jogador.sprite_index != spr_jogadorAtacando and alarm[1] <= 0 and ataque_ar == true{
+					obj_jogador.image_index = 0
+					scr_Emote(spr_jogadorAtacando)
+					audio_stop_sound(snd_porongaApagando)
+					audio_play_sound(snd_porongaApagando,5,0,,,2.5)
+					alarm[1] = 5
+					ataque_ar = false
+				}
+				}
+			break;
+			
+			case "Terço":
+				if global.saude < global.saudeMax * 0.2 {
+					obj_jogador.speed = 0
+					scr_removerItem(12,1)
+					global.pause = true
+					scr_Emote(spr_jogadorRezando)
+					audio_group_set_gain(audiogroup_default,0,3000)
+					audio_group_set_gain(audiogroup_ost,0,3000)
+				}else{
+					if obj_jogador.sprite_index != spr_jogadorPulando{
+						scr_Emote(spr_jogadorNao)
+						criar_dialogo(["A sua fé parece mais forte em momentos de dificuldade. As orações daqueles próximos da morte serão ouvidas."],0,{})
+					}
+				}
+			break;
+			
+			case "Feijão":
+				if global.fome < global.fomeMax {
+					scr_removerItem(13,1)
+					global.fome += 5
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaFeijao,5,0.05,0.1)
+					alarm[2] = 55
+				}
+				else{
+					if obj_jogador.sprite_index != spr_jogadorPulando{
+						scr_Emote(spr_jogadorNao)
+						criar_dialogo(["Você não está com fome agora."],0,{})
+					}
+				}
+			break;
+			
+			case "Carne seca":
+				if global.fome < global.fomeMax{
+					scr_removerItem(14,1)
+					global.fome += 8
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaCarne,5,0.05,0.1)
+					alarm[2] = 55
+				}
+				else{
+					scr_Emote(spr_jogadorNao)
+					criar_dialogo(["Você não está com fome agora."],0,{})
+				}
+			break;
+			
+			case "Farinha":
+				if global.fome < global.fomeMax{
+					scr_removerItem(15,1)
+					global.fome += 3
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaFarinha,5,0.05,0.1)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaNuvem,3,0.025,0.05)
+					alarm[2] = 55
+				}
+				else{
+					scr_Emote(spr_jogadorNao)
+					criar_dialogo(["Você não está com fome agora."],0,{})
+				}
+			break;
+			
+			case "Mel":
+					scr_removerItem(16,1)
+					global.energia = global.energiaMax
+					audio_stop_sound(snd_comer)
+					audio_play_sound(snd_comer,10,0)
+					scr_Emote(spr_jogadorItem)
+					scr_explosaoParticula(obj_jogador.x,obj_jogador.y-20,depth+1,360,13,spr_particulaMel,5,0.05,0.1)
+					alarm[2] = 55
+			break;
+			
+			case "Espingarda":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_carabina
+					obj_jogador.damageMulti = 0.2
+
+					// Ataque no chão
+					if obj_jogador.sprite_index != spr_jogadorAtacando 
+					and alarm[1] <= 0 
+					and obj_jogador.sprite_index != spr_jogadorTiro
+					and obj_jogador.pulando != true {
+						if global.municaoSG > 0 {
+							obj_jogador.image_index = 0
+							scr_Emote(spr_jogadorTiro)
+							
+							// Coice do disparo
+							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+							    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
+								}
+
+							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
+							}
+
+							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
+							}
+								
+							audio_stop_sound(snd_espingarda)
+							audio_play_sound(snd_espingarda,6,0)
+							repeat(12){
+								instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
+							}
+							scr_cameraShake(20)
+							scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+							obj_daynight.image_alpha *= 0.5
+							alarm[1] = 30
+							global.municaoSG -= 1 
+						}
+					}
+
+					// Ataque no ar
+					if obj_jogador.sprite_index != spr_jogadorAtacando 
+					and alarm[1] <= 0 
+					and ataque_ar == true {
+						if global.municaoSG > 0 {
+							obj_jogador.image_index = 0
+							scr_Emote(spr_jogadorTiro)
+							audio_stop_sound(snd_espingarda)
+							audio_play_sound(snd_espingarda,6,0)
+							
+							// Coice do disparo
+							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
+								}
+
+							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
+							}
+
+							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+							    obj_jogador.recoil = -60 * obj_jogador.xScaleReal;
+							}
+							
+							repeat(12){
+								instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
+							}
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+							scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
+							scr_cameraShake(25)
+							obj_daynight.image_alpha *= 0.5
+							alarm[1] = 30
+							ataque_ar = false
+							global.municaoSG -= 1 
+						}
+					}
+				}
+			break;
+			
+			case "Carabina":
+				if !instance_exists(obj_machadinha){
+					obj_jogador.attackItem = spr_espingarda
+					obj_jogador.damageMulti = 3
+
+					// Ataque no chão
+					if obj_jogador.sprite_index != spr_jogadorAtacando 
+					and alarm[1] <= 0 
+					and obj_jogador.sprite_index != spr_jogadorTiro
+					and obj_jogador.pulando != true {
+						if global.municaoWIN > 0{
+							obj_jogador.image_index = 0
+							scr_Emote(spr_jogadorTiro)
+							// Coice do disparo
+							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+							    obj_jogador.recoil = -5 * obj_jogador.xScaleReal;
+								}
+
+							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+							    obj_jogador.recoil = -15 * obj_jogador.xScaleReal;
+							}
+
+							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+							    obj_jogador.recoil = -30 * obj_jogador.xScaleReal;
+							}
+							audio_stop_sound(snd_carabina)
+							audio_play_sound(snd_carabina,6,0)
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
+							scr_cameraShake(10)
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+							obj_daynight.image_alpha *= 0.5
+							alarm[1] = 30
+							global.municaoWIN -= 1 
+						}
+					}
+
+					// Ataque no ar
+					if obj_jogador.sprite_index != spr_jogadorAtacando 
+					and alarm[1] <= 0 
+					and ataque_ar == true {
+						if global.municaoWIN > 0{
+							obj_jogador.image_index = 0
+							scr_Emote(spr_jogadorTiro)
+							// Coice do disparo
+							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+							    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
+								}
+
+							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
+							}
+
+							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
+							}
+							audio_stop_sound(snd_carabina)
+							audio_play_sound(snd_carabina,6,0)
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+							scr_cameraShake(15)
+							obj_daynight.image_alpha *= 0.5
+							alarm[1] = 30
+							ataque_ar = false
+							global.municaoWIN -= 1 
+						}
+					}
+				}
+			break;
+		}
+	}
+}
+#endregion
+>>>>>>> Stashed changes

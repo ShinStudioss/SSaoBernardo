@@ -27,20 +27,59 @@ else{
 // elaborada que a condição horizontal devido a gravidade, mas nada demais
 
 // Checagem de colisão horizontal
-if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
-    while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)) {
-        x += sign(moveSpeed);
-    }
+if (moveSpeed != 0)
+{
+    if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor))
+    {
+        while (!place_meeting(x + sign(moveSpeed), y, obj_colisor))
+        {
+            x += sign(moveSpeed);
+        }
 
-    while (place_meeting(x, y, obj_colisor)) {
-        x -= sign(moveSpeed);
-    }
+        while (place_meeting(x, y, obj_colisor))
+        {
+            x -= sign(moveSpeed);
+        }
 
-    moveSpeed = 0;
+        moveSpeed = 0;
+    }
 }
 
 // Movimento final
 x += moveSpeed * speedMulti;
+
+#endregion
+	
+#region Coice
+// Aplica o recuo
+if (abs(recoil) > 0.1)
+{
+    var dist = abs(round(recoil));
+    var dir = sign(recoil);
+
+    // Move pixel a pixel para respeitar as colisões
+    for (var i = 0; i < dist; i++)
+    {
+        if (!place_meeting(x + dir, y, obj_colisor))
+        {
+            x += dir;
+        }
+        else
+        {
+            recoil = 0;
+            break;
+        }
+    }
+
+    // Reduz a força do recuo gradualmente
+    recoil *= 0.80;
+
+    // Evita valores muito pequenos
+    if (abs(recoil) < 0.1)
+    {
+        recoil = 0;
+    }
+}
 
 #endregion
 	
@@ -53,7 +92,29 @@ x += moveSpeed * speedMulti;
 
 if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
 	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
+<<<<<<< Updated upstream
+=======
+		pulando = true
+		xScaleReal = sign(xScaleReal) * 0.5
+		yScaleReal = 1.6
+		// Altura do pulo varia conforme a fome
+>>>>>>> Stashed changes
 		jumpSpeed = alturaMaxPulo
+
+		if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+		    jumpSpeed = alturaMaxPulo * 1
+			estado = "normal"
+		}
+
+		if (global.fome <= global.fomeMax / 2) or (global.saude <= global.saudeMax/2){
+		    jumpSpeed = alturaMaxPulo * 0.85
+			estado = "mal"
+		}
+
+		if (global.fome <= global.fomeMax / 4) or (global.saude <= global.saudeMax/4){
+		    jumpSpeed = alturaMaxPulo * 0.75
+			estado = "pessimo"
+		}
 	    coyoteTime = 0
 	}
 }
@@ -123,13 +184,17 @@ if jumpSpeed > 30{
 // Aqui é feita a geração de partículas. O valor do sprite da partícula varia de room pra room
 
 // Particulas ao caminhar
-particleTimer--
-if particleTimer <= 0{
-	if jumpSpeed = 0 and inputX != 0{
-		scr_criarParticula(x,y+sprite_height/2-15,depth+1,spr_particulaGrama,random_range(180,90)*inputX,2*inputX,0.06)
-	}
-	
-	particleTimer = 0.5
+particleTimer--;
+
+if (particleTimer <= 0)
+{
+    if (jumpSpeed == 0 && inputX != 0)
+    {
+        scr_criarParticula(x,y + sprite_height / 2 - 15,depth + 1,spr_particulaGrama,random_range(90,180) * inputX,2 * inputX,0.06);
+    }
+
+    // Quanto maior o speedMulti, menor o intervalo entre partículas
+    particleTimer = lerp(8, 2, clamp(speedMulti / 1.6, 0, 1));
 }
 
 
@@ -178,4 +243,21 @@ if (lifeRegenTimer <= 0){
 if global.fome <= 0{
 	global.saude -= 0.01
 }
+<<<<<<< Updated upstream
 lifeRegenTimer--
+=======
+lifeRegenTimer--
+if sprite_index = spr_jogadorRezando{
+	global.pause = true
+	if image_index = image_number-2{
+		image_speed = 0
+		if tercoDialogo = 0{
+			tercoDialogo = criar_dialogo(["Ave maria, cheia de graça, o senhor é convosco. Bendita sois vós entre as mulheres, bendito é o fruto do vosso ventre; Jesus.","Santa Maria mãe de Deus, rogai por nós pecadores, agora e na hora de nossa morte... Amém."],0,{},1.5,snd_raimundoVoz,0.3,5)
+		}
+	}
+}
+
+xScaleReal = lerp(xScaleReal, sign(xScaleReal), 0.1)
+yScaleReal = lerp(yScaleReal, 1, 0.1)
+
+>>>>>>> Stashed changes

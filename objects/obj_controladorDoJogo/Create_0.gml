@@ -44,7 +44,39 @@ global.transitionY = 0
 global.pause = false
 draw_set_font(fnt_hud)
 
+<<<<<<< Updated upstream
 global.inventario = [[3,1],[1,3],[0,0],[6,1]]
+=======
+global.municaoSG_max = 4
+global.municaoSG = 4
+
+global.municaoWIN_max = 8
+global.municaoWIN = 8
+
+
+global.inventario = [[17,1],[18,1],[19,4],[20,4]]
+
+
+// ID dos itens do jogo
+// 1 - Balde
+// 2 - Látex
+// 3 - Faca de sangria
+// 4 - Poronga
+// 5 - Poronga acesa
+// 6 - Querosene
+// 7 - Bola de borracha
+// 8 - Terçado
+// 9 - Facão
+// 10 - Machadinha
+// 11 - Galho
+// 12 - Terço
+// 13 - Feijão
+// 14 - Carne seca
+// 15 - Farinha
+// 16 - Mel
+// 17 - Espingarda
+// 18 - Carabina
+>>>>>>> Stashed changes
 
 global.tutorial = [[0]]
 

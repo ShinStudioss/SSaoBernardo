@@ -17,6 +17,13 @@ lifeRegenTimer = 120
 lifeRegen = 3
 attackItem = spr_vazio
 
+recoil = 0;
+
+estado = noone
+// Normal = Pulo normal
+// Mal = Pulo medio
+// Pessimo = Pulo baixo
+
 global.saudeMax = 30
 global.saude = 30
 
