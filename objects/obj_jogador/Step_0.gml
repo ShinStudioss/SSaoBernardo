@@ -74,6 +74,7 @@ if (abs(recoil) > 0.1)
         }
         else
         {
+			
             recoil = 0;
             break;
         }
@@ -294,3 +295,46 @@ if sprite_index = spr_jogadorRezando{
 
 xScaleReal = lerp(xScaleReal, sign(xScaleReal), 0.1)
 yScaleReal = lerp(yScaleReal, 1, 0.1)
+
+// Ficar com fome
+if 
+inputX != 0 or
+jumpSpeed < alturaMaxPulo/2 or
+sprite_index = spr_jogadorAtacando
+{
+	global.tickFome -= 1
+}
+
+if global.tickFome <= 0{
+	obj_hud.fomeShake = 5
+	global.fome -= 0.5
+	global.tickFome = 600
+}
+
+// Batidas do coração
+if (global.saude <= global.saudeMax * 0.5)
+{
+    var _t = 1 - ((global.saude - global.saudeMax * 0.01) / (global.saudeMax * 0.49));
+    _t = clamp(_t, 0, 1);
+
+    var _volume = lerp(0.5, 1.5, _t);
+    var _pitch  = lerp(1.0, 2.0, _t);
+
+    audio_group_set_gain(audiogroup_default, lerp(global.sfxVolume, global.sfxVolume * 0.1, _t), 0);
+
+    if (!audio_is_playing(snd_heartbeat))
+    {
+		obj_hud.coracaoSize = _pitch;
+        audio_play_sound(snd_heartbeat, 0, false, _volume, 0, _pitch);
+    }
+}
+else
+{
+    audio_stop_sound(snd_heartbeat);
+    audio_group_set_gain(audiogroup_default, global.sfxVolume, 0);
+}
+
+if global.saude <= 0{
+	instance_create_depth(x,y,depth,obj_jogadorMorrendo,{moveSpeed: moveSpeed, speedMulti: speedMulti})
+	instance_destroy()
+}

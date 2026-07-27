@@ -1,7 +1,10 @@
 disp_saude = global.saude
 disp_energia = global.energia
 disp_fome = global.fome
-
+coracaoSize = 1
+alphaCorrida = 1
+alphaCorridaGoal = 1
+fomeShake = 0
 
 var pos = 0
 

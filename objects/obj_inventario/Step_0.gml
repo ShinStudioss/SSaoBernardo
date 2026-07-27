@@ -1,5 +1,6 @@
 item = global.inventario[arrayPos][0]
 quantidade = global.inventario[arrayPos][1]
+keybinds = scr_getBinds()
 
 if quantidade = 0{ item = 0}
 
@@ -12,7 +13,7 @@ if global.municaoCar == 0 and scr_buscarItem(20) != noone{
 	global.municaoCar = global.municaoCarMax
 }
 
-if (keyboard_check_pressed(ord("E"))) {
+if (keyboard_check_pressed(ord(keybinds.reload))) {
 
     if (global.itemSelecionado == scr_buscarItem(17).arrayPos) &&
        (global.municao12 > 0 and global.municao12 < global.municao12Max){

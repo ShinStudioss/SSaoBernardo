@@ -26,6 +26,8 @@ if mouse_check_button(mb_right){
 #region Uso dos itens
 var _item = scr_getItem(global.inventario[global.itemSelecionado][0])
 
+if !instance_exists(obj_jogador) exit
+
 if obj_jogador.pulando == false{
 	ataque_ar = true
 }

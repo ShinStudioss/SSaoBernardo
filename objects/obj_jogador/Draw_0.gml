@@ -3,9 +3,17 @@ if _item != 0 and _item.frame != 0{
 	_verificador = _item
 }
 
-if sprite_index != spr_jogadorAtacando or sprite_index = spr_jogadorTiro{
-	var _cor = make_color_rgb(effectColor[0],effectColor[1],effectColor[2])
-	draw_sprite_ext(sprite_index,image_index,x,y,xScaleReal,yScaleReal,angleReal,_cor,image_alpha)
+if (invencivel){
+    image_alpha = 0.4 + (sin(current_time / 40) * 0.3 + 0.3);}
+else{
+    image_alpha = 1;
+}
+if sprite_index != spr_jogadorAtacando or sprite_index == spr_jogadorTiro
+{
+    var _cor = make_color_rgb(effectColor[0], effectColor[1], effectColor[2]);
+    var _resp = 1 + sin(current_time / 180) * 0.015;
+    draw_sprite_ext(sprite_index,image_index,x,y,xScaleReal * (2 - _resp),yScaleReal * _resp,angleReal,_cor,image_alpha
+    );
 }
 if obj_cursor.alarm[2] < 19{
 	effectColor[0] = lerp(effectColor[0],255,0.05)

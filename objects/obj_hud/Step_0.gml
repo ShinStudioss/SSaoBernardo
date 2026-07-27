@@ -1,4 +1,5 @@
 var lerpSpeed = 0.1
+keybinds = scr_getBinds()
 
 disp_saude   = lerp(disp_saude, global.saude, lerpSpeed)
 disp_energia = lerp(disp_energia, global.energia, lerpSpeed)
@@ -29,4 +30,20 @@ if (mouse_wheel_down())
 
     if (global.itemSelecionado < 0)
         global.itemSelecionado = 3;
+}
+
+coracaoSize = lerp(coracaoSize,1,0.5)
+if keyboard_check(keybinds.run){
+	alphaCorrida = lerp(alphaCorrida,alphaCorridaGoal,0.1)
+	if abs(alphaCorridaGoal - alphaCorrida) < 0.1{
+		alphaCorrida = alphaCorridaGoal
+		if alphaCorridaGoal = 0.5{alphaCorridaGoal = 1}else{alphaCorridaGoal=0.5}
+	}
+}else{
+	alphaCorrida = 1
+}
+if global.fome > 0{
+	fomeShake = lerp(fomeShake,0,0.1)
+}else{
+	fomeShake = 5
 }

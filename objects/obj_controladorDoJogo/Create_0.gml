@@ -17,6 +17,7 @@ var keybinds = {
 	jump: vk_space,
 	run: vk_shift,
 	interact: ord("E"),
+	reload: ord("R"),
 	item1: ord("1"),
 	item2: ord("2"),
 	item3: ord("3"),
@@ -89,3 +90,6 @@ global.ostVolume = 1
 
 transition = 1
 transitionGoal = 0
+alphaVida = 0
+
+vinhetaVermelha = 0

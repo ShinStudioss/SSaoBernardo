@@ -2,15 +2,15 @@
   "$GMSound":"v2",
   "%Name":"snd_heartbeat",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_vozes",
+    "path":"audiogroups/audiogroup_vozes",
   },
   "bitDepth":1,
   "channelFormat":0,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.88816327,
+  "duration":0.8620408,
   "exportDir":"",
   "name":"snd_heartbeat",
   "parent":{

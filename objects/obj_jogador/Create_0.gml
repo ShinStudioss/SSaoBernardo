@@ -6,6 +6,8 @@ inputX = 0
 global.maxSpeed = 7
 global.currentSpeed = 0
 
+global.tickFome = 00
+
 alturaMaxPulo = -13
 attackMove = 0
 porongaScale = 1
@@ -21,6 +23,7 @@ lifeRegen = 3
 attackItem = spr_vazio
 effectColor = [255,255,255]
 tercoDialogo = 0
+invencivel = false
 
 xScaleReal = 1
 yScaleReal = 1

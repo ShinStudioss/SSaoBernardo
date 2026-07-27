@@ -25,7 +25,7 @@
   ],
   "name":"spr_hudIcon",
   "nineSlice":null,
-  "origin":1,
+  "origin":0,
   "parent":{
     "name":"Efeitos",
     "path":"folders/Sprites/Efeitos.yy",
@@ -83,7 +83,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":16,
+    "xorigin":0,
     "yorigin":0,
   },
   "swatchColours":null,
