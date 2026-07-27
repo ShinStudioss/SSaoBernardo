@@ -1,10 +1,12 @@
-if instance_exists(obj_dialogBox) exit
+
+
+if instance_exists(obj_dialogBox) or obj_controladorDoJogo.alarm[1] > 0 or obj_controladorDoJogo.transitionGoal != obj_controladorDoJogo.transition exit
 
 if global.pause = false{
 	draw_set_alpha(0.4);
 	draw_set_color(c_black);
 	draw_rectangle(24,10,534,140,false);
-	draw_set_alpha(1);
+	draw_set_alpha(1); 
 
 	draw_sprite(spr_hudIcon, 0, 32, 25);
 	draw_healthbar(74,25,493,56,(disp_saude/global.saudeMax) * 100,make_color_rgb(31, 7, 6),make_color_rgb(51, 22, 3),make_color_rgb(130, 35, 31),0,1,0);

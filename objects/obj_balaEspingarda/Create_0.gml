@@ -10,3 +10,5 @@ else{
 	intensity = 0
 	radius = 0
 }
+
+image_blend = make_color_rgb(30,30,30)
