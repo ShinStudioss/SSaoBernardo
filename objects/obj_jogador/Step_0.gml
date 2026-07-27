@@ -1,5 +1,5 @@
 keybinds = scr_getBinds()
-
+mask_index = spr_jogadorParado
 #region Movimentação e colisão (clique para abrir)
 
 // Movimentação básica =================================================================================
@@ -7,19 +7,24 @@ keybinds = scr_getBinds()
 // Exemplo: Jogador pressiona DIREITA, que retorna 1 e é subtraído por ESQUERDA, que não está pressionado,
 // retornando 0, a subtração resulta em 1 e é multiplicado pela velocidade
 
-if global.pause = false and !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
-inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
+if global.pause = false {
+	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem){
+		inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
+	}
+	else{
+		inputX = 0
+		global.currentSpeed = 0
+	}
 }
 
-
 if inputX != 0{
-	image_xscale = inputX
+	xScaleReal = inputX
 	global.currentSpeed = lerp(global.currentSpeed,global.maxSpeed,0.8)
 	var moveSpeed = inputX * global.currentSpeed
 }
 else{
 	global.currentSpeed = lerp(global.currentSpeed,0,0.2)
-	moveSpeed = global.currentSpeed * image_xscale
+	moveSpeed = global.currentSpeed * xScaleReal
 }
 
 // Colisão horizontal + vertical =========================================================================
@@ -27,58 +32,21 @@ else{
 // elaborada que a condição horizontal devido a gravidade, mas nada demais
 
 // Checagem de colisão horizontal
-if (moveSpeed != 0)
-{
-    if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor))
-    {
-        while (!place_meeting(x + sign(moveSpeed), y, obj_colisor))
-        {
-            x += sign(moveSpeed);
-        }
-
-        while (place_meeting(x, y, obj_colisor))
-        {
-            x -= sign(moveSpeed);
-        }
-
-        moveSpeed = 0;
+if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
+    while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)) {
+        x += sign(moveSpeed);
     }
+
+    while (place_meeting(x, y, obj_colisor)) {
+        x -= sign(moveSpeed);
+    }
+
+    moveSpeed = 0;
 }
 
 // Movimento final
-x += moveSpeed * speedMulti;
-
-#endregion
-	
-#region Coice
-// Aplica o recuo
-if (abs(recoil) > 0.1)
-{
-    var dist = abs(round(recoil));
-    var dir = sign(recoil);
-
-    // Move pixel a pixel para respeitar as colisões
-    for (var i = 0; i < dist; i++)
-    {
-        if (!place_meeting(x + dir, y, obj_colisor))
-        {
-            x += dir;
-        }
-        else
-        {
-            recoil = 0;
-            break;
-        }
-    }
-
-    // Reduz a força do recuo gradualmente
-    recoil *= 0.80;
-
-    // Evita valores muito pequenos
-    if (abs(recoil) < 0.1)
-    {
-        recoil = 0;
-    }
+if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
+	x += moveSpeed * speedMulti;
 }
 
 #endregion
@@ -92,29 +60,10 @@ if (abs(recoil) > 0.1)
 
 if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
 	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
-<<<<<<< Updated upstream
-=======
 		pulando = true
 		xScaleReal = sign(xScaleReal) * 0.5
 		yScaleReal = 1.6
-		// Altura do pulo varia conforme a fome
->>>>>>> Stashed changes
 		jumpSpeed = alturaMaxPulo
-
-		if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
-		    jumpSpeed = alturaMaxPulo * 1
-			estado = "normal"
-		}
-
-		if (global.fome <= global.fomeMax / 2) or (global.saude <= global.saudeMax/2){
-		    jumpSpeed = alturaMaxPulo * 0.85
-			estado = "mal"
-		}
-
-		if (global.fome <= global.fomeMax / 4) or (global.saude <= global.saudeMax/4){
-		    jumpSpeed = alturaMaxPulo * 0.75
-			estado = "pessimo"
-		}
 	    coyoteTime = 0
 	}
 }
@@ -128,29 +77,40 @@ else{
 }
 	
 if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
+	idleSprite = spr_jogadorParado
 	jumpSpeed *= 0.4
 	coyoteTime = 0
 }
 
 // Sprite machine
-if jumpSpeed = 0{
-	if inputX != 0{
-		sprite_index = spr_jogadorAndando
-	}
-	else{
-		sprite_index = idleSprite
-	}
-}
-else{
-	sprite_index = spr_jogadorPulando
-	if sign(jumpSpeed) = 1{
-		image_index = clamp(image_index,3,4)
-	}
-	else{
-		image_index = clamp(image_index,0,2)
-	}
-}
+if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
+	if jumpSpeed = 0{
+		pulando = false
+		if inputX != 0{
+			idleSprite = spr_jogadorParado
+			sprite_index = spr_jogadorAndando
+		}
+		else{
+			sprite_index = idleSprite
+		}
 
+	}
+	else{
+		sprite_index = spr_jogadorPulando
+		if jumpSpeed < -2{
+			xScaleReal = lerp(xScaleReal, sign(xScaleReal) * 0.9, 0.2)
+			yScaleReal = lerp(yScaleReal, 1.15, 0.2)
+		}
+		if sign(jumpSpeed) = 1{
+			image_index = clamp(image_index,3,4)
+		}
+		else{
+			image_index = clamp(image_index,0,2)
+		}
+	}
+}else{
+	image_speed = 1
+}
 
 // Colisão vertical (ajustada com partículas)
 if place_meeting(x, y + jumpSpeed, obj_colisor){
@@ -160,18 +120,24 @@ if place_meeting(x, y + jumpSpeed, obj_colisor){
 
     // Partículas ao aterrissar, se estava caindo (jumpSpeed positivo)
     if jumpSpeed > 0{
+		xScaleReal = sign(xScaleReal) * 1.7
+		yScaleReal = 0.8
         scr_explosaoParticula(x,y+sprite_height/2,depth+1,180,jumpSpeed,spr_particulaGrama,10,0.03,0.1)
     }
 
     jumpSpeed = 0
 }
 
+// Pausa no ar durante o ataque
+if sprite_index == spr_jogadorAtacando or sprite_index == spr_jogadorTiro
+{
+    jumpSpeed = 0;
+}
 
 // Movimento definitivo
 y += jumpSpeed
 	
-// Limitando a velocidade de queda, usando o número fixo porque aqui é meio que o único
-// lugar que a gente manuseia a velocidade da queda :p
+// Limitando a velocidade de queda
 if jumpSpeed > 30{
 	jumpSpeed = 30
 }
@@ -184,17 +150,13 @@ if jumpSpeed > 30{
 // Aqui é feita a geração de partículas. O valor do sprite da partícula varia de room pra room
 
 // Particulas ao caminhar
-particleTimer--;
-
-if (particleTimer <= 0)
-{
-    if (jumpSpeed == 0 && inputX != 0)
-    {
-        scr_criarParticula(x,y + sprite_height / 2 - 15,depth + 1,spr_particulaGrama,random_range(90,180) * inputX,2 * inputX,0.06);
-    }
-
-    // Quanto maior o speedMulti, menor o intervalo entre partículas
-    particleTimer = lerp(8, 2, clamp(speedMulti / 1.6, 0, 1));
+particleTimer--
+if particleTimer <= 0{
+	if jumpSpeed = 0 and inputX != 0{
+		scr_criarParticula(x,y+sprite_height/2-15,depth+1,spr_particulaGrama,random_range(180,90)*inputX,2*inputX,0.06)
+	}
+	
+	particleTimer = 0.5
 }
 
 
@@ -215,7 +177,7 @@ var runMax = 1.6
 var walkSpeed = lerp(walkMin, walkMax, fomePerc)
 var runSpeed  = lerp(runMin, runMax, fomePerc)
 
-if keyboard_check(keybinds.run) and global.energia > 0{
+if keyboard_check(keybinds.run) and global.energia > 0 and inputX != 0 and sprite_index != spr_jogadorAtacando{
 	speedMulti = runSpeed
 	image_speed = lerp(1, 1.67, fomePerc)
 	global.energia -= 0.15 * (1 - fomePerc * 0.5) 
@@ -243,9 +205,6 @@ if (lifeRegenTimer <= 0){
 if global.fome <= 0{
 	global.saude -= 0.01
 }
-<<<<<<< Updated upstream
-lifeRegenTimer--
-=======
 lifeRegenTimer--
 if sprite_index = spr_jogadorRezando{
 	global.pause = true
@@ -259,5 +218,3 @@ if sprite_index = spr_jogadorRezando{
 
 xScaleReal = lerp(xScaleReal, sign(xScaleReal), 0.1)
 yScaleReal = lerp(yScaleReal, 1, 0.1)
-
->>>>>>> Stashed changes

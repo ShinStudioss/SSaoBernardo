@@ -1,3 +1,4 @@
+#region Funcionamento do cursor
 image_xscale = lerp(image_xscale,1,0.3)
 image_yscale = lerp(image_yscale,1,0.3)
 var mx_gui = device_mouse_x_to_gui(0);
@@ -7,6 +8,7 @@ var mx_room = camera_get_view_x(cam) + (mx_gui / display_get_gui_width()) * came
 var my_room = camera_get_view_y(cam) + (my_gui / display_get_gui_height()) * camera_get_view_height(cam);
 x = mx_room
 y = my_room
+
 
 if display_text != ""{
 	alpha = lerp(alpha,1,0.1)
@@ -19,8 +21,6 @@ if mouse_check_button(mb_right){
     var item_id = global.inventario[global.itemSelecionado][0];
     display_text = scr_getItem(item_id).descricao;
 }
-<<<<<<< Updated upstream
-=======
 #endregion
 
 #region Uso dos itens
@@ -267,7 +267,7 @@ if mouse_check_button_pressed(mb_left){
 			
 			case "Espingarda":
 				if !instance_exists(obj_machadinha){
-					obj_jogador.attackItem = spr_carabina
+					obj_jogador.attackItem = spr_espingarda
 					obj_jogador.damageMulti = 0.2
 
 					// Ataque no chão
@@ -275,78 +275,45 @@ if mouse_check_button_pressed(mb_left){
 					and alarm[1] <= 0 
 					and obj_jogador.sprite_index != spr_jogadorTiro
 					and obj_jogador.pulando != true {
-						if global.municaoSG > 0 {
-							obj_jogador.image_index = 0
-							scr_Emote(spr_jogadorTiro)
-							
-							// Coice do disparo
-							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
-							    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
-								}
-
-							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
-							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
-							}
-
-							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
-							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
-							}
-								
-							audio_stop_sound(snd_espingarda)
-							audio_play_sound(snd_espingarda,6,0)
-							repeat(12){
-								instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
-							}
-							scr_cameraShake(20)
-							scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
-							obj_daynight.image_alpha *= 0.5
-							alarm[1] = 30
-							global.municaoSG -= 1 
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorTiro)
+						obj_jogador.x -= 10 * obj_jogador.xScaleReal
+						audio_stop_sound(snd_espingarda)
+						audio_play_sound(snd_espingarda,6,0)
+						repeat(12){
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
 						}
+						scr_cameraShake(20)
+						scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+						obj_daynight.image_alpha *= 0.5
+						alarm[1] = 30
 					}
 
 					// Ataque no ar
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
 					and ataque_ar == true {
-						if global.municaoSG > 0 {
-							obj_jogador.image_index = 0
-							scr_Emote(spr_jogadorTiro)
-							audio_stop_sound(snd_espingarda)
-							audio_play_sound(snd_espingarda,6,0)
-							
-							// Coice do disparo
-							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
-							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
-								}
-
-							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
-							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
-							}
-
-							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
-							    obj_jogador.recoil = -60 * obj_jogador.xScaleReal;
-							}
-							
-							repeat(12){
-								instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
-							}
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
-							scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
-							scr_cameraShake(25)
-							obj_daynight.image_alpha *= 0.5
-							alarm[1] = 30
-							ataque_ar = false
-							global.municaoSG -= 1 
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorTiro)
+						audio_stop_sound(snd_espingarda)
+						audio_play_sound(snd_espingarda,6,0)
+						repeat(12){
+							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaEspingarda)
 						}
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+						scr_explosaoParticula(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,depth+1,360,13,spr_particulaNuvemPreta,3,0.025,0.05)
+						scr_cameraShake(20)
+						obj_daynight.image_alpha *= 0.5
+						alarm[1] = 30
+						ataque_ar = false
 					}
 				}
 			break;
 			
 			case "Carabina":
 				if !instance_exists(obj_machadinha){
-					obj_jogador.attackItem = spr_espingarda
+					obj_jogador.attackItem = spr_carabina
 					obj_jogador.damageMulti = 3
 
 					// Ataque no chão
@@ -354,61 +321,32 @@ if mouse_check_button_pressed(mb_left){
 					and alarm[1] <= 0 
 					and obj_jogador.sprite_index != spr_jogadorTiro
 					and obj_jogador.pulando != true {
-						if global.municaoWIN > 0{
-							obj_jogador.image_index = 0
-							scr_Emote(spr_jogadorTiro)
-							// Coice do disparo
-							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
-							    obj_jogador.recoil = -5 * obj_jogador.xScaleReal;
-								}
-
-							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
-							    obj_jogador.recoil = -15 * obj_jogador.xScaleReal;
-							}
-
-							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
-							    obj_jogador.recoil = -30 * obj_jogador.xScaleReal;
-							}
-							audio_stop_sound(snd_carabina)
-							audio_play_sound(snd_carabina,6,0)
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
-							scr_cameraShake(10)
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
-							obj_daynight.image_alpha *= 0.5
-							alarm[1] = 30
-							global.municaoWIN -= 1 
-						}
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorTiro)
+						obj_jogador.x -= 5 * obj_jogador.xScaleReal
+						audio_stop_sound(snd_carabina)
+						audio_play_sound(snd_carabina,6,0)
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
+						scr_cameraShake(10)
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+						obj_daynight.image_alpha *= 0.5
+						alarm[1] = 30
 					}
 
 					// Ataque no ar
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
 					and ataque_ar == true {
-						if global.municaoWIN > 0{
-							obj_jogador.image_index = 0
-							scr_Emote(spr_jogadorTiro)
-							// Coice do disparo
-							if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
-							    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
-								}
-
-							if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
-							    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
-							}
-
-							if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
-							    obj_jogador.recoil = -40 * obj_jogador.xScaleReal;
-							}
-							audio_stop_sound(snd_carabina)
-							audio_play_sound(snd_carabina,6,0)
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
-							instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
-							scr_cameraShake(15)
-							obj_daynight.image_alpha *= 0.5
-							alarm[1] = 30
-							ataque_ar = false
-							global.municaoWIN -= 1 
-						}
+						obj_jogador.image_index = 0
+						scr_Emote(spr_jogadorTiro)
+						audio_stop_sound(snd_carabina)
+						audio_play_sound(snd_carabina,6,0)
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
+						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
+						scr_cameraShake(10)
+						obj_daynight.image_alpha *= 0.5
+						alarm[1] = 30
+						ataque_ar = false
 					}
 				}
 			break;
@@ -416,4 +354,3 @@ if mouse_check_button_pressed(mb_left){
 	}
 }
 #endregion
->>>>>>> Stashed changes

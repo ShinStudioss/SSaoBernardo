@@ -26,13 +26,6 @@ xScaleReal = 1
 yScaleReal = 1
 angleReal = 0
 
-recoil = 0;
-
-estado = noone
-// Normal = Pulo normal
-// Mal = Pulo medio
-// Pessimo = Pulo baixo
-
 global.saudeMax = 30
 global.saude = 1
 
