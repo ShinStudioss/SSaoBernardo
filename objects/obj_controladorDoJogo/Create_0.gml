@@ -81,3 +81,5 @@ global.sfxVolume = 1
 global.ostVolume = 1
 
 
+transition = 1
+transitionGoal = 0
