@@ -32,21 +32,61 @@ else{
 // elaborada que a condição horizontal devido a gravidade, mas nada demais
 
 // Checagem de colisão horizontal
-if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor)) {
-    while (!place_meeting(x + sign(moveSpeed), y, obj_colisor)) {
-        x += sign(moveSpeed);
-    }
+if (moveSpeed != 0)
+{
+    if (place_meeting(x + moveSpeed * speedMulti, y, obj_colisor))
+    {
+        while (!place_meeting(x + sign(moveSpeed), y, obj_colisor))
+        {
+            x += sign(moveSpeed);
+        }
 
-    while (place_meeting(x, y, obj_colisor)) {
-        x -= sign(moveSpeed);
-    }
+        while (place_meeting(x, y, obj_colisor))
+        {
+            x -= sign(moveSpeed);
+        }
 
-    moveSpeed = 0;
+        moveSpeed = 0;
+    }
 }
 
 // Movimento final
 if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
 	x += moveSpeed * speedMulti;
+}
+
+#endregion
+
+#region Coice de armas
+
+// Aplica o recuo
+if (abs(recoil) > 0.1)
+{
+    var dist = abs(round(recoil));
+    var dir = sign(recoil);
+
+    // Move pixel a pixel para respeitar as colisões
+    for (var i = 0; i < dist; i++)
+    {
+        if (!place_meeting(x + dir, y, obj_colisor))
+        {
+            x += dir;
+        }
+        else
+        {
+            recoil = 0;
+            break;
+        }
+    }
+
+    // Reduz a força do recuo gradualmente
+    recoil *= 0.80;
+
+    // Evita valores muito pequenos
+    if (abs(recoil) < 0.1)
+    {
+        recoil = 0;
+    }
 }
 
 #endregion
@@ -63,7 +103,23 @@ if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = f
 		pulando = true
 		xScaleReal = sign(xScaleReal) * 0.5
 		yScaleReal = 1.6
+		// Altura do pulo varia conforme a fome
 		jumpSpeed = alturaMaxPulo
+
+		if (global.fome <= global.fomeMax)
+		{
+		    jumpSpeed = alturaMaxPulo * 1
+		}
+
+		if (global.fome <= global.fomeMax / 2)
+		{
+		    jumpSpeed = alturaMaxPulo * 0.85
+		}
+
+		if (global.fome <= global.fomeMax / 4)
+		{
+		    jumpSpeed = alturaMaxPulo * 0.70
+		}
 	    coyoteTime = 0
 	}
 }
@@ -122,8 +178,12 @@ if place_meeting(x, y + jumpSpeed, obj_colisor){
     if jumpSpeed > 0{
 		xScaleReal = sign(xScaleReal) * 1.7
 		yScaleReal = 0.8
-        scr_explosaoParticula(x,y+sprite_height/2,depth+1,180,jumpSpeed,spr_particulaGrama,10,0.03,0.1)
-    }
+        var intensidade = clamp(global.fome / global.fomeMax, 0, 1);
+
+		var qtdParticulas = round(lerp(3, jumpSpeed, intensidade));
+
+		scr_explosaoParticula(x,y + sprite_height / 2,depth + 1,180,max(qtdParticulas,3),spr_particulaGrama,lerp(5,10,intensidade),0.03,0.1);
+	}
 
     jumpSpeed = 0
 }
@@ -150,13 +210,29 @@ if jumpSpeed > 30{
 // Aqui é feita a geração de partículas. O valor do sprite da partícula varia de room pra room
 
 // Particulas ao caminhar
-particleTimer--
-if particleTimer <= 0{
-	if jumpSpeed = 0 and inputX != 0{
-		scr_criarParticula(x,y+sprite_height/2-15,depth+1,spr_particulaGrama,random_range(180,90)*inputX,2*inputX,0.06)
-	}
-	
-	particleTimer = 0.5
+// Calcula a intensidade das partículas com base na velocidade atual
+var intensidade = clamp(global.currentSpeed / global.maxSpeed, 0, 1);
+
+// Quanto maior a velocidade, menor o intervalo entre partículas
+particleTimer--;
+
+if (particleTimer <= 0)
+{
+    if (jumpSpeed == 0 && inputX != 0)
+    {
+        scr_criarParticula(
+            x,
+            y + sprite_height / 2 - 15,
+            depth + 1,
+            spr_particulaGrama,
+            random_range(90,180) * inputX,
+            2 * inputX,
+            0.06
+        );
+    }
+
+    // Quanto maior o speedMulti, menor o intervalo entre partículas
+    particleTimer = lerp(8, 2, clamp(speedMulti / 1.6, 0, 1));
 }
 
 

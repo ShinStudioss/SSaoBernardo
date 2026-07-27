@@ -56,3 +56,13 @@ if point_in_rectangle(
 {
     obj_cursor.display_text = scr_getItem(item).descricao;
 }
+
+if global.itemSelecionado == arrayPos{
+    if item == 17{
+        draw_text(x+16,y+16,string(global.municao12)+"/"+string(global.municao12Max))
+    }
+
+    if item == 18{
+        draw_text(x+16,y+16,string(global.municaoCar)+"/"+string(global.municaoCarMax))
+    }
+}

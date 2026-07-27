@@ -27,7 +27,7 @@ yScaleReal = 1
 angleReal = 0
 
 global.saudeMax = 30
-global.saude = 1
+global.saude = 30
 
 global.energiaMax = 20
 global.energia = 20
@@ -46,3 +46,4 @@ itemY = 0
 
 _verificador = noone
 pulando = false
+recoil = 0;

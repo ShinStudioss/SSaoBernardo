@@ -49,8 +49,12 @@ flash = 0
 
 draw_set_font(fnt_hud)
 
+global.municao12Max = 6
+global.municao12 = 6
+global.municaoCarMax = 10
+global.municaoCar = 10
 
-global.inventario = [[17,1],[18,1],[0,0],[0,0]]
+global.inventario = [[17,1],[18,1],[19,4],[20,4]]
 
 
 // ID dos itens do jogo
@@ -72,6 +76,8 @@ global.inventario = [[17,1],[18,1],[0,0],[0,0]]
 // 16 - Mel
 // 17 - Espingarda
 // 18 - Carabina
+// 19 - Munição Esp.
+// 20 - Munição Car.
 
 global.tutorial = [[0]]
 

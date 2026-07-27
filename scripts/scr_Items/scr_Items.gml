@@ -170,6 +170,24 @@ function scr_getItem(_id){
 		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias. Requer munição."
 		    };
 		    break;
+			
+		case 19:
+		    return {
+		        nome: "Munição Esp.",
+		        sprite: spr_item,
+		        frame: 19,
+		        descricao: "Munição para espingarda."
+		    };
+		    break;
+			
+		case 20:
+		    return {
+		        nome: "Munição Car.",
+		        sprite: spr_item,
+		        frame: 20,
+		        descricao: "Munição para carabina."
+		    };
+		    break;
 
 		    return undefined;
 	}

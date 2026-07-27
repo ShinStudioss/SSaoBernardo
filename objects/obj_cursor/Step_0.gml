@@ -274,10 +274,21 @@ if mouse_check_button_pressed(mb_left){
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
 					and obj_jogador.sprite_index != spr_jogadorTiro
-					and obj_jogador.pulando != true {
+					and obj_jogador.pulando != true 
+					and global.municao12 > 0{
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorTiro)
-						obj_jogador.x -= 10 * obj_jogador.xScaleReal
+						if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+						    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+						    obj_jogador.recoil = -15 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+						    obj_jogador.recoil = -30 * obj_jogador.xScaleReal;
+							}
 						audio_stop_sound(snd_espingarda)
 						audio_play_sound(snd_espingarda,6,0)
 						repeat(12){
@@ -288,14 +299,27 @@ if mouse_check_button_pressed(mb_left){
 						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
 						obj_daynight.image_alpha *= 0.5
 						alarm[1] = 30
+						global.municao12 -= 1
 					}
 
 					// Ataque no ar
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
-					and ataque_ar == true {
+					and ataque_ar == true 
+					and global.municao12 > 0{
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorTiro)
+						if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+						    obj_jogador.recoil = -15 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+						    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+						    obj_jogador.recoil = -30 * obj_jogador.xScaleReal;
+							}
 						audio_stop_sound(snd_espingarda)
 						audio_play_sound(snd_espingarda,6,0)
 						repeat(12){
@@ -307,6 +331,7 @@ if mouse_check_button_pressed(mb_left){
 						obj_daynight.image_alpha *= 0.5
 						alarm[1] = 30
 						ataque_ar = false
+						global.municao12 -= 1
 					}
 				}
 			break;
@@ -320,10 +345,21 @@ if mouse_check_button_pressed(mb_left){
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
 					and obj_jogador.sprite_index != spr_jogadorTiro
-					and obj_jogador.pulando != true {
+					and obj_jogador.pulando != true 
+					and global.municaoCar > 0{
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorTiro)
-						obj_jogador.x -= 5 * obj_jogador.xScaleReal
+						if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+						    obj_jogador.recoil = -5 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+						    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+						    obj_jogador.recoil = -20 * obj_jogador.xScaleReal;
+							}
 						audio_stop_sound(snd_carabina)
 						audio_play_sound(snd_carabina,6,0)
 						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
@@ -331,14 +367,27 @@ if mouse_check_button_pressed(mb_left){
 						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_flashArma)
 						obj_daynight.image_alpha *= 0.5
 						alarm[1] = 30
+						global.municaoCar -= 1
 					}
 
 					// Ataque no ar
 					if obj_jogador.sprite_index != spr_jogadorAtacando 
 					and alarm[1] <= 0 
-					and ataque_ar == true {
+					and ataque_ar == true 
+					and global.municaoCar > 0{
 						obj_jogador.image_index = 0
 						scr_Emote(spr_jogadorTiro)
+						if (global.fome <= global.fomeMax) or (global.saude <= global.saudeMax){
+						    obj_jogador.recoil = -10 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/2) or (global.saude <= global.saudeMax/2){
+						    obj_jogador.recoil = -15 * obj_jogador.xScaleReal;
+							}
+
+						if (global.fome <= global.fomeMax/4) or (global.saude <= global.saudeMax/4){
+						    obj_jogador.recoil = -25 * obj_jogador.xScaleReal;
+							}
 						audio_stop_sound(snd_carabina)
 						audio_play_sound(snd_carabina,6,0)
 						instance_create_depth(obj_jogador.x + 37*sign(obj_jogador.xScaleReal),obj_jogador.y-12,obj_jogador.depth-1,obj_balaCarabina)
@@ -347,6 +396,7 @@ if mouse_check_button_pressed(mb_left){
 						obj_daynight.image_alpha *= 0.5
 						alarm[1] = 30
 						ataque_ar = false
+						global.municaoCar -= 1
 					}
 				}
 			break;
