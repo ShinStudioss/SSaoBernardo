@@ -3,7 +3,7 @@ function scr_getItem(_id){
         case 0:
             return {
                 nome: "",
-                sprite: spr_vazio,
+                sprite: spr_item,
                 frame: 0,
                 descricao: ""
             };
@@ -13,17 +13,17 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Balde vazio",
 		        sprite: spr_item,
-		        frame: 0,
-		        descricao: "Balde de coleta utilizado para armazenar o látex extraído das seringueiras."
+		        frame: 1,
+		        descricao: "Balde de coleta utilizado para armazenar\no látex extraído das seringueiras."
 		    };
 		    break;
 
 		case 2:
 		    return {
-		        nome: "Balde de látex",
+		        nome: "Látex",
 		        sprite: spr_item,
-		        frame: 1,
-		        descricao: "Balde cheio de látex fresco, pronto para ser processado."
+		        frame: 2,
+		        descricao: "Látex fresco, pronto para ser processado."
 		    };
 		    break;
 
@@ -31,8 +31,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Faca de sangria",
 		        sprite: spr_item,
-		        frame: 2,
-		        descricao: "Ferramenta afiada usada para realizar a sangria das seringueiras e extrair seu látex."
+		        frame: 3,
+		        descricao: "Ferramenta afiada usada para realizar\na sangria das seringueiras e extrair seu látex."
 		    };
 		    break;
 
@@ -40,8 +40,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Poronga",
 		        sprite: spr_item,
-		        frame: 3,
-		        descricao: "Lamparina tradicional dos seringueiros. Precisa de combustível para funcionar."
+		        frame: 4,
+		        descricao: "Lamparina tradicional dos seringueiros.\nPrecisa de combustível para funcionar."
 		    };
 		    break;
 
@@ -49,8 +49,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Poronga acesa",
 		        sprite: spr_item,
-		        frame: 4,
-		        descricao: "Poronga abastecida e acesa. Ilumina a mata durante a noite, mas o combustível se esgota com o tempo."
+		        frame: 5,
+		        descricao: "Poronga abastecida e acesa, Ilumina a mata\ndurante a noite, mas o combustível se esgota com o tempo."
 		    };
 		    break;
 
@@ -58,8 +58,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Querosene",
 		        sprite: spr_item,
-		        frame: 5,
-		        descricao: "Recipiente com combustível para abastecer uma poronga. Consumido após o uso."
+		        frame: 6,
+		        descricao: "Recipiente com combustível para abastecer uma poronga.\nConsumido após o uso."
 		    };
 		    break;
 
@@ -67,8 +67,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Bola de Borracha",
 		        sprite: spr_item,
-		        frame: 6,
-		        descricao: "Bola de borracha produzida a partir do látex. Possui valor de troca no barracão."
+		        frame: 7,
+		        descricao: "Bola de borracha produzida a partir do látex.\nPossui valor de troca no barracão."
 		    };
 		    break;
 
@@ -76,8 +76,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Terçado",
 		        sprite: spr_item,
-		        frame: 7,
-		        descricao: "Terçado robusto usado tanto para abrir caminho na mata quanto para combate. Causa dano médio."
+		        frame: 8,
+		        descricao: "Terçado robusto usado tanto para abrir caminho na\nmata quanto para combate. Causa dano médio."
 		    };
 		    break;
 
@@ -85,8 +85,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Facão",
 		        sprite: spr_item,
-		        frame: 8,
-		        descricao: "Facão afiado e resistente. Uma ferramenta versátil que também serve como arma. Causa dano médio."
+		        frame: 9,
+		        descricao: "Facão afiado e resistente. Uma ferramenta versátil\nque também serve como arma. Causa dano médio."
 		    };
 		    break;
 
@@ -94,8 +94,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Machadinha",
 		        sprite: spr_item,
-		        frame: 9,
-		        descricao: "Machadinha leve utilizada para cortar madeira. Pode ser usada em combate. Causa dano médio."
+		        frame: 10,
+		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser arremessada em combate. Causa dano médio."
 		    };
 		    break;
 
@@ -103,8 +103,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Galho",
 		        sprite: spr_item,
-		        frame: 10,
-		        descricao: "Galho improvisado encontrado na mata. Causa pouco dano e pode quebrar durante o uso."
+		        frame: 11,
+		        descricao: "Galho improvisado encontrado na mata.\nCausa pouco dano e pode quebrar durante o uso."
 		    };
 		    break;
 
@@ -112,17 +112,17 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Terço",
 		        sprite: spr_item,
-		        frame: 11,
-		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder uma intervenção divina inesperada. Consumível."
+		        frame: 12,
+		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder\numa intervenção divina inesperada. Consumível."
 		    };
 		    break;
 
 		case 13:
 		    return {
-		        nome: "Feijoada",
+		        nome: "Feijão",
 		        sprite: spr_item,
-		        frame: 12,
-		        descricao: "Prato tradicional e bastante nutritivo. Reduz significativamente a fome. Consumível."
+		        frame: 13,
+		        descricao: "Prato tradicional e bastante nutritivo.\nReduz a fome. Consumível."
 		    };
 		    break;
 
@@ -130,8 +130,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Carne seca",
 		        sprite: spr_item,
-		        frame: 13,
-		        descricao: "Carne salgada e seca, ideal para longas jornadas na floresta. Reduz a fome. Consumível."
+		        frame: 14,
+		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome significativamente. Consumível."
 		    };
 		    break;
 
@@ -139,8 +139,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Farinha",
 		        sprite: spr_item,
-		        frame: 14,
-		        descricao: "Farinha de mandioca, alimento básico dos seringueiros. Reduz a fome. Consumível."
+		        frame: 15,
+		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz um pouco a fome. Consumível."
 		    };
 		    break;
 
@@ -148,8 +148,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Mel",
 		        sprite: spr_item,
-		        frame: 15,
-		        descricao: "Mel silvestre coletado na floresta. Fonte rápida de energia e alimento. Consumível."
+		        frame: 16,
+		        descricao: "Mel silvestre coletado na floresta.\nRecupera totalmente sua energia. Consumível."
 		    };
 		    break;
 
@@ -157,8 +157,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Espingarda",
 		        sprite: spr_item,
-		        frame: 16,
-		        descricao: "Espingarda de curto alcance, eficaz para caça e defesa pessoal."
+		        frame: 17,
+		        descricao: "Espingarda de curto alcance, eficaz para\ncaça e defesa pessoal. Requer munição."
 		    };
 		    break;
 
@@ -166,8 +166,8 @@ function scr_getItem(_id){
 		    return {
 		        nome: "Carabina",
 		        sprite: spr_item,
-		        frame: 17,
-		        descricao: "Carabina precisa e potente, capaz de atingir alvos a grandes distâncias."
+		        frame: 18,
+		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias. Requer munição."
 		    };
 		    break;
 			

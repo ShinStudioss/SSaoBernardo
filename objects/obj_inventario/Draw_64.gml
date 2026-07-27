@@ -1,4 +1,4 @@
-if instance_exists(obj_dialogBox) exit
+if instance_exists(obj_dialogBox) or obj_controladorDoJogo.alarm[1] > 0 or global.pause = true or obj_controladorDoJogo.transitionGoal != obj_controladorDoJogo.transition exit
 draw_sprite_ext(spr_inventario,2,x,y,1,1,0,c_white,effectAlpha)
 
 draw_self()

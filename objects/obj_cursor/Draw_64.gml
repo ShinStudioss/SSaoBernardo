@@ -19,8 +19,8 @@ draw_set_valign(fa_top)
 draw_sprite_ext(
     item.sprite,
     item.frame,
-    device_mouse_x_to_gui(0) - 8,
-    device_mouse_y_to_gui(0) + 8,
+    device_mouse_x_to_gui(0) - 16,
+    device_mouse_y_to_gui(0) + 16,
 	0.6,
 	0.6,
 	0,c_white,1

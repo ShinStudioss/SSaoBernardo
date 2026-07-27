@@ -19,6 +19,7 @@
   "height":512,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"cc319a11-dc1f-4876-abf8-41451c356f3a","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"cc319a11-dc1f-4876-abf8-41451c356f3a","opacity":20.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"ecbdd1ee-3d35-432b-8dcd-58324bafe104","blendMode":0,"displayName":"default","isLocked":false,"name":"ecbdd1ee-3d35-432b-8dcd-58324bafe104","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"lut_dia",

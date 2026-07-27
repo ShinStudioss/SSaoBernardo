@@ -1,4 +1,4 @@
-if global.pause = false {global.minuto += 0.05}
+if global.pause = false {global.minuto += 0.01}
 
 
 // Desligar poronga 
@@ -47,10 +47,12 @@ if (global.minuto >= 60) {
 if (global.combustivelPoronga <= 0) {
     global.combustivelPoronga = 0;
 
-    scr_removerItem(5, 1);
+    if (scr_buscarItem(5) != noone) {
+        scr_removerItem(5, 1);
 
-    if (scr_buscarItem(4) == noone) {
-        scr_addItem(4, 1);
+        if (scr_buscarItem(4) == noone) {
+            scr_addItem(4, 1);
+        }
     }
 }
 
@@ -106,7 +108,7 @@ if (global.hora >= 6 && global.hora <= 15) {
         image_yscale = 1;
     }
 }
-else if (global.hora >= 16 && global.hora <= 17) {
+else if (global.hora >= 14 && global.hora <= 18) {
 
     lutId_alvo = lutentardecer;
     image_alpha = lerp(image_alpha, 0.3, 0.01);
@@ -125,7 +127,7 @@ else if (global.hora >= 16 && global.hora <= 17) {
     image_xscale = 1;
     image_yscale = 1;
 }
-else if (global.hora >= 18 || global.hora <= 5) {
+else if (global.hora >= 19 || global.hora <= 5) {
 
     lutId_alvo = lutnoite;
     image_alpha = lerp(image_alpha, 1, 0.01);
@@ -181,3 +183,4 @@ var fx_struct = {
 };
 
 fx_set_parameters(layer_get_fx("lay_lut"), fx_struct);
+

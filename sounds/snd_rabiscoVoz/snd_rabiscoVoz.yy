@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"snd_rabiscoVoz",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_vozes",
+    "path":"audiogroups/audiogroup_vozes",
   },
   "bitDepth":1,
   "channelFormat":0,

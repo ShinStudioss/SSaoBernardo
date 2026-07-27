@@ -19,7 +19,7 @@
   "height":1500,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"cbe0e657-b30a-42bd-9593-41051b1ff83c","blendMode":0,"displayName":"default","isLocked":false,"name":"cbe0e657-b30a-42bd-9593-41051b1ff83c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"cbe0e657-b30a-42bd-9593-41051b1ff83c","blendMode":0,"displayName":"default","isLocked":false,"name":"cbe0e657-b30a-42bd-9593-41051b1ff83c","opacity":69.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_escurao",
   "nineSlice":null,

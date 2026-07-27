@@ -6,7 +6,6 @@ textArrayIndex = 0
 stretchLerp = 64
 
 charIndex = 0     
-textSpeed = 1 
 
 audio_stop_sound(snd_menuHover)
 audio_play_sound(snd_menuHover,2,0)
