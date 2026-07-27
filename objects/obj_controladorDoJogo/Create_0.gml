@@ -33,8 +33,6 @@ alturaCam = 648
 larguraCamAlvo = 1152
 alturaCamAlvo = 648
 alvoCam = obj_jogador
-shake = 0;
-shake_decay = 0.8;
 global.cameraEstatica = false
 display_reset(0, true);
 filtro_cor_set(c_white, 0);
@@ -44,13 +42,19 @@ global.combustivelPoronga = 0
 global.itemSelecionado = 0
 global.transitionY = 0
 global.pause = false
-
-flash = 0
-
 draw_set_font(fnt_hud)
 
+<<<<<<< Updated upstream
+global.inventario = [[3,1],[1,3],[0,0],[6,1]]
+=======
+global.municaoSG_max = 4
+global.municaoSG = 4
 
-global.inventario = [[17,1],[18,1],[0,0],[0,0]]
+global.municaoWIN_max = 8
+global.municaoWIN = 8
+
+
+global.inventario = [[17,1],[18,1],[19,4],[20,4]]
 
 
 // ID dos itens do jogo
@@ -72,14 +76,8 @@ global.inventario = [[17,1],[18,1],[0,0],[0,0]]
 // 16 - Mel
 // 17 - Espingarda
 // 18 - Carabina
+>>>>>>> Stashed changes
 
 global.tutorial = [[0]]
 
-audio_group_load(audiogroup_vozes)
 
-global.sfxVolume = 1
-global.ostVolume = 1
-
-
-transition = 1
-transitionGoal = 0

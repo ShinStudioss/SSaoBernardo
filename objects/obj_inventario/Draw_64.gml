@@ -30,6 +30,17 @@ draw_sprite_ext(itemInfo.sprite,itemInfo.frame,x,y,escala,escala,rotacao,c_white
 if quantidade > 1{
 	draw_text(x+16,y+16,"x" + string(quantidade))
 }
+
+if global.itemSelecionado == arrayPos{
+    if item == 17{
+        draw_text(x+12,y+16,string(global.municaoSG)+"/"+string(global.municaoSG_max))
+    }
+
+    if item == 18{
+        draw_text(x+12,y+16,string(global.municaoWIN)+"/"+string(global.municaoWIN_max))
+    }
+}
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top)
 if global.itemSelecionado == arrayPos{
