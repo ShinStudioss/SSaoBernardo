@@ -51,8 +51,8 @@ draw_set_font(fnt_hud)
 
 global.municao12Max = 6
 global.municao12 = 6
-global.municaoCarMax = 10
-global.municaoCar = 10
+global.municaoCarMax = 8
+global.municaoCar = 8
 
 global.inventario = [[17,1],[18,1],[19,4],[20,4]]
 

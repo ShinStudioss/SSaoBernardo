@@ -49,7 +49,7 @@ if mouse_check_button_pressed(mb_left){
 					scr_Emote(spr_jogadorAtacando)
 					audio_stop_sound(snd_espada1)
 					audio_play_sound(snd_espada1,3,0,,,random_range(0.9,1.2))
-					obj_jogador.x += 5 * obj_jogador.xScaleReal
+					obj_jogador.recoil = +2 * obj_jogador.xScaleReal;
 				}
 				if obj_jogador.sprite_index != spr_jogadorAtacando and ataque_ar == true{
 					obj_jogador.image_index = 0
@@ -101,7 +101,7 @@ if mouse_check_button_pressed(mb_left){
 					audio_stop_sound(snd_porongaApagando)
 					audio_play_sound(snd_porongaApagando,5,0,,,0.9)
 					audio_play_sound(snd_espada3,3,0,,,random_range(0.9,1.2))
-					obj_jogador.x += 10 * obj_jogador.xScaleReal
+					obj_jogador.recoil = +10 * obj_jogador.xScaleReal;
 					alarm[1] = 5
 				}
 				
@@ -130,7 +130,7 @@ if mouse_check_button_pressed(mb_left){
 						audio_stop_sound(snd_porongaApagando)
 						audio_play_sound(snd_porongaApagando,5,0,,,0.8)
 						audio_play_sound(snd_espada2,3,0,,,random_range(0.8,1.1))
-						obj_jogador.x += 15 * obj_jogador.xScaleReal
+						obj_jogador.recoil = +15 * obj_jogador.xScaleReal;
 						alarm[1] = 10
 					}
 					
@@ -173,7 +173,7 @@ if mouse_check_button_pressed(mb_left){
 						scr_Emote(spr_jogadorAtacando)				
 						audio_stop_sound(snd_porongaApagando)
 						audio_play_sound(snd_porongaApagando,5,0,,,2.5)
-						obj_jogador.x += 7 * obj_jogador.xScaleReal
+						obj_jogador.recoil = +5 * obj_jogador.xScaleReal;
 						alarm[1] = 10
 					}
 					
