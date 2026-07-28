@@ -196,8 +196,8 @@
   ],
   "name":"rm_PSD2",
   "parent":{
-    "name":"Cenas",
-    "path":"folders/Cenas.yy",
+    "name":"ZC Direita",
+    "path":"folders/Cenas/Zonas de coleta/ZC Direita.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
