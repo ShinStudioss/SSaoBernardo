@@ -2,8 +2,8 @@
   "FolderOrderSettings":[
     {"name":"Estradas","order":8,"path":"folders/Cenas/Estradas.yy",},
     {"name":"Grandes","order":3,"path":"folders/Cenas/Estradas/Grandes.yy",},
-    {"name":"Pequenas","order":5,"path":"folders/Cenas/Estradas/Pequenas.yy",},
     {"name":"Medias","order":4,"path":"folders/Cenas/Estradas/Medias.yy",},
+    {"name":"Pequenas","order":5,"path":"folders/Cenas/Estradas/Pequenas.yy",},
     {"name":"Zonas de coleta","order":7,"path":"folders/Cenas/Zonas de coleta.yy",},
     {"name":"ZC Direita","order":2,"path":"folders/Cenas/Zonas de coleta/ZC Direita.yy",},
     {"name":"ZC Esquerda","order":1,"path":"folders/Cenas/Zonas de coleta/ZC Esquerda.yy",},

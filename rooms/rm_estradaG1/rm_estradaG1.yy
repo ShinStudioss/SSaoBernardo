@@ -55,6 +55,8 @@
     {"name":"inst_570516A9","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},
     {"name":"inst_3EE7839A","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},
     {"name":"inst_21314A9C","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},
+    {"name":"inst_1BA65ADE","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},
+    {"name":"inst_60B9D72D","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -116,6 +118,12 @@
         {"$GMRInstance":"v4","%Name":"inst_4D4AD70_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D4AD70_1","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4727.0,"y":574.0,},
         {"$GMRInstance":"v4","%Name":"inst_24E9BE83_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":1,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24E9BE83_1","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":-1.0,"scaleY":1.0,"x":5502.0,"y":629.0,},
         {"$GMRInstance":"v4","%Name":"inst_51612EF8_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":1,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_51612EF8_1","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":-1.0,"scaleY":-1.0,"x":5250.0,"y":714.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1BA65ADE","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BA65ADE","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":0.0,"y":320.0,},
+        {"$GMRInstance":"v4","%Name":"inst_60B9D72D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60B9D72D","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":6144.0,"y":320.0,},
       ],"layers":[],"name":"lay_instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"lay_assets","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2539066F1_2_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2539066F1_2_1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"spriteId":{"name":"spr_arvore","path":"sprites/spr_arvore/spr_arvore.yy",},"x":327.0,"y":329.0,},

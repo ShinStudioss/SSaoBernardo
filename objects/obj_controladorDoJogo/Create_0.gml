@@ -87,6 +87,12 @@ audio_group_load(audiogroup_vozes)
 global.sfxVolume = 1
 global.ostVolume = 1
 
+randomize()
+
+global.seringalRooms = {
+	direita: asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4))),
+	esquerda: asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4)))
+}
 
 transition = 1
 transitionGoal = 0

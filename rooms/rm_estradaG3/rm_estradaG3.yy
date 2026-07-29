@@ -71,6 +71,8 @@
     {"name":"inst_61DBC91","path":"rooms/rm_estradaG3/rm_estradaG3.yy",},
     {"name":"inst_2BDD8EFC","path":"rooms/rm_estradaG3/rm_estradaG3.yy",},
     {"name":"inst_3194C04","path":"rooms/rm_estradaG3/rm_estradaG3.yy",},
+    {"name":"inst_232BC85A","path":"rooms/rm_estradaG3/rm_estradaG3.yy",},
+    {"name":"inst_7BA9BE5D","path":"rooms/rm_estradaG3/rm_estradaG3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -148,6 +150,12 @@
         {"$GMRInstance":"v4","%Name":"inst_3F394C1D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F394C1D","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5869.0,"y":574.0,},
         {"$GMRInstance":"v4","%Name":"inst_6C828CA1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C828CA1","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1069.0,"y":766.0,},
         {"$GMRInstance":"v4","%Name":"inst_6D01E1E4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D01E1E4","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1146.0,"y":766.0,},
+        {"$GMRInstance":"v4","%Name":"inst_232BC85A","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_232BC85A","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":6144.0,"y":320.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7BA9BE5D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7BA9BE5D","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":0.0,"y":320.0,},
       ],"layers":[],"name":"lay_instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"lay_assets","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2539066F1_2_1_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2539066F1_2_1_1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"spriteId":{"name":"spr_arvore","path":"sprites/spr_arvore/spr_arvore.yy",},"x":327.0,"y":329.0,},

@@ -55,6 +55,8 @@
     {"name":"inst_58CB4C05","path":"rooms/rm_estradaG2/rm_estradaG2.yy",},
     {"name":"inst_5B715208","path":"rooms/rm_estradaG2/rm_estradaG2.yy",},
     {"name":"inst_43928CA5","path":"rooms/rm_estradaG2/rm_estradaG2.yy",},
+    {"name":"inst_41F4C02B","path":"rooms/rm_estradaG2/rm_estradaG2.yy",},
+    {"name":"inst_1BD506C5","path":"rooms/rm_estradaG2/rm_estradaG2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -116,6 +118,12 @@
         {"$GMRInstance":"v4","%Name":"inst_5527ABFA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":1,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5527ABFA","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":-1.0,"scaleY":1.0,"x":5310.0,"y":629.0,},
         {"$GMRInstance":"v4","%Name":"inst_3BBBF307","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BBBF307","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5792.0,"y":510.0,},
         {"$GMRInstance":"v4","%Name":"inst_5AAC79C9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":1,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5AAC79C9","objectId":{"name":"obj_passBy","path":"objects/obj_passBy/obj_passBy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":4394.0,"y":638.0,},
+        {"$GMRInstance":"v4","%Name":"inst_41F4C02B","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_41F4C02B","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":6144.0,"y":320.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1BD506C5","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BD506C5","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_teleporte","path":"objects/obj_teleporte/obj_teleporte.yy",},"propertyId":{"name":"destino","path":"objects/obj_teleporte/obj_teleporte.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.5,"x":0.0,"y":352.0,},
       ],"layers":[],"name":"lay_instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"lay_assets","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2539066F1_2","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2539066F1_2","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"spriteId":{"name":"spr_arvore","path":"sprites/spr_arvore/spr_arvore.yy",},"x":327.0,"y":329.0,},
