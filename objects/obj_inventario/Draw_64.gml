@@ -33,7 +33,7 @@ if quantidade > 1{
 draw_set_halign(fa_left);
 draw_set_valign(fa_top)
 if global.itemSelecionado == arrayPos{
-	draw_text(32,room_height-32,itemInfo.nome)
+	draw_text(32,camera_get_view_height(view_camera[0])+90,itemInfo.nome)
 }
 draw_set_halign(fa_middle)
 draw_set_valign(fa_center)

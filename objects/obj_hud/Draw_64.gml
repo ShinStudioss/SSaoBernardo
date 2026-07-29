@@ -23,9 +23,9 @@ if global.pause = false{
 	draw_set_color(c_white);
 
 	draw_set_font(fnt_minor)
-	draw_set_halign(fa_center);
+	draw_set_halign(fa_left);
 	draw_set_valign(fa_top)
-	draw_text(80,room_height-120,"Inventário")
+	draw_text(32,camera_get_view_height(view_camera[0])-10,"Inventário")
 	draw_set_font(fnt_hud)
 	
 	if device_mouse_x_to_gui(0) < 480 && device_mouse_y_to_gui(0) < 110{

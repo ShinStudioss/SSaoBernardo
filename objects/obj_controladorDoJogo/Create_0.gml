@@ -89,10 +89,17 @@ global.ostVolume = 1
 
 randomize()
 
+var direita = asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4)));
+var esquerda;
+
+do {
+	esquerda = asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4)));
+} until (esquerda != direita);
+
 global.seringalRooms = {
-	direita: asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4))),
-	esquerda: asset_get_index("rm_estrada" + choose("G","M","P") + string(irandom_range(1,4)))
-}
+	direita: direita,
+	esquerda: esquerda
+};
 
 transition = 1
 transitionGoal = 0
