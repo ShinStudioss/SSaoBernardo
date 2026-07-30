@@ -55,7 +55,7 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.inventario = [[17,1],[18,1],[10,1],[9,1]]
+global.inventario = [[8,1],[18,1],[10,1],[9,1]]
 
 
 // ID dos itens do jogo

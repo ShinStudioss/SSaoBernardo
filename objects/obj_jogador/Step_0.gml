@@ -1,4 +1,5 @@
 keybinds = scr_getBinds()
+
 mask_index = spr_jogadorParado
 #region Movimentação e colisão (clique para abrir)
 
@@ -99,8 +100,8 @@ if (abs(recoil) > 0.1){
 
 // Entrar na escalada
 if (place_meeting(x, y, obj_trepante)){
-	if (podeTrepar && keyboard_check_pressed(ord("W")))
-	or (podeTrepar && keyboard_check_pressed(ord("S"))){
+	if (podeTrepar && keyboard_check_pressed(keybinds.up))
+	or (podeTrepar && keyboard_check_pressed(ord(keybinds.down))){
 	    trepando = true;
 	    jumpSpeed = 0;
 	}
@@ -108,9 +109,19 @@ if (place_meeting(x, y, obj_trepante)){
 	// Sair da escalada
 	if (trepando){
 	    // Se saiu do cipó
+		pulando = false
+		coyoteTime = 10;
 	    if (!podeTrepar){
 	        trepando = false;
 	    }
+		
+		if sprite_index == spr_jogadorAtacando
+		or sprite_index == spr_jogadorTiro{
+			obj_cursor.ataque_ar = false
+			trepando = false
+			pulando = true
+			coyoteTime = 0
+		}
 
 	    // Pular para soltar
 	    if (keyboard_check_pressed(keybinds.jump)){
@@ -121,13 +132,16 @@ if (place_meeting(x, y, obj_trepante)){
 	    // Movimento vertical
 	    jumpSpeed = 0;
 
-	    if (keyboard_check(ord("W"))){
+	    if (keyboard_check(keybinds.up)){
 	        jumpSpeed = -velTrepar;
+			image_speed = 1
 		}
 
-	    if (keyboard_check(ord("S"))){
+	    if (keyboard_check(keybinds.down)){
 	        jumpSpeed = velTrepar;
+			image_speed = -1
 		}
+		
 		if (!place_meeting(x, y + jumpSpeed*2, obj_colisor)){
 		    y += jumpSpeed*2;
 		}
@@ -136,10 +150,17 @@ if (place_meeting(x, y, obj_trepante)){
 		}
 
 	    // Sprite
-	    sprite_index = spr_jogadorNao;
+		if trepando{
+			sprite_index = spr_jogadorNao;
+		}
+		
 	}
 }
 else{
+	if jumpSpeed > 0
+	or jumpSpeed > 0 and (sprite_index == spr_jogadorTiro or sprite_index == spr_jogadorAtacando){
+		pulando = true
+	}
 	podeTrepar = false
 	trepando = false
 }
