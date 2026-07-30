@@ -27,7 +27,6 @@ if global.seringalRooms.direita = room{
 
 else if global.seringalRooms.esquerda = room{
 	if x > room_width/2{
-		show_debug_message(room)
 		destino = rm_seringal
 		xx = 64
 		yy = 512
@@ -38,6 +37,3 @@ else if global.seringalRooms.esquerda = room{
 		xx = room_get_info(destino).width - 96
 	}
 }
-
-
-show_debug_message(room_get_name(room))

@@ -51,8 +51,15 @@ if (moveSpeed != 0)
 }
 
 // Movimento final
-if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
-	x += moveSpeed * speedMulti;
+if (trepando){
+	if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
+	x += moveSpeed * (speedMulti/3);
+	}
+}
+else{
+	if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
+		x += moveSpeed * speedMulti;
+	}
 }
 
 #endregion
@@ -60,20 +67,16 @@ if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
 #region Coice de armas
 
 // Aplica o recuo
-if (abs(recoil) > 0.1)
-{
+if (abs(recoil) > 0.1){
     var dist = abs(round(recoil));
     var dir = sign(recoil);
 
     // Move pixel a pixel para respeitar as colisões
-    for (var i = 0; i < dist; i++)
-    {
-        if (!place_meeting(x + dir, y, obj_colisor))
-        {
+    for (var i = 0; i < dist; i++){
+        if (!place_meeting(x + dir, y, obj_colisor)){
             x += dir;
         }
-        else
-        {
+        else{
 			
             recoil = 0;
             break;
@@ -92,115 +95,166 @@ if (abs(recoil) > 0.1)
 
 #endregion
 	
+#region Escalada
+
+// Entrar na escalada
+if (place_meeting(x, y, obj_trepante)){
+	if (podeTrepar && keyboard_check_pressed(ord("W")))
+	or (podeTrepar && keyboard_check_pressed(ord("S"))){
+	    trepando = true;
+	    jumpSpeed = 0;
+	}
+
+	// Sair da escalada
+	if (trepando){
+	    // Se saiu do cipó
+	    if (!podeTrepar){
+	        trepando = false;
+	    }
+
+	    // Pular para soltar
+	    if (keyboard_check_pressed(keybinds.jump)){
+	        trepando = false;
+	        jumpSpeed = alturaMaxPulo;
+	    }
+
+	    // Movimento vertical
+	    jumpSpeed = 0;
+
+	    if (keyboard_check(ord("W"))){
+	        jumpSpeed = -velTrepar;
+		}
+
+	    if (keyboard_check(ord("S"))){
+	        jumpSpeed = velTrepar;
+		}
+		if (!place_meeting(x, y + jumpSpeed*2, obj_colisor)){
+		    y += jumpSpeed*2;
+		}
+		else{
+		    jumpSpeed = 0;
+		}
+
+	    // Sprite
+	    sprite_index = spr_jogadorNao;
+	}
+}
+else{
+	podeTrepar = false
+	trepando = false
+}
+#endregion
+	
 #region Pulo, gravidade e colisão vertical (clique para abrir)
 
 // Pulo =================================================================================
 // Basicamente aqui é feita a definição da velocidade vertical quando aperta o botão de pulo.
 // Tem umas frescurinha tipo o coyote time e a multiplicação da velocidade de queda, junto com
 // aquela mecanica que o pulo é mais alto conforme você segura o botão
+if !trepando{
+	if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
+		if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
+			pulando = true
+			xScaleReal = sign(xScaleReal) * 0.5
+			yScaleReal = 1.6
+			// Altura do pulo varia conforme a fome
+			jumpSpeed = alturaMaxPulo
 
-if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
-	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
-		pulando = true
-		xScaleReal = sign(xScaleReal) * 0.5
-		yScaleReal = 1.6
-		// Altura do pulo varia conforme a fome
-		jumpSpeed = alturaMaxPulo
+			if (global.fome <= global.fomeMax)
+			{
+			    jumpSpeed = alturaMaxPulo * 1
+			}
 
-		if (global.fome <= global.fomeMax)
-		{
-		    jumpSpeed = alturaMaxPulo * 1
+			if (global.fome <= global.fomeMax / 2)
+			{
+			    jumpSpeed = alturaMaxPulo * 0.85
+			}
+
+			if (global.fome <= global.fomeMax / 4)
+			{
+			    jumpSpeed = alturaMaxPulo * 0.70
+			}
+		    coyoteTime = 0
 		}
-
-		if (global.fome <= global.fomeMax / 2)
-		{
-		    jumpSpeed = alturaMaxPulo * 0.85
-		}
-
-		if (global.fome <= global.fomeMax / 4)
-		{
-		    jumpSpeed = alturaMaxPulo * 0.70
-		}
-	    coyoteTime = 0
 	}
-}
 
-if place_meeting(x, y+1, obj_colisor){
-    coyoteTime = 10
-}
-else{
-    jumpSpeed += gravidade
-	coyoteTime--
-}
-	
-if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
-	idleSprite = spr_jogadorParado
-	jumpSpeed *= 0.4
-	coyoteTime = 0
-}
-
-// Sprite machine
-if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
-	if jumpSpeed = 0{
-		pulando = false
-		if inputX != 0{
-			idleSprite = spr_jogadorParado
-			sprite_index = spr_jogadorAndando
-		}
-		else{
-			sprite_index = idleSprite
-		}
-
+	if place_meeting(x, y+1, obj_colisor){
+	    coyoteTime = 10
 	}
 	else{
-		sprite_index = spr_jogadorPulando
-		if jumpSpeed < -2{
-			xScaleReal = lerp(xScaleReal, sign(xScaleReal) * 0.9, 0.2)
-			yScaleReal = lerp(yScaleReal, 1.15, 0.2)
-		}
-		if sign(jumpSpeed) = 1{
-			image_index = clamp(image_index,3,4)
+	    jumpSpeed += gravidade
+		coyoteTime--
+	}
+	
+	if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
+		idleSprite = spr_jogadorParado
+		jumpSpeed *= 0.4
+		coyoteTime = 0
+	}
+
+	// Sprite machine
+	if sprite_index != spr_jogadorAtacando and sprite_index != spr_jogadorTiro{
+		if jumpSpeed = 0{
+			pulando = false
+			if inputX != 0{
+				idleSprite = spr_jogadorParado
+				sprite_index = spr_jogadorAndando
+			}
+			else{
+				sprite_index = idleSprite
+			}
+
 		}
 		else{
-			image_index = clamp(image_index,0,2)
+			sprite_index = spr_jogadorPulando
+			if jumpSpeed < -2{
+				xScaleReal = lerp(xScaleReal, sign(xScaleReal) * 0.9, 0.2)
+				yScaleReal = lerp(yScaleReal, 1.15, 0.2)
+			}
+			if sign(jumpSpeed) = 1{
+				image_index = clamp(image_index,3,4)
+			}
+			else{
+				image_index = clamp(image_index,0,2)
+			}
 		}
-	}
-}else{
-	image_speed = 1
-}
-
-// Colisão vertical (ajustada com partículas)
-if place_meeting(x, y + jumpSpeed, obj_colisor){
-    while (!place_meeting(x, y + sign(jumpSpeed), obj_colisor)){
-        y += sign(jumpSpeed)
-    }
-
-    // Partículas ao aterrissar, se estava caindo (jumpSpeed positivo)
-    if jumpSpeed > 0{
-		xScaleReal = sign(xScaleReal) * 1.7
-		yScaleReal = 0.8
-        var intensidade = clamp(global.fome / global.fomeMax, 0, 1);
-
-		var qtdParticulas = round(lerp(3, jumpSpeed, intensidade));
-
-		scr_explosaoParticula(x,y + sprite_height / 2,depth + 1,180,max(qtdParticulas,3),spr_particulaGrama,lerp(5,10,intensidade),0.03,0.1);
+	}else{
+		image_speed = 1
 	}
 
-    jumpSpeed = 0
-}
+	// Colisão vertical (ajustada com partículas)
+	if place_meeting(x, y + jumpSpeed, obj_colisor){
+	    while (!place_meeting(x, y + sign(jumpSpeed), obj_colisor)){
+	        y += sign(jumpSpeed)
+	    }
 
-// Pausa no ar durante o ataque
-if sprite_index == spr_jogadorAtacando or sprite_index == spr_jogadorTiro
-{
-    jumpSpeed = 0;
-}
+	    // Partículas ao aterrissar, se estava caindo (jumpSpeed positivo)
+	    if jumpSpeed > 0{
+			xScaleReal = sign(xScaleReal) * 1.7
+			yScaleReal = 0.8
+	        var intensidade = clamp(global.fome / global.fomeMax, 0, 1);
 
-// Movimento definitivo
-y += jumpSpeed
+			var qtdParticulas = round(lerp(3, jumpSpeed, intensidade));
+
+			scr_explosaoParticula(x,y + sprite_height / 2,depth + 1,180,max(qtdParticulas,3),spr_particulaGrama,lerp(5,10,intensidade),0.03,0.1);
+		}
+
+	    jumpSpeed = 0
+	}
+
+	// Pausa no ar durante o ataque
+	if sprite_index == spr_jogadorAtacando or sprite_index == spr_jogadorTiro
+	{
+	    jumpSpeed = 0;
+	}
+
+	// Movimento definitivo
+	y += jumpSpeed
 	
-// Limitando a velocidade de queda
-if jumpSpeed > 30{
-	jumpSpeed = 30
+	// Limitando a velocidade de queda
+	if jumpSpeed > 30{
+		jumpSpeed = 30
+	}
 }
 
 #endregion

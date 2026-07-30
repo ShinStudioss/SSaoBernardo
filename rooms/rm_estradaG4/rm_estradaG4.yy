@@ -169,9 +169,9 @@
     {"$GMRTileLayer":"","%Name":"lay_tileset","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lay_tileset","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":13,"SerialiseWidth":96,"TileCompressedData":[
           -436,0,4,1,2,2,3,-81,0,1,1,-5,2,1,3,-11,0,1,1,-3,2,1,3,-47,0,1,1,-7,2,1,3,-12,0,1,1,-4,2,1,17,-5,6,1,
           7,-20,0,1,1,-7,2,1,3,-34,0,1,5,-7,6,1,7,-12,0,1,5,-10,6,1,7,-20,0,1,5,-7,6,1,16,-5,2,1,3,-24,0,1,1,-3,
-          2,1,17,-7,6,2,16,3,-5,0,1,1,-5,2,1,17,-10,6,1,7,-19,0,2,1,17,-13,6,1,16,-24,2,-13,6,1,7,-5,0,1,5,-16,
-          6,1,7,-4,0,1,1,-4,2,1,3,-7,0,3,1,2,17,-52,6,2,16,3,-4,0,1,5,-17,6,1,3,-3,0,1,5,-4,6,1,16,-7,2,1,17,-55,
-          6,1,7,-3,0,2,1,17,-17,6,1,7,-3,0,1,5,-68,6,1,16,-3,2,1,17,-18,6,1,16,-3,2,1,17,-43,6,
+          2,1,17,-7,6,2,16,3,-5,0,1,1,-5,2,1,17,-10,6,1,7,-19,0,2,1,17,-13,6,1,16,-24,2,1,17,-12,6,1,7,-5,0,1,
+          5,-16,6,1,7,-4,0,1,1,-4,2,1,3,-7,0,3,1,2,17,-52,6,2,16,3,-4,0,1,5,-16,6,2,16,3,-3,0,1,5,-4,6,1,16,-7,
+          2,1,17,-55,6,1,7,-3,0,2,1,17,-17,6,1,7,-3,0,1,5,-68,6,1,16,-3,2,1,17,-18,6,1,16,-3,2,1,17,-43,6,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tlt_terraPreta","path":"tilesets/tlt_terraPreta/tlt_terraPreta.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"lay_tilesetFundo","depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lay_tilesetFundo","properties":[
         {"name":"g_TintCol","type":1,"value":"#FF5F7533",},
