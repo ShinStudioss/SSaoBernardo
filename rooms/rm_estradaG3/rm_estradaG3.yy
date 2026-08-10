@@ -202,8 +202,8 @@
           0,1,1,-6,2,1,3,-18,0,4,1,2,2,17,-3,6,1,7,-7,0,4,5,6,6,16,-3,2,1,3,-4,0,4,1,2,2,3,-22,0,1,5,-10,6,1,7,
           -4,0,2,1,17,-6,6,1,16,-3,2,1,3,-7,0,-7,2,1,17,-6,6,2,16,3,-4,0,3,1,2,17,-6,6,1,7,-30,0,1,5,-10,6,2,16,
           3,-3,0,1,5,-11,6,1,16,-7,2,-15,6,1,7,-3,0,2,1,17,-8,6,2,16,3,-29,0,1,5,-11,6,1,7,-3,0,1,5,-34,6,1,7,
-          -3,0,1,5,-10,6,1,7,-10,0,7,1,17,6,6,16,2,3,-9,0,4,1,2,2,17,-11,6,5,7,0,0,1,17,-34,6,1,16,-3,2,1,17,-10,
-          6,1,16,-4,2,1,17,-3,6,3,16,2,17,-5,6,5,16,2,17,6,16,-5,2,1,17,-14,6,4,16,2,2,17,-20,6,
+          -3,0,1,5,-10,6,1,7,-10,0,1,1,-5,2,1,3,-9,0,4,1,2,2,17,-11,6,5,7,0,0,1,17,-34,6,1,16,-3,2,1,17,-10,6,
+          1,16,-10,2,1,17,-5,6,1,16,-9,2,1,17,-14,6,4,16,2,2,17,-20,6,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tlt_terraPreta","path":"tilesets/tlt_terraPreta/tlt_terraPreta.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"lay_tilesetFundo","depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lay_tilesetFundo","properties":[
         {"name":"g_TintCol","type":1,"value":"#FF5F7533",},

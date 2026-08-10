@@ -5,5 +5,5 @@ obj_controladorDoJogo.transitionGoal = 1
 
 if (abs(obj_controladorDoJogo.transition - obj_controladorDoJogo.transitionGoal) < 0.01)
 {
-    room_goto(destino)
+    room_goto(rm_estradaT3)
 }

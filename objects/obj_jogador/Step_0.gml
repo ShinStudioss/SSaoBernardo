@@ -1,6 +1,6 @@
 keybinds = scr_getBinds()
-
 mask_index = spr_jogadorParado
+
 #region Movimentação e colisão (clique para abrir)
 
 // Movimentação básica =================================================================================
