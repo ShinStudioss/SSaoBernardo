@@ -40,6 +40,8 @@ else if (scr_buscarItem(4) != noone) {
 
 if (global.minuto >= 60) {
     global.hora += 1;
+	audio_play_sound(snd_clock,8,0)
+	audio_play_sound(snd_tempoHiss,9,0,,,0.9)
     global.minuto = 0;
 }
 

@@ -1,6 +1,6 @@
 keybinds = scr_getBinds()
 
-if keyboard_check_pressed(keybinds.interact){
+if keyboard_check_pressed(keybinds.up){
 	selectedOption = optionsStruct[0]
 	audio_stop_sound(snd_menuHover)
 	audio_play_sound(snd_menuHover,2,0)

@@ -39,6 +39,26 @@ switch selectedOption.action{
 			criar_dialogo(["Você precisa de uma faca para cortar a casca."],0,{})
 		}
 	break;
+	
+	case "pegar_item":
+		show_message(caller.item)
+		scr_addItem(caller.item_id,caller.quantidade)
+		with caller{
+			for (var i = 0; i < array_length(global.itens_mundo); i++)
+			{
+			    if (global.itens_mundo[i]._id == item
+			    && global.itens_mundo[i]._x == x
+			    && global.itens_mundo[i]._y == y
+			    && global.itens_mundo[i]._room == room)
+			    {
+			        array_delete(global.itens_mundo, i, 1);
+			        break;
+			    }
+			}
+
+			instance_destroy();
+		}
+	break;
         
     case "cancel":
         instance_destroy()

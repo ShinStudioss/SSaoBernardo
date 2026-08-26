@@ -40,10 +40,10 @@ global.cameraEstatica = false
 display_reset(0, true);
 filtro_cor_set(c_white, 0);
 
-global.transitionX = 0
+global.transitionX = 672
 global.combustivelPoronga = 0
 global.itemSelecionado = 0
-global.transitionY = 0
+global.transitionY = 512
 global.pause = false
 
 flash = 0
@@ -55,8 +55,15 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.inventario = [[8,1],[18,1],[10,1],[9,1]]
-
+global.inventario = [[3,1],[1,3],[0,0],[0,0]]
+global.itens_mundo = [
+    {
+        _id: 8,
+        _x: 500,
+        _y: 300,
+        _room: rm_seringal
+    },
+];
 
 // ID dos itens do jogo
 // 1 - Balde

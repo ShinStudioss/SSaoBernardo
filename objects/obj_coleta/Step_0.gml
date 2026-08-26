@@ -83,10 +83,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
                 if global.itemSelecionado == scr_buscarItem(3).arrayPos{
 
                     scr_buscarItem(3).animPlay = false
-                    alarm[0] = 18
-
-                    scr_Emote(spr_jogadorAtacando)
-                    obj_jogador.attackItem = spr_galho
+                    alarm[0] = 13
 
                     image_xscale = random_range(1.5,2)
                     image_yscale = random_range(1.5,2)
@@ -110,6 +107,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
             scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaLatex,10,0.03,0.1)
 
             scr_addItem(2,1)
+			scr_addItem(1,1)
             quantidade = 0
             state = "sembalde"
         break
