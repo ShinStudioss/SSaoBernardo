@@ -1,4 +1,4 @@
-if (distance_to_object(obj_jogador) < 69 && !instance_exists(obj_dialogBox)) {
+if (distance_to_object(obj_jogador) < 70 && !instance_exists(obj_dialogBox)) {
     var inventario_livre = false;
 
     for (var i = 0; i < array_length(global.inventario); i++) {
@@ -11,7 +11,7 @@ if (distance_to_object(obj_jogador) < 69 && !instance_exists(obj_dialogBox)) {
     if (inventario_livre) {
 		global.pause = true
         criar_dialogo([
-            $"Dá pra ver de longe algo brilhando no chão; {item.nome}... Parece ser {quantidade}. É um pouco perigoso deixar aqui, alguém do seringal pode encontrar.",
+            $"Você encontrou {quantidade} {item.nome}. É um pouco perigoso deixar aqui, alguém do seringal pode encontrar.",
             $"Pegar {item.nome}?",
 			""
         ], true, [

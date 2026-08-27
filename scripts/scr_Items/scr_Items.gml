@@ -196,7 +196,7 @@ function scr_getItem(_id){
 function scr_buscarItem(_idItem){
 	with (obj_inventario){
 	    if (arrayPos < array_length(global.inventario)){
-	        if (global. inventario[arrayPos][0] == _idItem){
+	        if (global.inventario[arrayPos][0] == _idItem){
 	            return id;
 	        }
 	    }

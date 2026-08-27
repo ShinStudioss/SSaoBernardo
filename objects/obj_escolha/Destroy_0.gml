@@ -41,7 +41,7 @@ switch selectedOption.action{
 	break;
 	
 	case "pegar_item":
-		show_message(caller.item)
+		
 		scr_addItem(caller.item_id,caller.quantidade)
 		with caller{
 			for (var i = 0; i < array_length(global.itens_mundo); i++)

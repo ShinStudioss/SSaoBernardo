@@ -214,6 +214,7 @@
     {"id":{"name":"scr_Binds","path":"scripts/scr_Binds/scr_Binds.yy",},},
     {"id":{"name":"scr_Dano","path":"scripts/scr_Dano/scr_Dano.yy",},},
     {"id":{"name":"scr_Dialogo","path":"scripts/scr_Dialogo/scr_Dialogo.yy",},},
+    {"id":{"name":"scr_DropItem","path":"scripts/scr_DropItem/scr_DropItem.yy",},},
     {"id":{"name":"scr_Efeitos","path":"scripts/scr_Efeitos/scr_Efeitos.yy",},},
     {"id":{"name":"scr_Emote","path":"scripts/scr_Emote/scr_Emote.yy",},},
     {"id":{"name":"scr_Filtro","path":"scripts/scr_Filtro/scr_Filtro.yy",},},

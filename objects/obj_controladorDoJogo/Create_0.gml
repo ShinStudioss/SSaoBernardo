@@ -55,7 +55,7 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.inventario = [[3,1],[1,3],[0,0],[0,0]]
+global.inventario = [[3,1],[1,3],[12,3],[0,0]]
 global.itens_mundo = [
     {
         _id: 8,
