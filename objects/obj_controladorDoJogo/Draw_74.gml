@@ -6,10 +6,8 @@ draw_set_alpha(1)
 
 transition = lerp(transition, transitionGoal, 0.2)
 
-if (abs(transition - transitionGoal) < 0.1)
-{
+if (abs(transition - transitionGoal) < 0.1){
     transition = transitionGoal;
-	global.pause = false
 }else{
 	alarm[1] = 5
 }

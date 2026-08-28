@@ -1,4 +1,5 @@
 // Cãmera =====================================================================
+show_debug_message(global.pause)
 
 if global.cameraEstatica = false and instance_exists(obj_jogador)
 {
@@ -32,4 +33,6 @@ if !audio_is_playing(snd_ambiente){
 if vinhetaVermelha > 0{
 	vinhetaVermelha -= 0.05
 }
+
+
 

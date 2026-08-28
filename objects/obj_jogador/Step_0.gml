@@ -421,3 +421,5 @@ if keyboard_check_pressed(ord("T")) and item_id != 0 {
 	scr_DropItem(item_id,x,y,depth,1)
 	scr_removerItem(item_id,1)	
 }
+
+show_debug_message(global.transitionX, global.transitionY)
