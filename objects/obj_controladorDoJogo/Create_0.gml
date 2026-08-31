@@ -56,15 +56,7 @@ global.municaoCarMax = 8
 global.municaoCar = 8
 
 global.inventario = [[3,1],[1,3],[12,3],[0,0]]
-global.itens_mundo = [
-    {
-        _id: 8,
-        _x: 500,
-        _y: 300,
-        _room: rm_seringal
-    },
-];
-
+global.itens_mundo = []
 // ID dos itens do jogo
 // 1 - Balde
 // 2 - Látex

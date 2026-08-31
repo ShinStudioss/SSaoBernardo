@@ -1,4 +1,4 @@
-if (distance_to_object(obj_jogador) < 70 && !instance_exists(obj_dialogBox)) {
+if (distance_to_object(obj_jogador) < 90 && !instance_exists(obj_dialogBox)) {
     var inventario_livre = false;
 
     for (var i = 0; i < array_length(global.inventario); i++) {

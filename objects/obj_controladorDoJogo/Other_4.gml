@@ -8,9 +8,8 @@ for (var i = 0; i < array_length(global.itens_mundo); i++)
             info._x,
             info._y,
             "lay_instances",
-            obj_item
+            obj_item,
+			{item_id: info._id}
         );
-
-        novo_item.item = info._id;
     }
 }

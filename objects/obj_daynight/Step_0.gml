@@ -184,5 +184,14 @@ var fx_struct = {
     g_LUTColourTexture   : lutId
 };
 
+if global.hora = 14{
+	global.pause = true
+	obj_jogador.speed = 0
+	obj_jogador.sprite_index = spr_jogadorParado
+	if alarm[0] <= 0{
+		alarm[0] = 180
+	}
+}
+
 fx_set_parameters(layer_get_fx("lay_lut"), fx_struct);
 
