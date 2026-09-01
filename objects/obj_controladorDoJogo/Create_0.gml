@@ -85,6 +85,7 @@ audio_group_load(audiogroup_vozes)
 
 global.sfxVolume = 1
 global.ostVolume = 1
+global.dinheiro = 0
 
 randomize()
 
