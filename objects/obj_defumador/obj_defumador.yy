@@ -1,11 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_comercio",
+  "%Name":"obj_defumador",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_comercio",
+  "name":"obj_defumador",
   "overriddenProperties":[],
   "parent":{
     "name":"Interagiveis",
@@ -28,15 +31,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v2","%Name":"contrabandista","filters":[],"listItems":[],"multiselect":false,"name":"contrabandista","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_comerciante",
-    "path":"sprites/spr_comerciante/spr_comerciante.yy",
+    "name":"spr_defumador",
+    "path":"sprites/spr_defumador/spr_defumador.yy",
   },
   "spriteMaskId":null,
   "visible":true,

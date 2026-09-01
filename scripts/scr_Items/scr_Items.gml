@@ -188,6 +188,14 @@ function scr_getItem(_id){
 		        descricao: "Munição para carabina."
 		    };
 		    break;
+			
+		case 21:
+			return {
+				nome: "Lenha",
+				sprite: spr_item,
+				frame: 21,
+				descricao: "Combustivel para defumadora."
+			}
 
 		    return undefined;
 	}

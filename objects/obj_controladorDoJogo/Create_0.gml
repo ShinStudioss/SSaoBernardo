@@ -55,7 +55,7 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.inventario = [[3,1],[1,3],[12,3],[0,0]]
+global.inventario = [[21,3],[2,3],[0,0],[0,0]]
 global.itens_mundo = []
 // ID dos itens do jogo
 // 1 - Balde
@@ -78,6 +78,7 @@ global.itens_mundo = []
 // 18 - Carabina
 // 19 - Munição Esp.
 // 20 - Munição Car.
+// 21 - Lenha
 
 global.tutorial = [[0]]
 
@@ -85,7 +86,6 @@ audio_group_load(audiogroup_vozes)
 
 global.sfxVolume = 1
 global.ostVolume = 1
-global.dinheiro = 0
 
 randomize()
 
