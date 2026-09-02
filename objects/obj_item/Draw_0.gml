@@ -24,10 +24,17 @@ draw_sprite_ext(
 
 intensity = 0.30 + alpha_wave
 
-if (distance_to_object(obj_jogador) < 90) and !instance_exists(obj_dialogBox){
-	draw_set_font(fnt_interacoes)
-	draw_set_halign(fa_center);
-    draw_set_valign(fa_bottom);
-	draw_set_color(c_white);
-    draw_text(x, y - 40, "Clique para interagir");
+// 1. Encontra qual é a instância de 'obj_item' MAIS PERTO do jogador
+var _item_mais_proximo = instance_nearest(obj_jogador.x, obj_jogador.y, obj_item);
+
+// 2. Só desenha se ESTE objeto for o mais próximo de todos
+if (id == _item_mais_proximo) {
+    if (distance_to_object(obj_jogador) < 90) and !instance_exists(obj_dialogBox) {
+        draw_set_font(fnt_interacoes);
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_bottom);
+        draw_set_color(c_white);
+        draw_text(x, y - 40, "Pegar");
+    }
 }
+

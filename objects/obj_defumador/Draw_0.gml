@@ -18,11 +18,3 @@ if state = "aceso"{
 	}
 	draw_healthbar(x-30,y+20,x+30,y+23,valor,make_colour_rgb(20,20,20),c_white,c_white,0,true,true)
 }
-
-if state = "aceso" or state = "pronto"{
-	draw_sprite(spr_corteArvore_1,dripFrame,x-3,y)
-}
-
-if state = "pronto"{
-	dripFrame = 0
-}

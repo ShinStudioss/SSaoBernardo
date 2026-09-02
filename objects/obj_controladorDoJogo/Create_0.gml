@@ -56,7 +56,6 @@ global.municaoCarMax = 8
 global.municaoCar = 8
 
 global.inventario = [[21,3],[2,3],[0,0],[0,0]]
-global.itens_mundo = []
 // ID dos itens do jogo
 // 1 - Balde
 // 2 - Látex
@@ -79,6 +78,9 @@ global.itens_mundo = []
 // 19 - Munição Esp.
 // 20 - Munição Car.
 // 21 - Lenha
+
+global.itens_mundo = []
+// [x, y, item(id), quantidade, room]
 
 global.tutorial = [[0]]
 

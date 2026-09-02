@@ -418,6 +418,13 @@ if global.saude <= 0{
 // Ta tudo errado	
 var item_id = global.inventario[global.itemSelecionado][0]
 if keyboard_check_pressed(ord("T")) and item_id != 0 {
+	array_push(global.itens_mundo, {
+        _x: x,
+        _y: y,
+        _id: item_id,
+        _qtd: 1,
+        _room: room
+    });
 	scr_DropItem(item_id,x,y,depth,1)
 	scr_removerItem(item_id,1)	
 }

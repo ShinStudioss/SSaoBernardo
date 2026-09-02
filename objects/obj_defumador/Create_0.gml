@@ -1,4 +1,5 @@
-state = "semlenha"
+state = "semlatex"
+
 
 quantidade = 0
 quantidadeMax = 600
