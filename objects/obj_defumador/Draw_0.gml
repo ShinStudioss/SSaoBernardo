@@ -1,12 +1,12 @@
 draw_self()
 
-if state != "aceso"{
+if state != "comlatex"{
 	event_inherited();
 }
 
 var valor = (quantidade/quantidadeMax) * 100
 
-if state = "aceso"{
+if state = "comlatex"{
 	if quantidade < quantidadeMax{
 		quantidade += 1
 	}else{
@@ -17,4 +17,11 @@ if state = "aceso"{
 		state = "pronto"
 	}
 	draw_healthbar(x-30,y+20,x+30,y+23,valor,make_colour_rgb(20,20,20),c_white,c_white,0,true,true)
+}
+
+if state = "buff"{
+	if quantidade < quantidadeMax{
+		quantidade += 200
+		state = "comlatex"
+	}
 }

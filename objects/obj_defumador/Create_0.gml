@@ -1,4 +1,4 @@
-state = "semlenha"
+state = "semlatex"
 
 
 quantidade = 0

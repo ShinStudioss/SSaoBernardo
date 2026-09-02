@@ -12,9 +12,9 @@ var dialogoSeringueira = [
 ];
 
 switch state{
-    case "semlenha":
-		if scr_buscarItem(21) != noone{
-	        if global.itemSelecionado == scr_buscarItem(21).arrayPos and distancia < 70{
+    case "semlatex":
+		if scr_buscarItem(2) != noone{
+	        if global.itemSelecionado == scr_buscarItem(2).arrayPos and distancia < 70{
 				image_alpha = 1 + sin(current_time / 200) * 0.3
 
 
@@ -35,11 +35,6 @@ switch state{
 				image_index = 0
 	    }
     break;
-
-    case "comlenha":
-        image_alpha = 1
-        image_index = 1
-    break;
     
     case "pronto":
         image_index = 0
@@ -50,15 +45,15 @@ switch state{
 if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
     switch state{
 
-        case "semlenha":
+        case "semlatex":
             image_alpha = 0
 
-            if scr_buscarItem(21) != noone{
-                if global.itemSelecionado == scr_buscarItem(21).arrayPos{
+            if scr_buscarItem(2) != noone{
+                if global.itemSelecionado == scr_buscarItem(2).arrayPos{
 
                     scr_Emote(spr_jogadorItem)
-                    scr_buscarItem(21).animPlay = false
-                    scr_removerItem(21, 1);
+                    scr_buscarItem(2).animPlay = false
+                    scr_removerItem(2, 1);
                     scr_freeze(120)
                     scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaPontoPreto,10,0.03,0.1)
 
@@ -69,8 +64,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
                     image_xscale = random_range(1.5,2)
                     image_yscale = random_range(1.5,2)
                     image_angle = random_range(-60,60)
-
-                    state = "comlenha"
+					state = "comlatex"
                 }
                 else{
                     scr_Emote(spr_jogadorNao)
@@ -79,19 +73,19 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
             }
             else{
                 scr_Emote(spr_jogadorNao)
-                criar_dialogo(["É necessário lenha para defumar o látex. Você não tem lenha com você."],0,{})
+                criar_dialogo(["É necessário látex para fazer borracha. Você não tem látex com você."],0,{})
             }
         break;
 
-        case "comlenha":
+        case "comlatex":
 
             image_alpha = 1
             image_index = 1
 
-            if scr_buscarItem(2) != noone{
-                if global.itemSelecionado == scr_buscarItem(2).arrayPos{
-
-                    scr_buscarItem(2).animPlay = false
+            if scr_buscarItem(21) != noone{
+                if global.itemSelecionado == scr_buscarItem(21).arrayPos{
+                    scr_buscarItem(21).animPlay = false
+					scr_removerItem(21,1)
                     alarm[0] = 13
 
                     image_xscale = random_range(1.5,2)
@@ -105,7 +99,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
             }
             else{
                 scr_Emote(spr_jogadorNao)
-                criar_dialogo(["Você não tem látex. É preciso látex para defumar látex."],0,{})
+                criar_dialogo(["Você não tem lenha. É preciso lenha para aumentar a chama."],0,{})
             }
 
         break;
@@ -117,7 +111,7 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
 
             scr_addItem(7,1)
             quantidade = 0
-            state = "semlenha"
+            state = "semlatex"
         break
     }
 }
