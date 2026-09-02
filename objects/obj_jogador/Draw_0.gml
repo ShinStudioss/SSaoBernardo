@@ -35,7 +35,7 @@ if sprite_index = spr_jogadorTiro{
 }
 
 if sprite_index = spr_jogadorItem{
-	var offX = 10 * image_xscale
+	var offX = 10 * xScaleReal
     var offY = 0
 	itemX = lerp(itemX,x+offX,0.1)
 	itemY = lerp(itemY,y+offY,0.1)

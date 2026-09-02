@@ -40,6 +40,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"17c0d8cc-21dc-4b5e-bfd7-ec2686553eba","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"17c0d8cc-21dc-4b5e-bfd7-ec2686553eba","opacity":29.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"4e8d6859-7e08-45ff-b6cd-2d1a31ac4177","blendMode":0,"displayName":"default","isLocked":false,"name":"4e8d6859-7e08-45ff-b6cd-2d1a31ac4177","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_item",
