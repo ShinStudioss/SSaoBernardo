@@ -1,4 +1,4 @@
-draw_self()
+draw_sprite(sprite_index,0,x,y)
 
 if state != "comlatex"{
 	event_inherited();
@@ -24,4 +24,8 @@ if state = "buff"{
 		quantidade += 200
 		state = "comlatex"
 	}
+}
+
+if state != "semlatex"{
+	draw_sprite_ext(spr_item,frame,x,y,image_xscale,image_yscale,image_angle,c_white,1)
 }

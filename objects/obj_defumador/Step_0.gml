@@ -17,27 +17,20 @@ switch state{
 	        if global.itemSelecionado == scr_buscarItem(2).arrayPos and distancia < 70{
 				image_alpha = 1 + sin(current_time / 200) * 0.3
 
-
-				if (sin(current_time / 200) >= 0) {
-				    image_index = 2;
-				} else {
-				    image_index = 0;
-				}
-
 	        }
 	        else{
 	            image_alpha = 1
-				image_index = 0
+				frame = 0
 	        }
 		}
 		else{
 	            image_alpha = 1
-				image_index = 0
+				frame = 0
 	    }
     break;
     
     case "pronto":
-        image_index = 0
+        frame = 7
     break
 }
 
