@@ -48,15 +48,13 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
                     scr_buscarItem(2).animPlay = false
                     scr_removerItem(2, 1);
                     scr_freeze(120)
-                    scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaPontoPreto,10,0.03,0.1)
 
                     audio_play_sound(snd_equipe,3,0,0.3,,random_range(1.1,1.4))
                     audio_play_sound(snd_equipe,3,0,0.3,,random_range(0.7,0.9))
                     audio_play_sound(snd_porongaApagando,3,0,1,,0.8)
 
-                    image_xscale = random_range(1.5,2)
-                    image_yscale = random_range(1.5,2)
-                    image_angle = random_range(-60,60)
+					escalaItem = 2
+					scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaLatex,10,0.03,0.1)
 					state = "comlatex"
                 }
                 else{

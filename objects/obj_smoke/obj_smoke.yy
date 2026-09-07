@@ -8,12 +8,19 @@
   ],
   "managed":true,
   "name":"obj_smoke",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"__cle_objPointLight","path":"objects/__cle_objPointLight/__cle_objPointLight.yy",},"propertyId":{"name":"color","path":"objects/__cle_objPointLight/__cle_objPointLight.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF0088FF",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"__cle_objPointLight","path":"objects/__cle_objPointLight/__cle_objPointLight.yy",},"propertyId":{"name":"radius","path":"objects/__cle_objPointLight/__cle_objPointLight.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"48",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"__cle_objLightDynamic","path":"objects/__cle_objLightDynamic/__cle_objLightDynamic.yy",},"propertyId":{"name":"enabled","path":"objects/__cle_objLightDynamic/__cle_objLightDynamic.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+  ],
   "parent":{
     "name":"Efeitos",
     "path":"folders/Objetos/Efeitos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"__cle_objPointLight",
+    "path":"objects/__cle_objPointLight/__cle_objPointLight.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

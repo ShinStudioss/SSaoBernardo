@@ -10,3 +10,4 @@ if isParticle = true{
 		instance_destroy()
 	}
 }
+

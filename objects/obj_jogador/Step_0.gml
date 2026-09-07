@@ -151,7 +151,7 @@ if (place_meeting(x, y, obj_trepante)){
 
 	    // Sprite
 		if trepando{
-			sprite_index = spr_jogadorNao;
+			sprite_index = spr_jogadorTrepando;
 		}
 		
 	}
