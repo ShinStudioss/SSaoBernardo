@@ -12,3 +12,14 @@ if id = inst_126BD70B{
 	yy = 512
 }
 
+if id = inst_59250D20{
+	destino = rm_defumacao
+	xx = 600
+	yy = 732
+}
+
+if id = inst_46479F3F{
+	destino = rm_PSE2
+	xx = 360
+	yy = 67
+}

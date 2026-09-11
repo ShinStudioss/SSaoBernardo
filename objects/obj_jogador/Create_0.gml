@@ -25,6 +25,7 @@ effectColor = [255,255,255]
 tercoDialogo = 0
 invencivel = false
 
+maxjumpspeed = 11
 
 podeTrepar = false
 trepando = false;

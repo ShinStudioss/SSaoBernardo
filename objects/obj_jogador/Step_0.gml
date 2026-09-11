@@ -198,13 +198,16 @@ if !trepando{
 		    coyoteTime = 0
 		}
 	}
+	
 
 	if place_meeting(x, y+1, obj_colisor){
 	    coyoteTime = 10
 	}
 	else{
-	    jumpSpeed += gravidade
-		coyoteTime--
+		if jumpSpeed <= maxjumpspeed{
+		    jumpSpeed += gravidade
+			coyoteTime--
+		}
 	}
 	
 	if keyboard_check_released(keybinds.jump) and jumpSpeed < 0{
@@ -428,5 +431,3 @@ if keyboard_check_pressed(ord("T")) and item_id != 0 {
 	scr_DropItem(item_id,x,y,depth,1)
 	scr_removerItem(item_id,1)	
 }
-
-show_debug_message(global.transitionX, global.transitionY)

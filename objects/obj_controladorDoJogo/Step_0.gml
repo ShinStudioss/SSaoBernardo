@@ -1,5 +1,4 @@
 // Cãmera =====================================================================
-show_debug_message(global.pause)
 
 if global.cameraEstatica = false and instance_exists(obj_jogador)
 {
