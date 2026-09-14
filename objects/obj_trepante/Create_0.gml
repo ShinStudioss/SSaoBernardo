@@ -10,3 +10,6 @@ if podre{
 else{
 	image_index = 0
 }
+
+
+escalay = image_yscale

@@ -217,6 +217,7 @@
     {"name":"snd_rabiscoVoz","order":6,"path":"sounds/snd_rabiscoVoz/snd_rabiscoVoz.yy",},
     {"name":"snd_raimundoVoz","order":17,"path":"sounds/snd_raimundoVoz/snd_raimundoVoz.yy",},
     {"name":"snd_riser","order":27,"path":"sounds/snd_riser/snd_riser.yy",},
+    {"name":"snd_sino","order":28,"path":"sounds/snd_sino/snd_sino.yy",},
     {"name":"snd_tempoHiss","order":26,"path":"sounds/snd_tempoHiss/snd_tempoHiss.yy",},
     {"name":"snd_terco","order":18,"path":"sounds/snd_terco/snd_terco.yy",},
     {"name":"__cle_sprBayer2x2","order":1,"path":"sprites/__cle_sprBayer2x2/__cle_sprBayer2x2.yy",},

@@ -286,6 +286,7 @@
     {"id":{"name":"snd_rabiscoVoz","path":"sounds/snd_rabiscoVoz/snd_rabiscoVoz.yy",},},
     {"id":{"name":"snd_raimundoVoz","path":"sounds/snd_raimundoVoz/snd_raimundoVoz.yy",},},
     {"id":{"name":"snd_riser","path":"sounds/snd_riser/snd_riser.yy",},},
+    {"id":{"name":"snd_sino","path":"sounds/snd_sino/snd_sino.yy",},},
     {"id":{"name":"snd_tempoHiss","path":"sounds/snd_tempoHiss/snd_tempoHiss.yy",},},
     {"id":{"name":"snd_terco","path":"sounds/snd_terco/snd_terco.yy",},},
     {"id":{"name":"__cle_sprBayer16x16","path":"sprites/__cle_sprBayer16x16/__cle_sprBayer16x16.yy",},},
