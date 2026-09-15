@@ -249,6 +249,7 @@
     {"name":"spr_baldeDeFilho","order":3,"path":"sprites/spr_baldeDeFilho/spr_baldeDeFilho.yy",},
     {"name":"spr_bar","order":5,"path":"sprites/spr_bar/spr_bar.yy",},
     {"name":"spr_cabana","order":4,"path":"sprites/spr_cabana/spr_cabana.yy",},
+    {"name":"spr_cabanaalta","order":6,"path":"sprites/spr_cabanaalta/spr_cabanaalta.yy",},
     {"name":"spr_carabina","order":10,"path":"sprites/spr_carabina/spr_carabina.yy",},
     {"name":"spr_corteArvore_1","order":5,"path":"sprites/spr_corteArvore_1/spr_corteArvore_1.yy",},
     {"name":"spr_cursor","order":3,"path":"sprites/spr_cursor/spr_cursor.yy",},
