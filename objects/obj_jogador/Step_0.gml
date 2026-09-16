@@ -101,7 +101,7 @@ if (abs(recoil) > 0.1){
 // Entrar na escalada
 if (place_meeting(x, y, obj_trepante)){
 	if (podeTrepar && keyboard_check_pressed(keybinds.up))
-	or (podeTrepar && keyboard_check_pressed(ord(keybinds.down))){
+	or (podeTrepar && keyboard_check_pressed(keybinds.down)){
 	    trepando = true;
 	    jumpSpeed = 0;
 	}
@@ -136,10 +136,14 @@ if (place_meeting(x, y, obj_trepante)){
 	        jumpSpeed = -velTrepar;
 			image_speed = 1
 		}
-
-	    if (keyboard_check(keybinds.down)){
-	        jumpSpeed = velTrepar;
-			image_speed = -1
+		else{
+		    if (keyboard_check(keybinds.down)){
+		        jumpSpeed = velTrepar;
+				image_speed = -1
+			}
+			else{
+				image_speed = 0
+			}
 		}
 		
 		if (!place_meeting(x, y + jumpSpeed*2, obj_colisor)){
@@ -331,17 +335,19 @@ var runMax = 1.6
 var walkSpeed = lerp(walkMin, walkMax, fomePerc)
 var runSpeed  = lerp(runMin, runMax, fomePerc)
 
-if keyboard_check(keybinds.run) and global.energia > 0 and inputX != 0 and sprite_index != spr_jogadorAtacando{
-	speedMulti = runSpeed
-	image_speed = lerp(1, 1.67, fomePerc)
-	global.energia -= 0.15 * (1 - fomePerc * 0.5) 
-}
-else{
-	speedMulti = walkSpeed
-	image_speed = 1
+if !trepando{
+	if keyboard_check(keybinds.run) and global.energia > 0 and inputX != 0 and (sprite_index != spr_jogadorAtacando){
+		speedMulti = runSpeed
+		image_speed = lerp(1, 1.67, fomePerc)
+		global.energia -= 0.15 * (1 - fomePerc * 0.5) 
+	}
+	else{
+		speedMulti = walkSpeed
+		image_speed = 1
 	
-	if global.fome > global.fomeMax * 0.4 and global.energia < global.energiaMax and !keyboard_check(keybinds.run){
-		global.energia += (global.fome/global.fomeMax) / 30
+		if global.fome > global.fomeMax * 0.4 and global.energia < global.energiaMax and !keyboard_check(keybinds.run){
+			global.energia += (global.fome/global.fomeMax) / 30
+		}
 	}
 }
 #endregion

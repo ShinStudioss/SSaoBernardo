@@ -23,3 +23,15 @@ if id = inst_46479F3F{
 	xx = 360
 	yy = 67
 }
+
+if id = inst_2F189D0{
+	destino = rm_casas
+	xx = 600
+	yy = 732
+}
+
+if id = inst_46479F3F1{
+	destino = rm_PSD2
+	xx = 2688
+	yy = 67
+}
