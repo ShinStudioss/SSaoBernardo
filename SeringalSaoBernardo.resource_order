@@ -114,6 +114,7 @@
     {"name":"obj_transicaoDormir","order":2,"path":"objects/obj_transicaoDormir/obj_transicaoDormir.yy",},
     {"name":"obj_trepante","order":7,"path":"objects/obj_trepante/obj_trepante.yy",},
     {"name":"Object33","order":3,"path":"objects/Object33/Object33.yy",},
+    {"name":"rm_casas","order":5,"path":"rooms/rm_casas/rm_casas.yy",},
     {"name":"rm_dayTransition","order":3,"path":"rooms/rm_dayTransition/rm_dayTransition.yy",},
     {"name":"rm_defumacao","order":4,"path":"rooms/rm_defumacao/rm_defumacao.yy",},
     {"name":"rm_estradaG2","order":1,"path":"rooms/rm_estradaG2/rm_estradaG2.yy",},

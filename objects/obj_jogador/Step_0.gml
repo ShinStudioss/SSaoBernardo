@@ -243,7 +243,6 @@ if !trepando{
 			}
 		}
 	}else{
-		image_speed = 1
 	}
 
 	// Colisão vertical (ajustada com partículas)

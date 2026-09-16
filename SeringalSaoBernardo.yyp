@@ -156,6 +156,7 @@
     {"id":{"name":"obj_trepante","path":"objects/obj_trepante/obj_trepante.yy",},},
     {"id":{"name":"Object33","path":"objects/Object33/Object33.yy",},},
     {"id":{"name":"__cle_pthOccluderWall","path":"paths/__cle_pthOccluderWall/__cle_pthOccluderWall.yy",},},
+    {"id":{"name":"rm_casas","path":"rooms/rm_casas/rm_casas.yy",},},
     {"id":{"name":"rm_dayTransition","path":"rooms/rm_dayTransition/rm_dayTransition.yy",},},
     {"id":{"name":"rm_defumacao","path":"rooms/rm_defumacao/rm_defumacao.yy",},},
     {"id":{"name":"rm_estradaG1","path":"rooms/rm_estradaG1/rm_estradaG1.yy",},},
@@ -425,6 +426,7 @@
     {"roomId":{"name":"rm_estradaT10","path":"rooms/rm_estradaT10/rm_estradaT10.yy",},},
     {"roomId":{"name":"rm_estradaT11","path":"rooms/rm_estradaT11/rm_estradaT11.yy",},},
     {"roomId":{"name":"rm_defumacao","path":"rooms/rm_defumacao/rm_defumacao.yy",},},
+    {"roomId":{"name":"rm_casas","path":"rooms/rm_casas/rm_casas.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
