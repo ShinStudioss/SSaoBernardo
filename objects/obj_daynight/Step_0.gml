@@ -184,15 +184,16 @@ var fx_struct = {
     g_LUTColourTexture   : lutId
 };
 
-if global.hora = 14{
+if global.hora = 14 and global.minuto = 0{
 	global.pause = true
 	obj_jogador.speed = 0
+	obj_jogador.inputX = 0
 	obj_jogador.sprite_index = spr_jogadorParado
-	if !audio_is_playing(snd_sino){
+	if !audio_is_playing(snd_sino) and global.minuto = 0{
 		audio_play_sound(snd_sino,8,0)
 	}
 	if alarm[0] <= 0{
-		alarm[0] = 240
+		alarm[0] = 180
 	}
 }
 

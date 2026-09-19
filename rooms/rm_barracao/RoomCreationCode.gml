@@ -7,9 +7,7 @@ if !instance_exists(obj_controladorDoJogo){
 }
 
 else{
-	obj_jogador.x = global.transitionX
-	obj_jogador.y = global.transitionY 
+	obj_jogador.x = -30
+	obj_jogador.y = 514
 	obj_controladorDoJogo.transitionGoal = 0
 }
-
-audio_sound_gain(snd_ambiente,global.sfxVolume,3000)

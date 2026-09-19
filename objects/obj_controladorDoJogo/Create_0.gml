@@ -108,3 +108,4 @@ transitionGoal = 0
 alphaVida = 0
 
 vinhetaVermelha = 0
+drawVinheta = true

@@ -229,7 +229,9 @@ if !trepando{
 				sprite_index = spr_jogadorAndando
 			}
 			else{
+				if global.pause = false{
 				sprite_index = idleSprite
+				}
 			}
 
 		}
