@@ -109,3 +109,6 @@ alphaVida = 0
 
 vinhetaVermelha = 0
 drawVinheta = true
+
+global.poolLoja = []
+global.poolContrabando = []

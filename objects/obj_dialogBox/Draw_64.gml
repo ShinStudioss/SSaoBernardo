@@ -20,5 +20,5 @@ if options and currentText = ""{
 		instance_create_depth(x,y,depth,obj_escolha,{caixaPai: id})
 	}
 	draw_text_ext(88,524,optionsStruct[0].text,36,1200)
-	draw_text_ext(88,524 + string_height_ext(optionsStruct[0].text,36,1200),optionsStruct[1].text,36,1200)
+	draw_text_ext(88,524 + string_height_ext(optionsStruct[0].text,36,1200) + 8,optionsStruct[1].text,36,1200)
 }

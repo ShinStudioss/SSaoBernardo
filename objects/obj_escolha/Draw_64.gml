@@ -1,5 +1,8 @@
 keybinds = scr_getBinds()
 
+var mx = obj_cursor.x;
+var my = obj_cursor.y;
+
 if keyboard_check_pressed(keybinds.up){
 	selectedOption = optionsStruct[0]
 	audio_stop_sound(snd_menuHover)
@@ -32,7 +35,7 @@ if alarm[0] <= 0{
 		var w = string_width_ext(txt,36,1200)
 		var h = string_height_ext(txt,36,1200)
 
-		draw_rectangle(80,520 + yOffset, 80 + w + 16, 520 + yOffset + h + 8, false)
+		draw_rectangle(80,520 + yOffset + 8, 80 + w + 16, 520 + yOffset + h + 16, false)
 	}
 
 	draw_set_alpha(1)
