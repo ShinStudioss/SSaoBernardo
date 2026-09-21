@@ -24,7 +24,7 @@ if (selecionado)
 }
 
 selecionadoAntes = selecionado;
-
+draw_set_colour(c_white)
 itemInfo = scr_getItem(item)
 draw_sprite_ext(itemInfo.sprite,itemInfo.frame,x,y,escala,escala,rotacao,c_white,1)
 if quantidade > 1{
