@@ -32,5 +32,3 @@ mouseSobreItem = false
 RodaX = 180
 RodaY = 285
 
-var _itemSelect = 
-itensDisponiveis = []

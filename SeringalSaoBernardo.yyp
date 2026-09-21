@@ -360,6 +360,7 @@
     {"id":{"name":"spr_jogadorTiro","path":"sprites/spr_jogadorTiro/spr_jogadorTiro.yy",},},
     {"id":{"name":"spr_jogadorTrepando","path":"sprites/spr_jogadorTrepando/spr_jogadorTrepando.yy",},},
     {"id":{"name":"spr_lojista","path":"sprites/spr_lojista/spr_lojista.yy",},},
+    {"id":{"name":"spr_lojistamangando","path":"sprites/spr_lojistamangando/spr_lojistamangando.yy",},},
     {"id":{"name":"spr_noite","path":"sprites/spr_noite/spr_noite.yy",},},
     {"id":{"name":"spr_particulaBagaco","path":"sprites/spr_particulaBagaco/spr_particulaBagaco.yy",},},
     {"id":{"name":"spr_particulaBrilho","path":"sprites/spr_particulaBrilho/spr_particulaBrilho.yy",},},

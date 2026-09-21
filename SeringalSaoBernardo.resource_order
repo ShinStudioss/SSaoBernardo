@@ -280,6 +280,7 @@
     {"name":"spr_jogadorSim","order":6,"path":"sprites/spr_jogadorSim/spr_jogadorSim.yy",},
     {"name":"spr_jogadorTiro","order":7,"path":"sprites/spr_jogadorTiro/spr_jogadorTiro.yy",},
     {"name":"spr_jogadorTrepando","order":10,"path":"sprites/spr_jogadorTrepando/spr_jogadorTrepando.yy",},
+    {"name":"spr_lojistamangando","order":2,"path":"sprites/spr_lojistamangando/spr_lojistamangando.yy",},
     {"name":"spr_noite","order":1,"path":"sprites/spr_noite/spr_noite.yy",},
     {"name":"spr_particulaBagaco","order":21,"path":"sprites/spr_particulaBagaco/spr_particulaBagaco.yy",},
     {"name":"spr_particulaBrilho","order":12,"path":"sprites/spr_particulaBrilho/spr_particulaBrilho.yy",},

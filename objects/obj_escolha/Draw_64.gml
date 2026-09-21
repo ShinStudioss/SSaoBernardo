@@ -1,3 +1,5 @@
+// NÃO MEXER. SUJEITO A MORTE.
+
 keybinds = scr_getBinds()
 
 var mx = device_mouse_x_to_gui(0);

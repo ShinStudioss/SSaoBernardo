@@ -19,11 +19,13 @@
     {"name":"inst_18346B22","path":"rooms/rm_barracao/rm_barracao.yy",},
     {"name":"inst_77DD0178","path":"rooms/rm_barracao/rm_barracao.yy",},
     {"name":"inst_4CF58C3F","path":"rooms/rm_barracao/rm_barracao.yy",},
+    {"name":"inst_24066A94","path":"rooms/rm_barracao/rm_barracao.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"lay_overlay","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_4CF58C3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":2,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CF58C3F","objectId":{"name":"obj_barracao","path":"objects/obj_barracao/obj_barracao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":333.0,"y":15.0,},
+        {"$GMRInstance":"v4","%Name":"inst_24066A94","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24066A94","objectId":{"name":"obj_comercio","path":"objects/obj_comercio/obj_comercio.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1235.0,"y":467.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4CF58C3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":2,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CF58C3F","objectId":{"name":"obj_barracao","path":"objects/obj_barracao/obj_barracao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":332.0,"y":18.0,},
       ],"layers":[],"name":"lay_overlay","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"lay_lut","depth":100,"effectEnabled":true,"effectType":"_filter_lut_colour","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lay_lut","properties":[
         {"name":"g_LUTColourIntensity","type":0,"value":"1",},
