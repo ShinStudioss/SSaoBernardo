@@ -146,6 +146,7 @@
     {"id":{"name":"obj_interagivel","path":"objects/obj_interagivel/obj_interagivel.yy",},},
     {"id":{"name":"obj_inventario","path":"objects/obj_inventario/obj_inventario.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
+    {"id":{"name":"obj_itemCard","path":"objects/obj_itemCard/obj_itemCard.yy",},},
     {"id":{"name":"obj_jogador","path":"objects/obj_jogador/obj_jogador.yy",},},
     {"id":{"name":"obj_jogadorMorrendo","path":"objects/obj_jogadorMorrendo/obj_jogadorMorrendo.yy",},},
     {"id":{"name":"obj_luzControle","path":"objects/obj_luzControle/obj_luzControle.yy",},},

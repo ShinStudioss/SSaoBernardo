@@ -10,4 +10,4 @@ var choice = choose(
 	"Se chover, não venha reclamar que a borracha molhou.",
 	"Capricha nesses corte aí, rapaz. Cada gota dessas vale dinheiro!",
 )
-introDialog = criar_dialogo(["Patrão Mané:\nBora, Raimundão. Hora de prestar as contas dessa borracha.",$"Patrão Mané:\n{choice}"],false,[],,)
+introDialog = criar_dialogo(["Patrão Mané:\nBora, Raimundão. Hora de prestar as contas dessa borracha.",$"Patrão Mané:\n{choice}"],false,[],,snd_sosoVoz)

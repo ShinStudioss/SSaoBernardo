@@ -33,7 +33,12 @@ if (newCharIndex > oldCharIndex)
 }
 
 // Avançar diálogo
-if ((keyboard_check_pressed(keybinds.jump) || mouse_check_button_pressed(mb_left)) && !instance_exists(obj_escolha))
+if instance_exists(obj_comercio){
+	if instance_exists(obj_comercio.descricao){
+		skippable = false
+	}
+}
+if skippable and ((keyboard_check_pressed(keybinds.jump) || mouse_check_button_pressed(mb_left)) && !instance_exists(obj_escolha))
 {
     if (charIndex < string_length(currentText))
     {

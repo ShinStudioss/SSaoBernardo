@@ -55,7 +55,7 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.inventario = [[21,3],[2,3],[0,0],[0,0]]
+global.inventario = [[1,3],[3,1],[0,0],[0,0]]
 // ID dos itens do jogo
 // 1 - Balde
 // 2 - Látex

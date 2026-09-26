@@ -14,7 +14,7 @@ if sprite_index = spr_lojistamangando{
 	}
 	else{
 		sprite_index = spr_lojista
-		alarm[0] = 90
+		alarm[0] = 30
 	}
 }
 	

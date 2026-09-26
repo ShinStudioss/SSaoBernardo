@@ -14,7 +14,8 @@ function scr_getItem(_id){
 		        nome: "Balde vazio",
 		        sprite: spr_item,
 		        frame: 1,
-		        descricao: "Balde de coleta utilizado para armazenar\no látex extraído das seringueiras."
+		        descricao: "Balde de coleta utilizado para armazenar\no látex extraído das seringueiras.",
+				preco: 5
 		    };
 		    break;
 
@@ -32,7 +33,8 @@ function scr_getItem(_id){
 		        nome: "Faca de sangria",
 		        sprite: spr_item,
 		        frame: 3,
-		        descricao: "Ferramenta afiada usada para realizar\na sangria das seringueiras e extrair seu látex."
+		        descricao: "Ferramenta afiada usada para realizar\na sangria das seringueiras e extrair seu látex.",
+				preco: 10
 		    };
 		    break;
 
@@ -41,7 +43,8 @@ function scr_getItem(_id){
 		        nome: "Poronga",
 		        sprite: spr_item,
 		        frame: 4,
-		        descricao: "Lamparina tradicional dos seringueiros.\nPrecisa de combustível para funcionar."
+		        descricao: "Lamparina tradicional dos seringueiros.\nPrecisa de combustível para funcionar.",
+				preco: 15
 		    };
 		    break;
 
@@ -59,7 +62,8 @@ function scr_getItem(_id){
 		        nome: "Querosene",
 		        sprite: spr_item,
 		        frame: 6,
-		        descricao: "Recipiente com combustível para abastecer uma poronga.\nConsumido após o uso."
+		        descricao: "Recipiente com combustível para abastecer uma poronga.\nConsumido após o uso.",
+				preco: 10
 		    };
 		    break;
 
@@ -77,7 +81,8 @@ function scr_getItem(_id){
 		        nome: "Terçado",
 		        sprite: spr_item,
 		        frame: 8,
-		        descricao: "Terçado robusto usado tanto para abrir caminho na\nmata quanto para combate. Causa dano médio."
+		        descricao: "Terçado robusto usado tanto para abrir caminho na\nmata quanto para combate. Causa dano médio.",
+				preco: 20,
 		    };
 		    break;
 
@@ -86,7 +91,8 @@ function scr_getItem(_id){
 		        nome: "Facão",
 		        sprite: spr_item,
 		        frame: 9,
-		        descricao: "Facão afiado e resistente. Uma ferramenta versátil\nque também serve como arma. Causa dano médio."
+		        descricao: "Facão afiado e resistente. Uma ferramenta versátil\nque também serve como arma. Causa dano médio.",
+				preco: 20
 		    };
 		    break;
 
@@ -95,7 +101,8 @@ function scr_getItem(_id){
 		        nome: "Machadinha",
 		        sprite: spr_item,
 		        frame: 10,
-		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser arremessada em combate. Causa dano médio."
+		        descricao: "Machadinha leve utilizada para cortar madeira.\nPode ser arremessada em combate. Causa dano médio.",
+				preco: 25
 		    };
 		    break;
 
@@ -122,7 +129,8 @@ function scr_getItem(_id){
 		        nome: "Feijão",
 		        sprite: spr_item,
 		        frame: 13,
-		        descricao: "Prato tradicional e bastante nutritivo.\nReduz a fome. Consumível."
+		        descricao: "Prato tradicional e bastante nutritivo.\nReduz a fome. Consumível.",
+				preco: 15
 		    };
 		    break;
 
@@ -131,7 +139,8 @@ function scr_getItem(_id){
 		        nome: "Carne seca",
 		        sprite: spr_item,
 		        frame: 14,
-		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome significativamente. Consumível."
+		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome significativamente. Consumível.",
+				preco: 20
 		    };
 		    break;
 
@@ -140,7 +149,8 @@ function scr_getItem(_id){
 		        nome: "Farinha",
 		        sprite: spr_item,
 		        frame: 15,
-		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz um pouco a fome. Consumível."
+		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz um pouco a fome. Consumível.",
+				preco: 10
 		    };
 		    break;
 

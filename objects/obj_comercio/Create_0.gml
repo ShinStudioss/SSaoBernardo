@@ -3,32 +3,36 @@ if !lojista{
 	image_index = 0
 }
 
-//Pool de itens -> [item, preço, quantidade disponivel no dia]
-
-poolItens = [ 
-[1,2,irandom_range(4,10)], // 1  Balde vazio
-[3,4,irandom_range(1,3)], // 3  Faca de sangria
-[4,10,1], // 4  Poronga
-[6,3,irandom_range(2,6)], // 6  Querosene
-[8,8,1], // 8  Terçado
-[9,10,1], // 9  Facão
-[10,12,1], // 10 Machadinha
-[12,3,irandom_range(1,2)], // 12 Terço
-[13,1,irandom_range(4,10)], // 13 Feijão
-[14,1,irandom_range(1,3)], // 14 Carne seca
-[15,1,irandom_range(6,16)], // 15 Farinha
-[21,2,irandom_range(8,20)] //lenha
+descricao = 0
+descricaoTexto = "Passe o cursor pelos itens para mais informações."
+itemPool = [
+	6,
+	3,
+	choose(13,14,15), // Comida
+	choose(8,9,10), // Arma branca
+	4, // Querosene
+	6, // Poronga
 ]
 
-maxItens = 7
-itemSelecionado = 0
-espacamento = 62
-tempoCompra = 90
-tempoSegurando = 0
-comprando = false
-compraArmada = true
-mouseSobreItem = false
-
-RodaX = 180
-RodaY = 285
-
+// ID dos itens do jogo
+// 1 - Balde
+// 2 - Látex
+// 3 - Faca de sangria
+// 4 - Poronga
+// 5 - Poronga acesa
+// 6 - Querosene
+// 7 - Bola de borracha
+// 8 - Terçado
+// 9 - Facão
+// 10 - Machadinha
+// 11 - Galho
+// 12 - Terço
+// 13 - Feijão
+// 14 - Carne seca
+// 15 - Farinha
+// 16 - Mel
+// 17 - Espingarda
+// 18 - Carabina
+// 19 - Munição Esp.
+// 20 - Munição Car.
+// 21 - Lenha
