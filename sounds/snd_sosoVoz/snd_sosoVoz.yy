@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_sosoVoz",
+  "audioGroupId":{
+    "name":"audiogroup_vozes",
+    "path":"audiogroups/audiogroup_vozes",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.8808163,
+  "exportDir":"",
+  "name":"snd_sosoVoz",
+  "parent":{
+    "name":"Sons",
+    "path":"folders/Sons.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_sosoVoz.mp3",
+  "volume":1.0,
+}

@@ -31,3 +31,4 @@ if obj_jogador.x >= (50+room_width)/2 and lojaEstado = 1{
 }
 
 global.pause = true
+

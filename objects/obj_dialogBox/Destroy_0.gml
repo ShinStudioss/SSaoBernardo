@@ -23,3 +23,11 @@ if obj_dayControl.dialogo = id{
 	audio_play_sound(snd_riser,8,0)
 	obj_dayControl.alarm[1] = 130
 }
+
+if instance_exists(obj_barracao){
+	if obj_barracao.introDialog = id{
+		obj_comercio.sprite_index = spr_lojistamangando
+		audio_play_sound(snd_sosoRisada,9,0)
+		global.pause = true
+	}
+}
