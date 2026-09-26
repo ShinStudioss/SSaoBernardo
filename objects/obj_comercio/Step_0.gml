@@ -2,7 +2,12 @@ keybinds = scr_getBinds()
 
 if lojista{
 	if obj_barracao.lojaEstado = 2{
-		
+		if scr_buscarItem(7) != noone{
+			while scr_buscarItem(7) != noone{
+				global.dinheiro += 5
+				scr_removerItem(7,1)
+			}
+		}
 	}
 }
 
@@ -16,7 +21,6 @@ if sprite_index = spr_lojistamangando{
 		sprite_index = spr_lojista
 		alarm[0] = 30
 	}
-}
-	
+}	
 
 global.pause = true

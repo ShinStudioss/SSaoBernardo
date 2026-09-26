@@ -13,8 +13,14 @@ transition = lerp(transition, transitionGoal, 0.2);
 
 if (abs(transition - transitionGoal) < 0.01) {
     transition = transitionGoal;
-} else {
-    alarm[1] = 5;
+} 
+else{
+	if global.hora = 14 and global.minuto = 0{
+		alarm[1] = 40
+	}
+	else{
+		alarm[1] = 5
+	}
 }
 
 
