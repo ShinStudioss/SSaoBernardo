@@ -157,9 +157,7 @@ if (mouseSobre)
             //
             // Preço: R$15,00
 
-            var textoItem =
-                item.nome + ": " + item.descricao
-                + "\n\nPreço: R$" + precoTexto;
+            var textoItem = $"{item.nome} - R$ {item.preco}\n{item.descricao}"
 
 			var _dialogo = criar_dialogo(
                 [textoItem],

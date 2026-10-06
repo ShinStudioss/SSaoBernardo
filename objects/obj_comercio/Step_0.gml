@@ -1,16 +1,5 @@
 keybinds = scr_getBinds()
 
-if lojista{
-	if obj_barracao.lojaEstado = 2{
-		if scr_buscarItem(7) != noone{
-			while scr_buscarItem(7) != noone{
-				global.dinheiro += 5
-				scr_removerItem(7,1)
-			}
-		}
-	}
-}
-
 if sprite_index = spr_lojistamangando{
 	if audio_is_playing(snd_sosoRisada){
 		if image_index >= 5 and !audio_is_playing(snd_sosoPancada){
@@ -24,3 +13,10 @@ if sprite_index = spr_lojistamangando{
 }	
 
 global.pause = true
+
+escala = lerp(escala,1,0.2)
+rotacao = lerp(rotacao,0,0.2)
+cor = merge_colour(cor,c_white,0.2)
+if shake > 0{
+	shake --
+}

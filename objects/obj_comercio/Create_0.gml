@@ -3,6 +3,11 @@ if !lojista{
 	image_index = 0
 }
 
+dinheiroEfeitos = 0
+escala = 1
+rotacao = 0
+cor = c_white
+shake = 0
 descricao = 0
 descricaoTexto = "Passe o cursor pelos itens para mais informações."
 itemPool = [
