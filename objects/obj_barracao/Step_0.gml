@@ -22,6 +22,7 @@ if lojaEstado = 3{
 	obj_jogador.speed = -global.maxSpeed
 	obj_jogador.sprite_index = spr_jogadorAndando
 	obj_jogador.xScaleReal = -1
+	obj_controladorDoJogo.freio = true
 }
 depth = obj_jogador.depth +1
 

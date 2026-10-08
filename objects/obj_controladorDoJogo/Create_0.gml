@@ -113,3 +113,5 @@ alphaVida = 0
 
 vinhetaVermelha = 0
 drawVinheta = true
+
+freio = false
