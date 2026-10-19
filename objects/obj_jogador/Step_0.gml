@@ -8,7 +8,7 @@ mask_index = spr_jogadorParado
 // Exemplo: Jogador pressiona DIREITA, que retorna 1 e é subtraído por ESQUERDA, que não está pressionado,
 // retornando 0, a subtração resulta em 1 e é multiplicado pela velocidade
 
-if global.pause = false {
+if global.pause = false and emtransicao = false{
 	if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem){
 		inputX = keyboard_check(keybinds.right) - keyboard_check(keybinds.left)
 	}
@@ -177,7 +177,7 @@ else{
 // Tem umas frescurinha tipo o coyote time e a multiplicação da velocidade de queda, junto com
 // aquela mecanica que o pulo é mais alto conforme você segura o botão
 if !trepando{
-	if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false {
+	if keyboard_check_pressed(keybinds.jump) and coyoteTime > 0 and global.pause = false and emtransicao = false {
 		if !(sprite_index = spr_jogadorTiro or sprite_index = spr_jogadorItem or sprite_index = spr_jogadorAtacando){
 			pulando = true
 			xScaleReal = sign(xScaleReal) * 0.5

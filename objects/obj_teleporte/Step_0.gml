@@ -35,3 +35,9 @@ if id = inst_46479F3F1{
 	xx = 2688
 	yy = 67
 }
+
+if id = inst_126BD70B1{
+	destino = rm_casas
+	xx = 1024
+	yy = 480
+}

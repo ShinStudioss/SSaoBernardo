@@ -53,6 +53,8 @@ idleSprite = spr_jogadorParado
 itemX = 0
 itemY = 0
 
+emtransicao = false
+
 _verificador = noone
 pulando = false
 recoil = 0;

@@ -1,4 +1,6 @@
-if global.pause = false {global.minuto += 0.02}
+if global.pause == false{
+	global.minuto += 0.02
+}
 
 
 // Desligar poronga 
