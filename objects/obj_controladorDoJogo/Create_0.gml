@@ -55,8 +55,8 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.hora = 13
-global.minuto = 58
+global.hora = 6
+global.minuto = 0
 
 global.dinheiro = 0
 global.inventario = [[1,3],[3,1],[7,6],[0,0]]
