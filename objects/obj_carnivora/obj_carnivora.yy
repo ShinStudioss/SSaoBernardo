@@ -9,8 +9,8 @@
   "name":"obj_carnivora",
   "overriddenProperties":[],
   "parent":{
-    "name":"Personagens",
-    "path":"folders/Objetos/Personagens.yy",
+    "name":"Inimigos",
+    "path":"folders/Objetos/Personagens/Inimigos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
