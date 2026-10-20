@@ -111,6 +111,9 @@ if (distancia < 70 && cima) && !instance_exists(obj_dialogBox){
             quantidade = 0
             state = "sembalde"
         break
+		
+		case "ocupado":
+			image_index = 0
     }
 }
 
