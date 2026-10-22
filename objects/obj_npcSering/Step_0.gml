@@ -1,5 +1,10 @@
 if (instance_exists(obj_jogador))
 {
+	//arrume a respiração se achar necessario
+	var escalaAlvo = 1 + sin(current_time / 250) * 0.03;
+
+	escalaRespiracao = lerp(escalaRespiracao, escalaAlvo, 0.08);
+	image_yscale = escalaRespiracao;
     var jogador = instance_nearest(x, y, obj_jogador)
     var distancia = point_distance(x, y, jogador.x, jogador.y)
 
@@ -20,7 +25,19 @@ if (instance_exists(obj_jogador))
                 }
 
                 novo_dialogo = false
-
+				if npc_tipo = "estevao"{
+					if global.dicaClima{
+						dialogoNPC = [
+		                "Estevão: Vai trabalhar, Raimundo.",
+		                "As dividas tão grande e ainda tem o juros.",
+		                "Ah, cê quer saber sobre o clima?",
+						"Vai tá "+climaAmanha+" amanhã."
+						];
+					}
+					else{
+						global.dicaClima = true
+					}
+				}
                 criar_dialogo(
                     dialogoNPC,
                     false,
@@ -33,3 +50,4 @@ if (instance_exists(obj_jogador))
         alarm[0] = 30
     }
 }
+

@@ -1,6 +1,7 @@
 draw_self()
 
-if state != "corte"{
+if state != "corte"
+and state != "ocupado"{
 	event_inherited();
 }
 

@@ -107,6 +107,13 @@ global.seringalRooms = {
 	esquerda: esquerda
 };
 
+
+
+global.clima = "nublado";
+global.climaAmanha = "";
+global.previsaoCalculada = false;
+global.dicaClima = false;
+
 transition = 1
 transitionGoal = 0
 alphaVida = 0

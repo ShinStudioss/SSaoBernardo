@@ -11,6 +11,7 @@ switch selectedOption.action{
     case "dormir":
         criar_dialogo(["Raimundo deitou, encerrando seu trabalho por hoje."],false,{})
         instance_create_depth(x,y,depth,obj_transicaoDormir)
+		global.dicaClima = false
     break;
         
     case "colocarbalde":

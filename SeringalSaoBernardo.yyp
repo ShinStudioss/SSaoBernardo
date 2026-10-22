@@ -224,6 +224,7 @@
     {"id":{"name":"__cle_Utils","path":"scripts/__cle_Utils/__cle_Utils.yy",},},
     {"id":{"name":"__cle_VertexShadows","path":"scripts/__cle_VertexShadows/__cle_VertexShadows.yy",},},
     {"id":{"name":"scr_Binds","path":"scripts/scr_Binds/scr_Binds.yy",},},
+    {"id":{"name":"scr_Clima","path":"scripts/scr_Clima/scr_Clima.yy",},},
     {"id":{"name":"scr_Dano","path":"scripts/scr_Dano/scr_Dano.yy",},},
     {"id":{"name":"scr_Dialogo","path":"scripts/scr_Dialogo/scr_Dialogo.yy",},},
     {"id":{"name":"scr_DropItem","path":"scripts/scr_DropItem/scr_DropItem.yy",},},

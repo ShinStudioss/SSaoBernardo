@@ -1,4 +1,6 @@
-
+if global.clima = "chovendo"{
+	instance_destroy()
+}
 
 quantidade = 0
 quantidadeMax = 600

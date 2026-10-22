@@ -165,6 +165,7 @@
     {"name":"__cle_SpriteShadows","order":5,"path":"scripts/__cle_SpriteShadows/__cle_SpriteShadows.yy",},
     {"name":"__cle_Utils","order":6,"path":"scripts/__cle_Utils/__cle_Utils.yy",},
     {"name":"__cle_VertexShadows","order":7,"path":"scripts/__cle_VertexShadows/__cle_VertexShadows.yy",},
+    {"name":"scr_Clima","order":9,"path":"scripts/scr_Clima/scr_Clima.yy",},
     {"name":"scr_Dano","order":7,"path":"scripts/scr_Dano/scr_Dano.yy",},
     {"name":"scr_Dialogo","order":1,"path":"scripts/scr_Dialogo/scr_Dialogo.yy",},
     {"name":"scr_DropItem","order":8,"path":"scripts/scr_DropItem/scr_DropItem.yy",},

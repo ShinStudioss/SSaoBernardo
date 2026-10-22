@@ -21,7 +21,10 @@ if global.pause = false and emtransicao = false{
 if inputX != 0{
 	xScaleReal = inputX
 	global.currentSpeed = lerp(global.currentSpeed,global.maxSpeed,0.8)
-	var moveSpeed = inputX * global.currentSpeed
+	var moveSpeed = (inputX * global.currentSpeed) 
+	if global.clima = "chovendo"{
+		moveSpeed = (inputX * global.currentSpeed) * 0.67 // SEGUNDA OPÇÃO: 0.75
+	}
 }
 else{
 	global.currentSpeed = lerp(global.currentSpeed,0,0.2)
