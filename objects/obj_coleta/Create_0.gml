@@ -1,5 +1,6 @@
 if global.clima = "chovendo"{
 	instance_destroy()
+	exit
 }
 
 quantidade = 0
@@ -14,4 +15,24 @@ if state = 5{
 }
 else{
 	state = "sembalde"
+}
+
+chave = room_get_name(room) + "_" + string(x) + "_" + string(y);
+
+if variable_struct_exists(global.coletas, chave){
+	var dados = global.coletas[$ chave];
+
+	state = dados.state;
+	quantidade = dados.quantidade;
+	dripFrame = dados.dripFrame;
+
+	if state == "corte"{
+		var framesFora = (current_time - dados.saiuEm) / 1000 * game_get_speed(gamespeed_fps);
+		quantidade = min(quantidade + framesFora, quantidadeMax);
+
+		if quantidade >= quantidadeMax{
+			state = "cheio";
+			dripFrame = 0;
+		}
+	}
 }

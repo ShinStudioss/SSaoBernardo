@@ -85,6 +85,7 @@ global.inventario = [[1,3],[3,1],[7,6],[0,0]]
 
 global.itens_mundo = []
 // [x, y, item(id), quantidade, room]
+global.coletas = {}
 
 global.tutorial = [[0]]
 
