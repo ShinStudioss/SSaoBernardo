@@ -2,7 +2,9 @@ draw_self()
 var distancia = distance_to_object(obj_jogador);
 
 if (distancia < 70) and !instance_exists(obj_dialogBox){
-	if obj_coleta.state != "ocupado"{
+	if object_index = obj_coleta and obj_coleta.state = "ocupado"{
+	}
+	else{
 		draw_set_font(fnt_interacoes)
 		draw_set_halign(fa_center);
 	    draw_set_valign(fa_bottom);

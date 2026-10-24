@@ -132,7 +132,6 @@
     {"id":{"name":"obj_buraco","path":"objects/obj_buraco/obj_buraco.yy",},},
     {"id":{"name":"obj_carnivora","path":"objects/obj_carnivora/obj_carnivora.yy",},},
     {"id":{"name":"obj_coleta","path":"objects/obj_coleta/obj_coleta.yy",},},
-    {"id":{"name":"Obj_coletavel","path":"objects/Obj_coletavel/Obj_coletavel.yy",},},
     {"id":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},},
     {"id":{"name":"obj_comercio","path":"objects/obj_comercio/obj_comercio.yy",},},
     {"id":{"name":"obj_controladorDoJogo","path":"objects/obj_controladorDoJogo/obj_controladorDoJogo.yy",},},

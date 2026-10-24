@@ -93,7 +93,6 @@
     {"name":"obj_borrachaLoja","order":5,"path":"objects/obj_borrachaLoja/obj_borrachaLoja.yy",},
     {"name":"obj_buraco","order":8,"path":"objects/obj_buraco/obj_buraco.yy",},
     {"name":"obj_coleta","order":2,"path":"objects/obj_coleta/obj_coleta.yy",},
-    {"name":"Obj_coletavel","order":9,"path":"objects/Obj_coletavel/Obj_coletavel.yy",},
     {"name":"obj_colisor","order":9,"path":"objects/obj_colisor/obj_colisor.yy",},
     {"name":"obj_comercio","order":4,"path":"objects/obj_comercio/obj_comercio.yy",},
     {"name":"obj_cursor","order":7,"path":"objects/obj_cursor/obj_cursor.yy",},
