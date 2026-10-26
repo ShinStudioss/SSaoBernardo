@@ -3,65 +3,87 @@ vel_queda = 0
 dicaDia = scr_dica()
 switch (npc_tipo)
 {
-    case "luiz": 
+    case "luiz":
         sprite_index = spr_npcLuizFelipe;
+
+        var escolha = choose(
+            "Dormiu direito, Raimundo? Tu tá com uma cara de quem passou a noite inteira ouvindo coisa.",
+            "Ô, Raimundo... tu também sente que tem alguém olhando quando a gente tá sozinho?",
+            "Rapaz, sonhei contigo essa noite. Tu tava no meio do mato, parado, sem responder ninguém.",
+            "Essa mata tá esquisita ultimamente. Até os cachorro tão evitando passar por lá.",
+            "Tu anda trabalhando demais, homem. Daqui a pouco vai começar a conversar com as árvore.",
+            "Se eu fosse tu, não ficava dando bobeira depois que escurece. Tem coisa que é melhor não encontrar.",
+            "Raimundo, tu acredita que eu ouvi alguém me chamando ontem? O problema é que não tinha ninguém lá.",
+            "Eu ia te chamar pra tomar uma, mas deixa pra outro dia. Ando sem vontade de ficar na rua depois do anoitecer."
+        );
+
         dialogoNPC = [
-            "Luiz: Bom dia, Raimundo!",
-            "Vai me pagar aquela breja quando? hehe",
+            "Luiz: Ô, Raimundo... bom te ver, homem. Esses dias tão passando devagar demais, num acha?",
+            escolha,
             dicaDia,
         ];
     break;
 
-    
-	case "estevao":
 
-	    climaAmanha = scr_preverClima()
-		
-	    sprite_index = spr_npcEstevao;
-	    switch (climaAmanha){
-	        case "limpo":
-	            dialogoNPC = [
-	                "Estevão: Amanhã o céu deve abrir.",
-	                "Parece que vamo ter um dia de céu limpo.",
-	                "Aproveitar pra por minhas cueca pra secar HaHa."
-	            ];
-	        break;
+    case "estevao":
+        sprite_index = spr_npcEstevao;
+        climaAmanha = scr_preverClima();
 
-	        case "nublado":
-	            dialogoNPC = [
-	                "Estevão: Amanhã o céu deve ficar nublado.",
-	                "Pelo menos não parece que vai cair água.",
-	                "Mas, nesses mato, nunca dá pra confiar demais."
-	            ];
-	        break;
+        switch (climaAmanha)
+        {
+            case "limpo":
+                dialogoNPC = [
+                    "Estevão: O sol apareceu cedo hoje. Fazia uns dias que eu não via essa claridade toda.",
+                    "Amanhã o céu deve ficar limpo. Aproveita pra trabalhar enquanto ainda dá pra enxergar o caminho."
+                ];
+            break;
 
-	        case "chovendo":
-	            dialogoNPC = [
-	                "Estevão: Amanhã vai cair um toró.",
-	                "Melhor se apressar no serviço, filho.",
-	                "Quando chove não tem quem faça a casca sangrar."
-	            ];
-	        break;
-	    }
+            case "nublado":
+                dialogoNPC = [
+                    "Estevão: O céu tá com uma cor estranha desde cedo. Parece que o dia nem terminou de amanhecer.",
+                    "Amanhã deve ficar nublado. Fica de olho no tempo, porque essa mata muda depressa."
+                ];
+            break;
 
-	break;
+            case "chovendo":
+                dialogoNPC = [
+                    "Estevão: Passei a manhã escutando o vento bater nas telha. Não gostei do que ouvi lá fora.",
+                    "Amanhã vai chover. Melhor adiantar o serviço hoje, porque na chuva fica difícil enxergar qualquer coisa no seringal."
+                ];
+            break;
+        }
+    break;
 
 
     case "generico":
         sprite_index = spr_npcGenerico;
-		overlay = [random_range(0,2),random_range(0,2),random_range(0,1)]
+		overlay = [irandom_range(0,2),irandom_range(0,2),irandom_range(0,1)]
+        var escolha = choose(
+            "Faz uns dias que eu não durmo direito. Toda noite parece que tem alguém andando no quintal.",
+            "Tu viu alguém passando por aqui de madrugada? Escutei passos, mas não tive coragem de olhar.",
+            "Meu pai dizia pra nunca responder quando alguém chamasse teu nome no meio do mato.",
+            "Hoje eu tranquei a porta antes do sol se pôr. Não sei explicar, só achei melhor.",
+            "Tem alguma coisa errada com esse lugar. O povo só não gosta de falar sobre isso.",
+            "Eu ouvi uma conversa vindo da mata ontem. Quando cheguei perto, só tinha silêncio.",
+            "Tu também tá sentindo esse cheiro? Parece que vem lá de dentro do seringal.",
+            "O povo anda sumindo cedo das ruas. Acho que ninguém quer ser o último a voltar pra casa."
+        );
+
         dialogoNPC = [
-            "Bom dia!",
-            "Espero que sua jornada corra bem."
+            "Morador: Ô, Raimundo. Bom dia... se é que ainda dá pra chamar isso de bom dia.",
+            escolha
         ];
     break;
 
+
     default:
         sprite_index = spr_npcGenerico;
-        dialogoNPC = ["Olá!"];
+        dialogoNPC = [
+            "Morador: Ah, Raimundo... pensei que tu não vinha mais.",
+            "Enfim, deixa pra lá. Tenho umas coisa pra resolver antes de escurecer."
+        ];
     break;
 }
-
 // Configuração da animação
 escalaRespiracao = 1;
 image_yscale = 1;
