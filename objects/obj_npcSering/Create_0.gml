@@ -49,6 +49,7 @@ switch (npc_tipo)
 
     case "generico":
         sprite_index = spr_npcGenerico;
+		overlay = [random_range(0,2),random_range(0,2),random_range(0,1)]
         dialogoNPC = [
             "Bom dia!",
             "Espero que sua jornada corra bem."
