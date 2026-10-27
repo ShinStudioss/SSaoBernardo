@@ -51,3 +51,7 @@ if (instance_exists(obj_jogador))
     }
 }
 
+while !place_meeting(x,y+1,obj_colisor){
+	y+=1
+}
+

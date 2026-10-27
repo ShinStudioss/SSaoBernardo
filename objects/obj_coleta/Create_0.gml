@@ -36,3 +36,7 @@ if variable_struct_exists(global.coletas, chave){
 		}
 	}
 }
+randomise()
+if state == "ocupado"{
+	instance_create_depth(x-30,y,depth-irandom(5),obj_npcSering)
+}

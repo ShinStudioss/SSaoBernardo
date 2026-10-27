@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_npcGenerico",
   "bboxMode":2,
-  "bbox_bottom":123,
+  "bbox_bottom":132,
   "bbox_left":2,
   "bbox_right":62,
   "bbox_top":14,

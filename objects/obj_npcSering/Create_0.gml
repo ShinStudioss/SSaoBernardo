@@ -57,7 +57,6 @@ switch (npc_tipo)
 
     case "generico":
         sprite_index = spr_npcGenerico;
-		overlay = [irandom_range(0,2),irandom_range(0,2),irandom_range(0,1)]
         var escolha = choose(
             "Faz uns dias que eu não durmo direito. Toda noite parece que tem alguém andando no quintal.",
             "Tu viu alguém passando por aqui de madrugada? Escutei passos, mas não tive coragem de olhar.",
@@ -89,3 +88,15 @@ escalaRespiracao = 1;
 image_yscale = 1;
 image_xscale = 1;
 novo_dialogo = true
+
+chave = "npc_" + room_get_name(room) + "_" + string(x) + "_" + string(y);
+if variable_struct_exists(global.npcs, chave){
+	var dados = global.npcs[$ chave]
+	overlay = dados.overlay
+	temChapeu = dados.temChapeu 
+}
+else{
+	overlay = [irandom_range(0,2),irandom_range(0,2),irandom_range(0,1)]
+	temChapeu = (irandom(100) <= 33)
+}
+
