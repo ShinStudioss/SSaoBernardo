@@ -41,3 +41,7 @@ if id = inst_126BD70B1{
 	xx = 1024
 	yy = 480
 }
+
+if tpCaminho{
+	destino = global.roomsFuga[global.fugaSala + 1]
+}

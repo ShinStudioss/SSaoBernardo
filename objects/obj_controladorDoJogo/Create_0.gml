@@ -155,3 +155,5 @@ vinhetaVermelha = 0
 drawVinheta = true
 
 freio = false
+
+global.fugaSala = 0
