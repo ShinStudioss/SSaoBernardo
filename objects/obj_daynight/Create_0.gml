@@ -28,3 +28,6 @@ lutProxima = lutdia;
 castShadows = false
 
 autoactivate = true
+
+global.horaAlvo = 14
+global.horaInicial = 4

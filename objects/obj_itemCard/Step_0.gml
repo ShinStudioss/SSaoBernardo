@@ -190,7 +190,9 @@ if obj_barracao.lojaEstado = 2 {
 	            if (adicionou)
 	            {
 	                global.dinheiro -= item.preco;
-
+					obj_controladorDoJogo.alarm[0] = 3
+					audio_play_sound(snd_chaChing,8,0)
+					obj_controladorDoJogo.flash = true
 
 	                // Remove o item da loja
 	                obj_comercio.itemPool[shopId] = 0;

@@ -16,3 +16,4 @@ for (var i = 0; i < array_length(global.itens_mundo); i++)
         }
     }
 }
+

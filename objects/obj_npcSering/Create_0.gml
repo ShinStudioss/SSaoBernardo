@@ -1,4 +1,7 @@
 // Define a aparência e o diálogo conforme o tipo do NPC.
+if global.hora < 7{
+	instance_destroy()
+}
 vel_queda = 0
 dicaDia = scr_dica()
 switch (npc_tipo)

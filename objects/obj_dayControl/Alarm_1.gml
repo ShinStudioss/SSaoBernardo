@@ -1,1 +1,1 @@
-room_goto(rm_seringal)
+room_goto(destino)

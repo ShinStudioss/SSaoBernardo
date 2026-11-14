@@ -1,5 +1,11 @@
 if global.pause == false{
-	global.minuto += 0.02
+	if !string_starts_with(room_get_name(room),"rm_estradaP"){
+		global.minuto += 0.06
+	}else{
+		if !instance_exists(obj_barco){
+			global.minuto += 0.02
+		}
+	}
 }
 
 
@@ -198,6 +204,6 @@ if global.hora = 14 and global.minuto = 0{
 		alarm[0] = 180
 	}
 }
-
+if room != rm_dayTransition{
 fx_set_parameters(layer_get_fx("lay_lut"), fx_struct);
-
+}

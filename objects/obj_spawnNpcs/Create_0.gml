@@ -17,6 +17,6 @@ if variable_struct_exists(global.spawnNpcs, sala){
 			py = yPadrao;
 		}
 
-		instance_create_depth(px, py, 0, obj_npcSering);
+		instance_create_depth(px, py, 401, obj_npcSering);
 	}
 }

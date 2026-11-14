@@ -65,3 +65,4 @@ messaged = messageArray[irandom(array_length(messageArray) - 1)];
 
 dialogo = criar_dialogo([
 $"Dia {global.dia}.\n{global.data[1]}, {global.data[2]} de {global.data[3]} de {global.data[4]}.",$"{messaged}\nHora do trabalho."], 0, 0, , , 0.2, 1);
+destino = rm_seringal

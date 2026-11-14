@@ -37,11 +37,8 @@ if id = inst_46479F3F1{
 }
 
 if id = inst_126BD70B1{
-	destino = rm_casas
+	destino = rm_dayTransition
+	obj_dayControl.dayMode = "noite"
 	xx = 1024
 	yy = 480
-}
-
-if tpCaminho{
-	destino = global.roomsFuga[global.fugaSala + 1]
 }
