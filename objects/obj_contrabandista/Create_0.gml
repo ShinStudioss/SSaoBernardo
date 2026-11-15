@@ -1,6 +1,7 @@
 // Estados da loja: 0 = fechada | 1 = abrindo | 2 = aberta | 3 = encerrando
 // (o obj_itemCard só aparece quando lojaEstado == 2)
 lojaEstado = 0
+depth = obj_jogador.depth+1
 
 // Efeitos do contador de dinheiro (iguais aos do obj_comercio)
 dinheiroEfeitos = 0

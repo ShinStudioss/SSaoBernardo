@@ -55,11 +55,12 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.hora = 13
-global.minuto = 59
+global.hora = 9
+global.minuto = 0
 
 global.dinheiro = 0
 global.inventario = [[1,3],[3,1],[7,6],[0,0]]
+global.Caixainventario = [[],[]]
 // ID dos itens do jogo
 // 1 - Balde
 // 2 - Látex
@@ -91,12 +92,12 @@ global.npcs = {}
 
 global.spawnNpcs = {
 	rm_seringal: [
-		[220,574,764,1532,1600],
-		[600,670,1630],
-		[220,285,415,480,830],
-		[285,415,480,1630],
-		[600,764,1532,1600],
-		[220,574,670,830]
+		[220,574,764],
+		[600,1630],
+		[220],
+		[285,480],
+		[600],
+		[574,670,830]
 	],
 	rm_casas: [
 		[280,980,1310,1380,1600],

@@ -1,6 +1,12 @@
 if (instance_exists(obj_jogador))
 {
 	//arrume a respiração se achar necessario
+	if obj_jogador.x > x{
+		image_xscale = 1
+	}
+	else{
+		image_xscale = -1
+	}
 	var escalaAlvo = 1 + sin(current_time / 250) * 0.03;
 
 	escalaRespiracao = lerp(escalaRespiracao, escalaAlvo, 0.08);
