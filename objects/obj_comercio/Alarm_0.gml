@@ -5,7 +5,7 @@ for (var i = 0; i < 6; i++)
         0,
         0,
         obj_itemCard,
-		{shopId: i}
+		{shopId: i, loja: id}
     );
 }
 

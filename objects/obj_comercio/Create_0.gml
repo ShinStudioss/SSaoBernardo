@@ -1,8 +1,3 @@
-if !lojista{
-	sprite_index = spr_contrabandista
-	image_index = 0
-}
-
 dinheiroEfeitos = 0
 escala = 1
 rotacao = 0
@@ -11,12 +6,12 @@ shake = 0
 descricao = 0
 descricaoTexto = "Passe o cursor pelos itens para mais informações."
 itemPool = [
-	6,
-	3,
+	1, // Balde
+	3, // Faca de sangria
 	choose(13,14,15), // Comida
 	choose(8,9,10), // Arma branca
-	4, // Querosene
-	6, // Poronga
+	4, // Poronga
+	6, // Querosene
 ]
 
 // ID dos itens do jogo

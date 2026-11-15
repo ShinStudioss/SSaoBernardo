@@ -15,7 +15,8 @@ function scr_getItem(_id){
 		        sprite: spr_item,
 		        frame: 1,
 		        descricao: "Balde de coleta utilizado para armazenar\no látex extraído das seringueiras.",
-				preco: 5
+				preco: 5,
+				quantidade: 3
 		    };
 		    break;
 
@@ -63,7 +64,8 @@ function scr_getItem(_id){
 		        sprite: spr_item,
 		        frame: 6,
 		        descricao: "Recipiente com combustível para abastecer uma poronga.\nConsumido após o uso.",
-				preco: 10
+				preco: 10,
+				quantidade: 3
 		    };
 		    break;
 
@@ -111,7 +113,8 @@ function scr_getItem(_id){
 		        nome: "Galho",
 		        sprite: spr_item,
 		        frame: 11,
-		        descricao: "Galho improvisado encontrado na mata.\nCausa pouco dano e pode quebrar durante o uso."
+		        descricao: "Galho improvisado encontrado na mata.\nCausa pouco dano e pode quebrar durante o uso.",
+				preco: 5
 		    };
 		    break;
 
@@ -120,7 +123,9 @@ function scr_getItem(_id){
 		        nome: "Terço",
 		        sprite: spr_item,
 		        frame: 12,
-		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder\numa intervenção divina inesperada. Consumível."
+		        descricao: "Objeto de devoção. Ao ser utilizado, pode conceder\numa intervenção divina inesperada. Consumível.",
+				preco: 75,
+				quantidade: 2
 		    };
 		    break;
 
@@ -130,7 +135,8 @@ function scr_getItem(_id){
 		        sprite: spr_item,
 		        frame: 13,
 		        descricao: "Prato tradicional e bastante nutritivo.\nReduz a fome. Consumível.",
-				preco: 15
+				preco: 15,
+				quantidade: 3
 		    };
 		    break;
 
@@ -140,7 +146,8 @@ function scr_getItem(_id){
 		        sprite: spr_item,
 		        frame: 14,
 		        descricao: "Carne salgada e seca, ideal para longas jornadas\nna floresta. Reduz a fome significativamente. Consumível.",
-				preco: 20
+				preco: 20,
+				quantidade: 3
 		    };
 		    break;
 
@@ -150,7 +157,8 @@ function scr_getItem(_id){
 		        sprite: spr_item,
 		        frame: 15,
 		        descricao: "Farinha de mandioca, alimento básico dos seringueiros.\nReduz um pouco a fome. Consumível.",
-				preco: 10
+				preco: 10,
+				quantidade: 3
 		    };
 		    break;
 
@@ -159,7 +167,9 @@ function scr_getItem(_id){
 		        nome: "Mel",
 		        sprite: spr_item,
 		        frame: 16,
-		        descricao: "Mel silvestre coletado na floresta.\nRecupera totalmente sua energia. Consumível."
+		        descricao: "Mel silvestre coletado na floresta.\nRecupera totalmente sua energia. Consumível.",
+				preco: 5,
+				quantidade: 3
 		    };
 		    break;
 
@@ -168,7 +178,8 @@ function scr_getItem(_id){
 		        nome: "Espingarda",
 		        sprite: spr_item,
 		        frame: 17,
-		        descricao: "Espingarda de curto alcance, eficaz para\ncaça e defesa pessoal. Requer munição."
+		        descricao: "Espingarda de curto alcance, eficaz para\ncaça e defesa pessoal. Requer munição.",
+				preco: 40
 		    };
 		    break;
 
@@ -177,7 +188,8 @@ function scr_getItem(_id){
 		        nome: "Carabina",
 		        sprite: spr_item,
 		        frame: 18,
-		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias. Requer munição."
+		        descricao: "Carabina precisa e potente, capaz de\natingir alvos a grandes distâncias. Requer munição.",
+				preco: 30
 		    };
 		    break;
 			
@@ -186,7 +198,9 @@ function scr_getItem(_id){
 		        nome: "Munição Esp.",
 		        sprite: spr_item,
 		        frame: 19,
-		        descricao: "Munição para espingarda."
+		        descricao: "Munição para espingarda.",
+				preco: 15,
+				quantidade: 5
 		    };
 		    break;
 			
@@ -195,7 +209,9 @@ function scr_getItem(_id){
 		        nome: "Munição Car.",
 		        sprite: spr_item,
 		        frame: 20,
-		        descricao: "Munição para carabina."
+		        descricao: "Munição para carabina.",
+				preco: 10,
+				quantidade: 5
 		    };
 		    break;
 			
@@ -204,7 +220,10 @@ function scr_getItem(_id){
 				nome: "Lenha",
 				sprite: spr_item,
 				frame: 21,
-				descricao: "Combustivel para defumadora."
+				descricao: "Combustivel para defumadora.",
+				preco: 5,
+				quantidade: 30
+				
 			}
 
 		    return undefined;

@@ -1,4 +1,4 @@
-if obj_barracao.lojaEstado = 2 {
+if estadoLoja() == 2{
 	var mx = device_mouse_x_to_gui(0);
 	var my = device_mouse_y_to_gui(0);
 
@@ -48,7 +48,7 @@ if obj_barracao.lojaEstado = 2 {
 	        // VERIFICA DINHEIRO
 	        // -------------------------------------------------
 
-	        var temDinheiro = global.dinheiro >= item.preco;
+	        var temDinheiro = global.dinheiro >= preco;
 
 
 	        // -------------------------------------------------
@@ -59,9 +59,10 @@ if obj_barracao.lojaEstado = 2 {
 
 
 	        // Verifica se o item já existe para stackar
+	        // (CORRIGIDO: antes comparava com shopId em vez do id do item)
 	        for (var i = 0; i < array_length(global.inventario); i++)
 	        {
-	            if (global.inventario[i][0] == shopId)
+	            if (global.inventario[i][0] == itemreal)
 	            {
 	                temEspaco = true;
 	                break;
@@ -148,7 +149,7 @@ if obj_barracao.lojaEstado = 2 {
 	        {
 	            // Formata o preço:
 	            // 15.00 -> 15,00
-	            var precoTexto = string_format(item.preco, 2, 2);
+	            var precoTexto = string_format(preco, 2, 2);
 	            precoTexto = string_replace_all(precoTexto, ".", ",");
 
 
@@ -158,7 +159,7 @@ if obj_barracao.lojaEstado = 2 {
 	            //
 	            // Preço: R$15,00
 
-	            var textoItem = $"{item.nome} - R$ {item.preco}\n{item.descricao}"
+	            var textoItem = $"{item.nome} - R$ {preco}\n{item.descricao}"
 
 				var _dialogo = criar_dialogo(
 	                [textoItem],
@@ -183,23 +184,36 @@ if obj_barracao.lojaEstado = 2 {
 	        if (mouse_check_button_pressed(mb_left) && podeComprar)
 	        {
 	            // Tenta adicionar o item correto ao inventário
-	            var adicionou = scr_addItem(shopId, 1);
+	            var adicionou = scr_addItem(itemreal, 1);
 
 
 	            // Só cobra se o item realmente entrou
 	            if (adicionou)
 	            {
-	                global.dinheiro -= item.preco;
+	                global.dinheiro -= preco;
 					obj_controladorDoJogo.alarm[0] = 3
 					audio_play_sound(snd_chaChing,8,0)
 					obj_controladorDoJogo.flash = true
 
-	                // Remove o item da loja
-	                obj_comercio.itemPool[shopId] = 0;
+	                // Desconta 1 do estoque; guarda o valor na loja
+	                quantidade -= 1;
+	                if (instance_exists(loja))
+	                {
+	                    loja.estoque[shopId] = quantidade;
+
+	                    // Acabou: remove o item da loja que criou este card
+	                    if (quantidade <= 0)
+	                    {
+	                        loja.itemPool[shopId] = 0;
+	                    }
+	                }
 
 
-	                // Remove o card
-	                instance_destroy();
+	                // Só remove o card quando o estoque chegar a 0
+	                if (quantidade <= 0)
+	                {
+	                    instance_destroy();
+	                }
 	            }
 	        }
 	    }

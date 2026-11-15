@@ -49,4 +49,3 @@ if vinhetaVermelha > 0{
 	vinhetaVermelha -= 0.05;
 }
 
-show_debug_message(room_get_name(room))

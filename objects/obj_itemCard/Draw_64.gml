@@ -1,4 +1,4 @@
-if obj_barracao.lojaEstado = 2{
+if estadoLoja() == 2{
 	// =====================================================
 	// POSIÇÃO
 	// =====================================================
@@ -76,10 +76,34 @@ if obj_barracao.lojaEstado = 2{
 		draw_text_transformed_colour(
 	        cardX + largura / 2,
 	        cardY + altura - 15,
-			$"Preço: {item.preco}",
+			$"Preço: {preco}",
 			escala*0.6,escala*0.6,0,
 			c_yellow,c_yellow,c_orange,c_orange,1
 	    );
+
+		// Quantidade restante (só para itens com estoque)
+		if (comQuantidade){
+			draw_set_halign(fa_right);
+			draw_set_valign(fa_top);
+			draw_text_transformed(
+				cardX + largura - 10,
+				cardY + 8,
+				$"x{quantidade}",
+				escala*0.8,escala*0.8,0
+			);
+		}
+	}
+
+
+	// =====================================================
+	// DINHEIRO DO JOGADOR (só no contrabandista)
+	// No barracão quem desenha é o próprio obj_comercio.
+	// Só o card 5 chama, para não desenhar uma vez por card.
+	// =====================================================
+
+	if (contrabando && shopId == 5 && instance_exists(loja))
+	{
+	    loja.desenharDinheiro();
 	}
 
 
