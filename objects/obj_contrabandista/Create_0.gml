@@ -1,7 +1,6 @@
 // Estados da loja: 0 = fechada | 1 = abrindo | 2 = aberta | 3 = encerrando
 // (o obj_itemCard só aparece quando lojaEstado == 2)
 lojaEstado = 0
-depth = obj_jogador.depth+1
 
 // Efeitos do contador de dinheiro (iguais aos do obj_comercio)
 dinheiroEfeitos = 0
@@ -48,6 +47,20 @@ calcularPreco = function(_idItem, _item){
 		return clamp(_comDesconto, passoPreco, _item.preco)
 	}
 	return _item.preco
+}
+
+// Diálogo de aviso ("passe o cursor...").
+// _animado = true : o diálogo original, com a animação de escrever e que pula com clique/espaço.
+// _animado = false: configuração dos diálogos dos itens (obj_itemCard): texto direto e sem
+//                   fechar com clique/espaço. Usado pela rede de segurança do End Step.
+criarDialogoDescricao = function(_animado){
+	if (_animado){
+		descricao = criar_dialogo([string(descricaoTexto)],0,[])
+	}
+	else{
+		descricao = criar_dialogo([string(descricaoTexto)],false,[],,,999,999)
+		descricao.skippable = false
+	}
 }
 
 // Desenha o contador de dinheiro na GUI. Quem chama é o card "Encerrar negociações"

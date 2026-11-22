@@ -268,7 +268,7 @@
     {"name":"lut_madrugada","order":10,"path":"sprites/lut_madrugada/lut_madrugada.yy",},
     {"name":"lut_noite","order":7,"path":"sprites/lut_noite/lut_noite.yy",},
     {"name":"lut_tarde","order":8,"path":"sprites/lut_tarde/lut_tarde.yy",},
-    {"name":"spr_aranha","order":8,"path":"sprites/spr_aranha/spr_aranha.yy",},
+    {"name":"spr_aranha","order":2,"path":"sprites/spr_aranha/spr_aranha.yy",},
     {"name":"spr_araraVoando","order":1,"path":"sprites/spr_araraVoando/spr_araraVoando.yy",},
     {"name":"spr_arbusto","order":7,"path":"sprites/spr_arbusto/spr_arbusto.yy",},
     {"name":"spr_arvore","order":2,"path":"sprites/spr_arvore/spr_arvore.yy",},

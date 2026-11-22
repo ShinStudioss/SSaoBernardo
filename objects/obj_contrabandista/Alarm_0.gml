@@ -12,5 +12,5 @@ for (var i = 0; i < 6; i++)
 	}
 }
 
-descricao = criar_dialogo([string(descricaoTexto)],0,[])
+criarDialogoDescricao(true)
 lojaEstado = 2

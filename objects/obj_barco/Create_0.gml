@@ -4,7 +4,7 @@ y = 556
 yInicial = y;
 tempo = 0;
 speed = -2
-
+interagir = false
 with obj_contrabandista{
 	scr_explosaoParticula(x,y,depth+1,360,30,spr_particulaGrama,10,0.03,0.1)
 	audio_play_sound(snd_menuConfirm,7,0)

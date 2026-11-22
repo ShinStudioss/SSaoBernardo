@@ -3,6 +3,9 @@ y = yInicial + sin(tempo) * 10;
 if x <= room_width/4{
 	speed = lerp(speed,0,0.2)
 }
+if x <= room_width/4{
+	interagir = true
+}
 
 if (partindo) exit
 if (!instance_exists(obj_jogador)) exit
@@ -11,7 +14,8 @@ if (!instance_exists(obj_jogador)) exit
 if (distance_to_object(obj_jogador) < distanciaInteracao
 and !instance_exists(obj_dialogBox)
 and keyboard_check_pressed(ord("E"))
-and global.pause == false){
+and global.pause == false)
+and interagir == true{
 
 	global.pause = true
 

@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"SeringalSaoBernardo",
-    "path":"SeringalSaoBernardo.yyp",
+    "name":"Inimigos",
+    "path":"folders/Sprites/Personagens/Inimigos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
