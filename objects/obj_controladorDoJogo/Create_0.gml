@@ -55,7 +55,7 @@ global.municao12 = 6
 global.municaoCarMax = 8
 global.municaoCar = 8
 
-global.hora = 9
+global.hora = 4
 global.minuto = 0
 
 global.dinheiro = 0

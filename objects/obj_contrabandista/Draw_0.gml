@@ -1,3 +1,4 @@
+if instance_exists(obj_barco){
 if (lojaEstado == 0){
 	// Desenha o sprite e o "Clique para interagir" do obj_interagivel,
 	// restaurando o estado de desenho que o pai deixa alterado.
@@ -11,6 +12,6 @@ if (lojaEstado == 0){
 	draw_set_valign(_valign)
 	draw_set_color(_cor)
 }
-else{
-	draw_self()
 }
+
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,rotacao,image_blend,image_alpha)

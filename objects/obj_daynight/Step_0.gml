@@ -1,9 +1,12 @@
 if global.pause == false{
-	if !string_starts_with(room_get_name(room),"rm_estradaP"){
+	if !string_starts_with(room_get_name(room),"rm_estradaP1"){
 		global.minuto += 0.06
 	}else{
+		if global.hora = global.horaAlvo{
+			if !instance_exists(obj_barco){instance_create_depth(1757,y,obj_jogador.depth-1,obj_barco)}
+		}
 		if !instance_exists(obj_barco){
-			global.minuto += 0.02
+			global.minuto += 0.05
 		}
 	}
 }

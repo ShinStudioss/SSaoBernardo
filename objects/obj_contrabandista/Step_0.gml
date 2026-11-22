@@ -1,3 +1,8 @@
+if !instance_exists(obj_barco){
+	image_index = 0
+	exit
+}
+image_index = 1
 event_inherited() // atualiza keybinds, distancia e cima (obj_interagivel)
 
 // Animação do contador de dinheiro
@@ -33,3 +38,4 @@ switch (lojaEstado){
 		lojaEstado = 0
 	break
 }
+

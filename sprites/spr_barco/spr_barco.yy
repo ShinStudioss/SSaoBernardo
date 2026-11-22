@@ -20,6 +20,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"6ff75ace-30c6-4052-97a7-fb1b6855d514","blendMode":0,"displayName":"default","isLocked":false,"name":"6ff75ace-30c6-4052-97a7-fb1b6855d514","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"93398073-5216-4de5-86ba-988e97fd13e6","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"93398073-5216-4de5-86ba-988e97fd13e6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_barco",
   "nineSlice":null,

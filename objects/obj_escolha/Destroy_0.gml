@@ -7,7 +7,10 @@ instance_destroy(caixaPai)
 global.pause = false
 
 switch selectedOption.action{
-
+	case "ir_embora":
+		obj_barco.ir_embora()
+	break;
+	
     case "dormir":
         criar_dialogo(["Raimundo deitou, encerrando seu trabalho por hoje."],false,{})
         instance_create_depth(x,y,depth,obj_transicaoDormir)

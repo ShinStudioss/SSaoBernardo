@@ -6,5 +6,9 @@ else{
 	obj_jogador.y = 416
 }
 
-hora = 15
+
+global.horaInicial = 14
 global.horaAlvo = 19
+
+global.hora = 18
+global.minuto = 58

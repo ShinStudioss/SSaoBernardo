@@ -38,3 +38,4 @@ if (id == _item_mais_proximo) {
     }
 }
 
+draw_sprite(spr_item,item.frame,x,y)

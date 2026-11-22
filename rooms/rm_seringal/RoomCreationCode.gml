@@ -13,3 +13,9 @@ else{
 }
 
 audio_sound_gain(snd_ambiente,global.sfxVolume,3000)
+
+global.horaInicial = 4
+global.horaAlvo = 14
+
+global.hora = 13
+global.minuto = 58

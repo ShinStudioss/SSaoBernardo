@@ -1,0 +1,1 @@
+scr_explosaoParticula(x, y, depth + 1, 360, 4, spr_particulaNuvem, 5, 0.01, 0.02)

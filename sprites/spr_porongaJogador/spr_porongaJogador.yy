@@ -26,10 +26,7 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a12e2a5b-acc5-42e7-ae4d-4ba34e926dca","blendMode":0,"displayName":"Layer 1 (2)","isLocked":false,"name":"a12e2a5b-acc5-42e7-ae4d-4ba34e926dca","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"30d84341-717a-4563-bd71-17076d0fef86","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"30d84341-717a-4563-bd71-17076d0fef86","opacity":23.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"b9e4c3a4-8927-41d8-b221-5f9b9828d2c2","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"b9e4c3a4-8927-41d8-b221-5f9b9828d2c2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"4e8d6859-7e08-45ff-b6cd-2d1a31ac4177","blendMode":0,"displayName":"default","isLocked":false,"name":"4e8d6859-7e08-45ff-b6cd-2d1a31ac4177","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3b281341-ac86-4347-929d-1d1af0e3cc94","blendMode":0,"displayName":"default","isLocked":false,"name":"3b281341-ac86-4347-929d-1d1af0e3cc94","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_porongaJogador",
   "nineSlice":null,
